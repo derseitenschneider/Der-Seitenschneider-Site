@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;0,800;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/general.css" rel="stylesheet" />
 
@@ -12,5 +26,100 @@
 
     <title>Der Seitenschneider</title>
   </head>
-  <body></body>
+
+  <body>
+    <header class="header fixed">
+      <div class="container-header">
+        <div class="logo-header">
+          <a href="#" class="logo">STNSCHNDR</a>
+        </div>
+
+        <div class="container-social">
+          <a
+            href="#"
+            class="social-link social-link--facebook"
+            aria-label="Link zum Facebookprofil"
+          >
+            <img
+              src="content/img/icons/Facebook-1.svg"
+              height="24"
+              width="24"
+              class="icon-social"
+            />
+          </a>
+          <a
+            href="#"
+            class="social-link social-link--instagram"
+            aria-label="Link zum Instagram-Profil"
+          >
+            <img
+              src="content/img/icons/Instagram.svg"
+              height="24"
+              width="24"
+              class="icon-social"
+            />
+          </a>
+          <a
+            href="#"
+            class="social-link social-link--github"
+            aria-label="Link zum GitHub-Profil"
+          >
+            <img
+              src="content/img/icons/Github.svg"
+              height="24"
+              width="24"
+              class="icon-social"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-right fixed">
+      <div class="container-heading">
+        <h1 class="heading-primary">Modernes Webdesign</h1>
+        <p class="subheading-primary">
+          handgemacht und
+          <span class="subheading-primary--last-word"> massgeschneidert</span>
+        </p>
+      </div>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li class="nav-el">
+            <a href="#section-angebot" class="nav-link nav-link--angebot"
+              >Angebot</a
+            >
+          </li>
+          <li class="nav-el">
+            <a href="#section-portfolio" class="nav-link nav-link--portfolio"
+              >Portfolio</a
+            >
+          </li>
+          <li class="nav-el">
+            <a href="#section-schneider" class="nav-link nav-link--schneider"
+              >Der Schneider</a
+            >
+          </li>
+          <li class="nav-el">
+            <a href="#section-kontakt" class="nav-link nav-link--kontakt"
+              >Kontakt</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="section-hero" id="section-hero"></section>
+
+    <section class="section-angebot" id="section-angebot"></section>
+
+    <section class="section-portfolio" id="section-portfolio"></section>
+
+    <section class="section-schneider" id="section-schneider"></section>
+
+    <section class="section-kontakt" id="section-kontakt"></section>
+
+    <footer class="footer"></footer>
+  </body>
 </html>

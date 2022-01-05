@@ -1,3 +1,13 @@
+Colors:
+
+#E3C0D3
+
+#122932
+
+#95818D
+
+#E1E1E1
+
 # Der Seitenschneider
 
 ## Hero
