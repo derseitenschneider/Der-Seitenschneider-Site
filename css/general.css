@@ -24,6 +24,7 @@ html {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: "Montserrat", sans-serif;
 }
 
 img,
@@ -74,5 +75,42 @@ a:visited {
 
 section {
   width: 50vw;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 6.4rem;
+}
+
+.btn {
+  background: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+/* Headings */
+
+.heading-primary {
+  font-family: "Abril Fatface", cursive;
+  font-size: 8.6rem;
+  font-weight: 400;
+  color: #122932;
+  line-height: 1;
+
+  margin-bottom: 2.4rem;
+}
+
+.subheading-primary {
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 200;
+
+  color: #122932;
+
+  margin-bottom: 12.8rem;
+}
+
+.subheading-primary--last-word {
+  font-weight: 400;
+  font-style: italic;
 }

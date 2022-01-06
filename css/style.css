@@ -4,9 +4,6 @@
 
 .header {
   width: 100vw;
-
-  background-color: white;
-
   z-index: 10;
 }
 
@@ -14,7 +11,7 @@
   max-width: 200rem;
 
   margin: 0 auto;
-  padding: 4rem 6rem;
+  padding: 2rem 2rem;
 
   position: absolute;
   top: 0;
@@ -27,6 +24,17 @@
   justify-content: space-between;
 }
 
+.logo-header {
+  transform: rotate(-90deg);
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .logo:link,
 .logo:visited {
   font-family: "Abril Fatface", cursive;
@@ -36,7 +44,18 @@
 
 .container-social {
   display: flex;
-  gap: 1.2rem;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: right;
+  z-index: 9;
+}
+
+.social-link:link,
+.social-link:visited {
+  /* display: block; */
+  font-family: inherit;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
 
 /******************************************/
@@ -47,41 +66,13 @@
   height: 100vh;
   width: 50vw;
 
-  padding: 9rem 15rem;
+  padding: 6.4rem 12.8rem;
 
   background-color: #fff;
 
   z-index: 2;
 
   float: right;
-}
-
-/* Headings */
-
-.heading-primary {
-  font-family: "Abril Fatface", cursive;
-  font-size: 9.6rem;
-  font-weight: 400;
-  color: #122932;
-  line-height: 1;
-
-  margin-bottom: 4.8rem;
-}
-
-.subheading-primary {
-  text-align: right;
-  font-family: "Montserrat", sans-serif;
-  font-size: 4rem;
-  font-weight: 200;
-
-  color: #122932;
-
-  margin-bottom: 6.8rem;
-}
-
-.subheading-primary--last-word {
-  font-weight: 400;
-  font-style: italic;
 }
 
 /* Navigation */
@@ -122,6 +113,8 @@
 .section-hero {
   background-color: #122932;
   z-index: 2;
+  display: flex;
+  align-items: center;
 }
 
 /******************************************/
@@ -129,7 +122,38 @@
 /******************************************/
 
 .section-angebot {
+  padding: 8rem 12.8rem;
   background-color: #95818d;
+  width: 100vw;
+  z-index: 999;
+}
+
+.container-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.text-hero {
+  font-size: 3.6rem;
+  color: #e3c0d3;
+  font-weight: 200;
+}
+
+.emphasis-text-hero {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.btn-hero {
+  width: auto;
+  border: 3px solid #fff;
+  padding: 2rem 4rem;
+
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 600;
 }
 
 /******************************************/
@@ -155,4 +179,6 @@
 .section-kontakt {
   background-color: #122932;
   width: 100vw;
+  position: absolute;
+  z-index: 9;
 }
