@@ -25,6 +25,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: "Montserrat", sans-serif;
+  color: #122932;
 }
 
 img,
@@ -74,13 +75,11 @@ a:visited {
 /*General Settings*/
 
 section {
-  width: 50vw;
   min-height: 100vh;
-  padding: 6.4rem;
 }
 
 .btn {
-  background: none;
+  border: none;
 }
 
 .btn:hover {
@@ -93,19 +92,21 @@ section {
   font-family: "Abril Fatface", cursive;
   font-size: 8.6rem;
   font-weight: 400;
-  color: #122932;
+  color: #eee;
   line-height: 1;
 
   margin-bottom: 2.4rem;
 }
 
 .subheading-primary {
-  text-align: right;
-  font-family: "Montserrat", sans-serif;
-  font-size: 3.6rem;
+  width: 75%;
+  align-self: flex-end;
+
+  /* font-family: "Montserrat", sans-serif; */
+  font-size: 3rem;
   font-weight: 200;
 
-  color: #122932;
+  color: #c4c4c4;
 
   margin-bottom: 12.8rem;
 }
@@ -113,4 +114,13 @@ section {
 .subheading-primary--last-word {
   font-weight: 400;
   font-style: italic;
+}
+
+.heading-secondary {
+  font-size: 5.2rem;
+  width: 60vw;
+}
+
+.section-main {
+  padding: 8rem 6.4rem;
 }

@@ -1,11 +1,17 @@
 Colors:
 
-#E3C0D3
-
+Basic Font:
 #122932
 
-#95818D
+Bright Fonts:
+#EEEEEE
+#C4C4C4
 
+Accent Color:
+#E3C0D3
+
+Shades & Tints:
+#95818D
 #E1E1E1
 
 - Font sizes(px)
