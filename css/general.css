@@ -111,7 +111,7 @@ section {
   margin-bottom: 12.8rem;
 }
 
-.subheading-primary--last-word {
+.subheading-primary--emphasized {
   font-weight: 400;
   font-style: italic;
 }
@@ -119,8 +119,49 @@ section {
 .heading-secondary {
   font-size: 5.2rem;
   width: 60vw;
+  line-height: 1;
+
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary--first {
+  position: relative;
+}
+
+.heading-secondary--first::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  height: 100%;
+  width: 0.4rem;
+  background-color: #e3c0d3;
+}
+
+.heading-secondary--emphasized {
+  font-style: italic;
+}
+
+.heading-tertiary {
+  font-size: 3.6rem;
+  font-weight: 600;
+
+  margin-bottom: 0.4rem;
+}
+
+.heading-quaternary {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.textbox {
+  font-size: 1.8rem;
+
+  margin-bottom: 3.2rem;
 }
 
 .section-main {
   padding: 8rem 6.4rem;
+  width: 60vw;
 }

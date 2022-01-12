@@ -35,6 +35,16 @@
   top: 0;
 }
 
+.logo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -0.4rem;
+  height: 0.4rem;
+  width: 6.3rem;
+  background-color: #e3c0d3;
+}
+
 .logo:link,
 .logo:visited {
   font-family: "Abril Fatface", cursive;
@@ -134,13 +144,35 @@
   width: 60vw;
   padding: 18rem 12.6rem;
 
+  position: relative;
+
   background-color: #122932;
   z-index: 2;
   display: flex;
   align-items: center;
 }
 
-.container-heading {
+.svg {
+  position: absolute;
+}
+
+.svg-brackets {
+  top: 50%;
+  left: 50%;
+}
+
+.svg-btn {
+  top: 40%;
+  left: 0;
+}
+
+.svg-pants,
+.svg-lines {
+  top: 0;
+  right: -10%;
+}
+
+.svg-pants .container-heading {
   display: flex;
   flex-direction: column;
 }
@@ -155,6 +187,11 @@
   font-weight: 600;
 }
 
+.container-heading {
+  display: flex;
+  flex-direction: column;
+}
+
 /******************************************/
 /* SECTION ANGEBOT */
 /******************************************/
@@ -162,6 +199,29 @@
 .section-angebot {
   background-color: #eee;
   z-index: 999;
+}
+
+.textbox-angebot:last-of-type {
+  margin-bottom: 8rem;
+}
+
+.container-cards {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.cards {
+  border: 2px solid black;
+  min-height: 8rem;
+  padding: 1.2rem 2.4rem;
+}
+
+.heading-cards {
+  font-size: 2.4rem;
+}
+
+.text-cards {
+  font-size: 1.6rem;
 }
 
 /******************************************/
