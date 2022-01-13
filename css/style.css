@@ -48,7 +48,7 @@
 .logo:link,
 .logo:visited {
   font-family: "Abril Fatface", cursive;
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: #e3c0d3;
 }
 
@@ -179,7 +179,7 @@
 
 .btn-hero {
   width: auto;
-  padding: 2rem 4rem;
+  padding: 1.6rem 3.2rem;
   background: #e3c0d3;
 
   /* color: #fff; */
@@ -208,16 +208,36 @@
 .container-cards {
   display: flex;
   gap: 3.2rem;
+  z-index: 2;
 }
 
 .cards {
-  border: 2px solid black;
-  min-height: 8rem;
-  padding: 1.2rem 2.4rem;
+  position: relative;
+  border: 0.5px solid #e3c0d3;
+  min-height: 30rem;
+  width: calc(100% / 3);
+  padding: 3.2rem 2.4rem;
+
+  background-color: #fff;
+
+  z-index: 99999;
+}
+
+.cards::after {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  height: 100%;
+  width: 100%;
+
+  background-color: #e3c0d3;
+  z-index: -1;
 }
 
 .heading-cards {
   font-size: 2.4rem;
+  margin-bottom: 3.2rem;
 }
 
 .text-cards {

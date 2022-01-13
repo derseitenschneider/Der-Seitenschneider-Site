@@ -1,4 +1,24 @@
-/*Global Reset*/
+/********************************************/
+/* GLOBAL VARIABLES */
+/********************************************/
+
+:root {
+  /*Background-Colors*/
+  --main-background-bright: #eee;
+  --main-background-dark: #122932;
+
+  /*Accent Color*/
+  --main-accent-color: #e3c0d3;
+
+  /*Text-Colors*/
+  --main-text-color-dark: #122932;
+  --main-text-color-bright: #eee;
+  --secondary-text-color-bright: #c4c4c4;
+}
+
+/********************************************/
+/* GLOBAL RESET */
+/********************************************/
 
 *,
 *::before,
@@ -25,7 +45,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: "Montserrat", sans-serif;
-  color: #122932;
+  color: var(--main-text-color-dark);
 }
 
 img,
@@ -64,19 +84,26 @@ a:visited {
   color: inherit;
 }
 
-/*Helper-classes*/
-
-.fixed {
-  position: fixed;
-  right: 0;
-  top: 0;
-}
-
-/*General Settings*/
+/********************************************/
+/* GENERAL LAYOUT SETTINGS */
+/********************************************/
 
 section {
   min-height: 100vh;
 }
+
+.section-main {
+  padding: 8rem 6.4rem;
+  width: 60vw;
+}
+
+.textbox {
+  font-size: 1.6rem;
+
+  margin-bottom: 3.2rem;
+}
+
+/*Buttons*/
 
 .btn {
   border: none;
@@ -86,7 +113,9 @@ section {
   cursor: pointer;
 }
 
-/* Headings */
+/********************************************/
+/* HEADINGS */
+/********************************************/
 
 .heading-primary {
   font-family: "Abril Fatface", cursive;
@@ -152,16 +181,15 @@ section {
 .heading-quaternary {
   font-size: 2.4rem;
   font-weight: 600;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1.6rem;
 }
 
-.textbox {
-  font-size: 1.8rem;
+/********************************************/
+/* HELPER CLASSES */
+/********************************************/
 
-  margin-bottom: 3.2rem;
-}
-
-.section-main {
-  padding: 8rem 6.4rem;
-  width: 60vw;
+.fixed {
+  position: fixed;
+  right: 0;
+  top: 0;
 }
