@@ -42,14 +42,14 @@
   top: -0.4rem;
   height: 0.4rem;
   width: 6.3rem;
-  background-color: #e3c0d3;
+  background-color: var(--main-accent-color);
 }
 
 .logo:link,
 .logo:visited {
   font-family: "Abril Fatface", cursive;
   font-size: 2rem;
-  color: #e3c0d3;
+  color: var(--main-accent-color);
 }
 
 .container-social {
@@ -79,7 +79,7 @@
 
   padding: 6.4rem 9.6rem;
 
-  background-color: #eee;
+  background-color: var(--main-background-bright);
 
   z-index: 2;
 
@@ -92,7 +92,7 @@
 /* Navigation */
 
 .main-nav {
-  background-color: #eeeeee;
+  background-color: var(--main-background-bright);
   position: relative;
   padding: 1.8rem 3.6rem;
 }
@@ -102,8 +102,9 @@
   position: absolute;
   height: 120%;
   width: 100%;
-  /* background-color: #e3c0d3; */
-  border: 10px solid rgba(227, 192, 211, 0.25);
+
+  border: 10px solid var(--main-accent-color);
+  opacity: 0.25;
   top: -50%;
   left: 25%;
   z-index: -1;
@@ -146,7 +147,7 @@
 
   position: relative;
 
-  background-color: #122932;
+  background-color: var(--main-background-dark);
   z-index: 2;
   display: flex;
   align-items: center;
@@ -180,9 +181,8 @@
 .btn-hero {
   width: auto;
   padding: 1.6rem 3.2rem;
-  background: #e3c0d3;
+  background: var(--main-accent-color);
 
-  /* color: #fff; */
   font-size: 2.4rem;
   font-weight: 600;
 }
@@ -197,7 +197,7 @@
 /******************************************/
 
 .section-angebot {
-  background-color: #eee;
+  background-color: var(--main-background-bright);
   z-index: 999;
 }
 
@@ -207,41 +207,39 @@
 
 .container-cards {
   display: flex;
-  gap: 3.2rem;
+  gap: 2.4rem;
   z-index: 2;
 }
 
 .cards {
   position: relative;
-  border: 0.5px solid #e3c0d3;
-  min-height: 30rem;
+
   width: calc(100% / 3);
-  padding: 3.2rem 2.4rem;
-
-  background-color: #fff;
-
-  z-index: 99999;
-}
-
-.cards::after {
-  content: "";
-  position: absolute;
-  top: -1rem;
-  left: -1rem;
-  height: 100%;
-  width: 100%;
-
-  background-color: #e3c0d3;
-  z-index: -1;
 }
 
 .heading-cards {
   font-size: 2.4rem;
-  margin-bottom: 3.2rem;
+  /* text-align: center; */
+  text-transform: uppercase;
+}
+
+.container-icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.icon {
+  height: 6.4rem;
+  width: 6.4rem;
 }
 
 .text-cards {
   font-size: 1.6rem;
+  /* text-align: center; */
 }
 
 /******************************************/
@@ -249,7 +247,30 @@
 /******************************************/
 
 .section-portfolio {
-  background-color: #e1e1e1;
+  background-color: var(--main-background-bright);
+}
+
+.container-portfolio {
+  position: relative;
+}
+
+.macbook {
+  position: absolute;
+  top: 0;
+}
+
+.img-container {
+  position: absolute;
+  width: 54.55rem;
+  height: 34.1rem;
+  top: 6.34rem;
+  left: 9.54rem;
+
+  background-size: 100%;
+}
+
+.img-container--marabu {
+  background-image: url(../content/img/portfolio/marabu-beach.png);
 }
 
 /******************************************/
@@ -257,7 +278,6 @@
 /******************************************/
 
 .section-schneider {
-  background-color: #e3c0d3;
 }
 
 /******************************************/

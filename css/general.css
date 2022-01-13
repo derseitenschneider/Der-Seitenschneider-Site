@@ -4,16 +4,18 @@
 
 :root {
   /*Background-Colors*/
-  --main-background-bright: #eee;
-  --main-background-dark: #122932;
+  --main-background-bright: rgb(238, 238, 238);
+  --main-background-dark: rgb(18, 41, 50);
+
+  --secondary-background-bright: rgb(255, 255, 255);
 
   /*Accent Color*/
   --main-accent-color: #e3c0d3;
 
   /*Text-Colors*/
-  --main-text-color-dark: #122932;
-  --main-text-color-bright: #eee;
-  --secondary-text-color-bright: #c4c4c4;
+  --main-text-color-dark: rgb(18, 41, 50);
+  --main-text-color-bright: rgb(238, 238, 238);
+  --secondary-text-color-bright: rgb(196, 196, 196);
 }
 
 /********************************************/
@@ -97,6 +99,10 @@ section {
   width: 60vw;
 }
 
+.container-section {
+  margin-bottom: 9.6rem;
+}
+
 .textbox {
   font-size: 1.6rem;
 
@@ -135,7 +141,7 @@ section {
   font-size: 3rem;
   font-weight: 200;
 
-  color: #c4c4c4;
+  color: var(--secondary-text-color-bright);
 
   margin-bottom: 12.8rem;
 }
@@ -153,6 +159,14 @@ section {
   margin-bottom: 3.2rem;
 }
 
+.subheading-secondary {
+  font-size: 2rem;
+  font-weight: 200;
+  text-transform: uppercase;
+
+  margin-bottom: 0.8rem;
+}
+
 .heading-secondary--first {
   position: relative;
 }
@@ -164,7 +178,7 @@ section {
   left: -1rem;
   height: 100%;
   width: 0.4rem;
-  background-color: #e3c0d3;
+  background-color: var(--main-accent-color);
 }
 
 .heading-secondary--emphasized {
@@ -172,7 +186,7 @@ section {
 }
 
 .heading-tertiary {
-  font-size: 3.6rem;
+  font-size: 3rem;
   font-weight: 600;
 
   margin-bottom: 0.4rem;
@@ -181,7 +195,7 @@ section {
 .heading-quaternary {
   font-size: 2.4rem;
   font-weight: 600;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2.4rem;
 }
 
 /********************************************/
