@@ -19,8 +19,10 @@
       rel="stylesheet"
     />
 
-    <link href="css/style.css" rel="stylesheet" />
     <link href="css/general.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/animation.css" rel="stylesheet" />
+    <link href="css/queries.css" rel="stylesheet" />
 
     <script src="js/script.js" defer></script>
 
@@ -66,397 +68,488 @@
         </div>
       </div>
     </header>
-
-    <section class="section-right fixed">
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li class="nav-el">
-            <a href="#section-angebot" class="nav-link nav-link--angebot"
-              >Angebot</a
-            >
-          </li>
-          <li class="nav-el">
-            <a href="#section-portfolio" class="nav-link nav-link--portfolio"
-              >Portfolio</a
-            >
-          </li>
-          <li class="nav-el">
-            <a href="#section-schneider" class="nav-link nav-link--schneider"
-              >Der Schneider</a
-            >
-          </li>
-          <li class="nav-el">
-            <a href="#section-kontakt" class="nav-link nav-link--kontakt"
-              >Kontakt</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </section>
-
-    <section class="section-hero" id="section-hero">
-      <svg
-        width="217"
-        height="93"
-        viewBox="0 0 217 93"
-        fill="none"
-        class="svg svg-brackets"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          opacity="0.05"
-          d="M86.5386 92.0653V72.1305L24.2934 48.1275L18.9029 46.2967L24.2934 44.5677L86.5386 20.1578V0.223077L0.290334 38.6686V53.518L86.5386 92.0653ZM126.205 91.9636L216.013 53.4163V38.5669L126.205 0.121369V19.5476L192.01 43.9575L198.112 45.8899L192.01 47.6189L126.205 72.4356V91.9636Z"
-          fill="white"
-        />
-      </svg>
-      <svg
-        width="173"
-        height="620"
-        viewBox="0 0 173 620"
-        fill="none"
-        class="svg svg-btn"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g opacity="0.05">
-          <path
-            d="M55.0177 3C55.0177 3 175.693 89.7918 169.408 132.54C163.123 175.288 60.0459 233.581 39.9333 282.806C19.8207 332.031 163.123 365.712 169.408 401.983C175.693 438.254 131.682 501.918 48.7325 538"
-            stroke="#E3C0D3"
-            stroke-width="6"
-            stroke-linecap="round"
-          />
-          <ellipse cx="79" cy="538.5" rx="79" ry="81.5" fill="#C4C4C4" />
-          <ellipse cx="79" cy="537.5" rx="71" ry="71.5" fill="#122932" />
-          <circle cx="79.5" cy="538.5" r="62.5" fill="#C4C4C4" />
-          <ellipse cx="99" cy="558.5" rx="15" ry="14.5" fill="black" />
-          <ellipse cx="100" cy="519.5" rx="15" ry="14.5" fill="black" />
-          <ellipse cx="60" cy="558.5" rx="15" ry="14.5" fill="black" />
-          <ellipse cx="61.5" cy="519.5" rx="15.5" ry="14.5" fill="black" />
-        </g>
-      </svg>
-      <svg
-        width="556"
-        height="457"
-        viewBox="0 0 556 457"
-        fill="none"
-        class="svg svg-pants"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g opacity="0.05">
-          <path
-            d="M260.719 180.601V171.967M260.719 155.561V146.926M260.719 211.686V203.051M263.811 241.044V232.409M263.811 272.129V263.494M263.811 302.35L262.265 293.715M265.357 336.025L263.811 326.527M268.449 352.431L266.903 342.933M263.811 357.612H256.854M246.805 357.612H239.849M219.751 357.612H212.795M195.016 357.612H188.059M183.422 357.612H176.465M260.719 123.612V114.978M260.719 98.5718V89.9371M261.492 69.2139V60.5793M260.719 44.1734L259.946 33.8118M257.627 15.6789L256.081 6.1808M8.72973 175.42V166.786M8.72973 150.38V141.745M8.72973 206.505V197.871M5.63784 235.863V227.228M5.63784 266.948V258.313M5.63784 297.169L7.18378 288.535M4.09189 330.845L5.63784 321.346M1 347.25L2.54595 337.752M5.63784 352.431H12.5946M22.6432 352.431H29.6M49.6973 352.431H56.6541M74.4324 352.431H81.3892M86.027 352.431H92.9838M8.72973 118.432V109.797M8.72973 93.391V84.7563M7.95676 64.0331V55.3984M8.72973 38.9926L9.5027 28.631M11.8216 10.4981L13.3676 1"
-            stroke="white"
-          />
-          <path
-            d="M411.449 170.24L398.308 216.003L385.168 306.667L370.481 417.191C370.481 417.191 370.481 437.051 370.481 448.276C370.481 459.501 357.341 455.184 357.341 455.184C357.341 455.184 268.449 456.911 268.449 448.276C268.449 439.641 273.859 421.509 273.859 392.151C273.859 362.793 273.859 320.483 273.859 320.483C273.859 320.483 276.178 285.944 276.178 261.767C276.178 237.59 273.859 222.911 273.859 193.553C273.859 164.195 277.724 117.568 282.362 91.6641C287 65.7601 297.822 34.6752 297.822 34.6752H299.368M411.449 170.24V56.2619V34.6752M411.449 170.24L424.589 216.003L437.73 306.667L452.416 417.191C452.416 417.191 452.416 437.051 452.416 448.276C452.416 459.501 465.557 455.184 465.557 455.184C465.557 455.184 554.449 456.911 554.449 448.276C554.449 439.641 549.038 421.509 549.038 392.151C549.038 362.793 549.038 320.483 549.038 320.483C549.038 320.483 546.719 285.944 546.719 261.767C546.719 237.59 549.038 222.911 549.038 193.553C549.038 164.195 545.173 117.568 540.535 91.6641C535.897 65.7601 525.076 34.6752 525.076 34.6752H411.449M411.449 34.6752H299.368M299.368 34.6752V1H522.757V32.0848M307.097 78.7121H355.022V91.6641M307.097 76.9851L306.324 77.8486L307.097 81.3025V91.6641M307.097 91.6641V117.568L309.416 126.203L313.281 131.384H321.011H343.427L350.384 122.749L355.022 114.114V104.616V91.6641M307.097 91.6641H355.022M497.249 78.7121H449.324V91.6641M497.249 76.9851L498.022 77.8486L497.249 81.3025V91.6641M497.249 91.6641V117.568L494.93 126.203L491.065 131.384H483.335H460.919L453.962 122.749L449.324 114.114V104.616V91.6641M497.249 91.6641H449.324"
-            stroke="white"
-            stroke-width="2"
-          />
-        </g>
-      </svg>
-      <svg
-        width="187"
-        height="237"
-        viewBox="0 0 187 237"
-        fill="none"
-        class="svg svg-lines"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M3 221V236.5"
-          stroke="#E3C0D3"
-          stroke-opacity="0.05"
-          stroke-width="4"
-        />
-        <path
-          d="M3 187V202.5"
-          stroke="#E3C0D3"
-          stroke-opacity="0.05"
-          stroke-width="4"
-        />
-        <path
-          d="M3 155V170.5"
-          stroke="#E3C0D3"
-          stroke-opacity="0.05"
-          stroke-width="4"
-        />
-        <path
-          d="M3 123V138.5"
-          stroke="#E3C0D3"
-          stroke-opacity="0.05"
-          stroke-width="4"
-        />
-        <path
-          d="M3 91V106.5"
-          stroke="#E3C0D3"
-          stroke-opacity="0.05"
-          stroke-width="4"
-        />
-        <path
-          d="M13.5272 2.96921C5.14327 2.84221 3.41603 5.99431 3.50003 14.7889"
-          stroke="#E3C0D3"
-          stroke-opacity="0.05"
-          stroke-width="4"
-        />
-        <path
-          d="M3 57.5V73M3 27V42.5"
-          stroke="#E3C0D3"
-          stroke-opacity="0.05"
-          stroke-width="4"
-        />
-        <path
-          d="M56.5 3L72 3M26 3L41.5 3"
-          stroke="#E3C0D3"
-          stroke-opacity="0.05"
-          stroke-width="4"
-        />
-        <path
-          d="M114.5 3L130 3M84 3L99.5 3"
-          stroke="#E3C0D3"
-          stroke-opacity="0.05"
-          stroke-width="4"
-        />
-        <path
-          d="M171.5 3L187 3M141 3L156.5 3"
-          stroke="#E3C0D3"
-          stroke-opacity="0.05"
-          stroke-width="4"
-        />
-      </svg>
-      <div class="container-hero">
-        <div class="container-heading">
-          <h1 class="heading-primary">Modernes Webdesign</h1>
-          <p class="subheading-primary">
-            handgemacht und <br />
-
-            <span class="subheading-primary--emphasized">
-              massgeschneidert</span
-            >
-          </p>
-        </div>
-
-        <button class="btn btn-hero">Jetzt kontaktieren</button>
-      </div>
-    </section>
-
-    <section class="section-main section-angebot" id="section-angebot">
-      <div class="container-section">
-        <p class="subheading-secondary">Angebot</p>
-        <h2 class="heading-secondary">
-          <span class="heading-secondary--first">Sie</span> haben die
-          <span class="heading-secondary--emphasized">Vision</span>,<br />
-          ich setze sie um
-        </h2>
-
-        <h3 class="heading-tertiary">Modernes Design</h3>
-        <p class="textbox textbox-angebot">
-          Ich lege grossen Wert auf moderne Layouts und Designs kombiniert mit
-          der bestmöglichen Benutzerfreundlichkeit. Sei es mit gängigen
-          Werkzeugen wie Wordpress, Squarespace etc. oder komplett von Hand
-          zusammengeschneidert; Ihr Webauftritt soll der Ort sein, wo Ihre
-          Zielgruppe bestmöglichst aufgehoben ist.
-        </p>
-        <h3 class="heading-tertiary">Unterhalt & Support</h3>
-        <p class="textbox textbox-angebot">
-          Ein Webauftritt ist selten statisch, immer wieder wollen/sollen
-          Änderungen und Verbesserungen vorgenommen werden. Deshalb bin ich auch
-          nach der Fertigstellung jederzeit für Sie da - versprochen!
-        </p>
-        <h3 class="heading-tertiary">Selbständige Inhaltsbewirtschaftung</h3>
-        <p class="textbox textbox-angebot">
-          Dank einfach verfügbarer Werkzeuge wie Wordpress, Squarespace etc.
-          sind Sie in der Lage, die Inhalte Ihres Webauftritts nach
-          Fertigstellung selbständig zu bewirtschaften. Und das, ohne
-          Programmierkentnisse mitzubringen. Gerne gebe ich Ihnen eine
-          Einführung, sei es in Form eines aufgezeichneten Video-Tutorials oder
-          Live und in Farbe.
-        </p>
-
-        <h4 class="heading-quaternary">Damit können Sie rechnen</h4>
-        <div class="container-cards">
-          <div class="cards card-one">
-            <p class="heading-cards">Effizient & Unkompliziert</p>
-            <div class="container-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-clock"
+    <main class="main">
+      <section class="section-right fixed">
+        <nav class="main-nav">
+          <div class="nav-frame"></div>
+          <ul class="nav-list">
+            <li class="nav-el">
+              <a href="#section-angebot" class="nav-link nav-link--angebot"
+                >Angebot</a
               >
-                <path
-                  d="M12 4V6"
-                  stroke="#e3c0d3"
-                  stroke-opacity="0.25"
-                  stroke-width="1.2"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M12 11.9996L6.05859 6.06641"
-                  stroke="#e3c0d3"
-                  stroke-width="1.2"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M20 12L18 12"
-                  stroke="#e3c0d3"
-                  stroke-opacity="0.25"
-                  stroke-width="1.2"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M12 18V20"
-                  stroke="#e3c0d3"
-                  stroke-opacity="0.25"
-                  stroke-width="1.2"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M6 12L4 12"
-                  stroke="#e3c0d3"
-                  stroke-opacity="0.25"
-                  stroke-width="1.2"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M12 3.6C13.9434 3.6 15.8266 4.27384 17.3289 5.50671C18.8312 6.73958 19.8595 8.4552 20.2386 10.3612C20.6177 12.2673 20.3242 14.2458 19.4081 15.9597C18.492 17.6736 17.01 19.0169 15.2145 19.7606C13.4191 20.5043 11.4213 20.6024 9.56161 20.0383C7.7019 19.4742 6.09534 18.2827 5.01565 16.6668C3.93597 15.0509 3.44996 13.1107 3.64045 11.1767C3.83093 9.24263 4.68612 7.43448 6.06031 6.0603"
-                  stroke="#e3c0d3"
-                  stroke-width="1.2"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </div>
-
-            <p class="text-cards">
-              Ich trödle nicht gerne und komme meist schnell und direkt zur
-              Sache.
-            </p>
-          </div>
-          <div class="cards card-two">
-            <p class="heading-cards">Kunden-<br />orientiert</p>
-            <div class="container-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-smiley"
+            </li>
+            <li class="nav-el">
+              <a href="#section-portfolio" class="nav-link nav-link--portfolio"
+                >Portfolio</a
               >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="9.5"
-                  stroke="#e3c0d3"
-                  stroke-linecap="round"
-                />
-                <circle
-                  cx="9"
-                  cy="10"
-                  r="1"
-                  fill="#e3c0d3"
-                  stroke="#e3c0d3"
-                  stroke-linecap="round"
-                />
-                <circle
-                  cx="15"
-                  cy="10"
-                  r="1"
-                  fill="#e3c0d3"
-                  stroke="#e3c0d3"
-                  stroke-linecap="round"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M8.62889 15C8.34911 15 8.20922 15 8.13459 15.1068C8.05996 15.2136 8.10323 15.3318 8.18977 15.5683C8.70589 16.9788 10.2167 18 12 18C13.7834 18 15.2941 16.9788 15.8102 15.5683C15.8968 15.3318 15.9401 15.2136 15.8654 15.1068C15.7908 15 15.6509 15 15.3711 15H8.62889Z"
-                  fill="#e3c0d3"
-                />
-              </svg>
-            </div>
-            <p class="text-cards">
-              Ihr Produkt und Ihre Vision stehen zu jedem Zeitpunkt im
-              Vordergrund.
-            </p>
-          </div>
-          <div class="cards card-three">
-            <p class="heading-cards">Remote <br />Unterstützung</p>
-            <div class="container-icon">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-desktop"
+            </li>
+            <li class="nav-el">
+              <a href="#section-schneider" class="nav-link nav-link--schneider"
+                >Der Schneider</a
               >
-                <path
-                  d="M7 5H17C17.9711 5 18.5988 5.00212 19.0613 5.06431C19.495 5.12262 19.631 5.21677 19.7071 5.29289C19.7832 5.36902 19.8774 5.50496 19.9357 5.9387C19.9979 6.40121 20 7.02892 20 8V16H4V8C4 7.02892 4.00212 6.40121 4.06431 5.9387C4.12262 5.50496 4.21677 5.36902 4.29289 5.29289C4.36902 5.21677 4.50496 5.12262 4.9387 5.06431C5.40121 5.00212 6.02892 5 7 5Z"
-                  stroke="#e3c0d3"
-                  stroke-width="1.2"
-                />
-                <path
-                  d="M20.3333 16H3.66667C2.74619 16 2 16.7462 2 17.6667C2 18.9553 3.04467 20 4.33333 20H19.6667C20.9553 20 22 18.9553 22 17.6667C22 16.7462 21.2538 16 20.3333 16Z"
-                  stroke="#e3c0d3"
-                  stroke-width=""
-                />
-              </svg>
-            </div>
-            <p class="text-cards">
-              Ich arbeite von überall aus und kann somit jederzeit auf Ihre
-              Wünsche eingehen.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+            </li>
+            <li class="nav-el">
+              <a href="#section-kontakt" class="nav-link nav-link--kontakt"
+                >Kontakt</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
 
-    <section class="section-main section-portfolio" id="section-portfolio">
-      <div class="container-section">
-        <p class="subheading-secondary">Portfolio</p>
-        <h2 class="heading-secondary">
-          <span class="heading-secondary--first">Meine</span> Arbeit auf einen
-          Blick
-        </h2>
-        <div class="container-portfolio">
-          <div class="macbook">
-            <img
-              src="content/img/portfolio/mockup-macbook.png"
-              class="mockup-macbook"
-              width="736"
-              height="468"
+      <section class="section-hero" id="section-hero">
+        <div class="container-section">
+          <svg
+            width="217"
+            height="93"
+            viewBox="0 0 217 93"
+            fill="none"
+            class="svg svg-brackets"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              opacity="0.05"
+              d="M86.5386 92.0653V72.1305L24.2934 48.1275L18.9029 46.2967L24.2934 44.5677L86.5386 20.1578V0.223077L0.290334 38.6686V53.518L86.5386 92.0653ZM126.205 91.9636L216.013 53.4163V38.5669L126.205 0.121369V19.5476L192.01 43.9575L198.112 45.8899L192.01 47.6189L126.205 72.4356V91.9636Z"
+              fill="white"
             />
-            <div class="img-container img-container--marabu"></div>
-          </div>
+          </svg>
 
-          <a href="#" class="portfolio-link portfolio-link--marabu"
-            ><svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+          <svg
+            width="187"
+            height="237"
+            viewBox="0 0 187 237"
+            fill="none"
+            class="svg svg-lines"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 221V236.5"
+              stroke="#E3C0D3"
+              stroke-opacity="0.05"
+              stroke-width="4"
+            />
+            <path
+              d="M3 187V202.5"
+              stroke="#E3C0D3"
+              stroke-opacity="0.05"
+              stroke-width="4"
+            />
+            <path
+              d="M3 155V170.5"
+              stroke="#E3C0D3"
+              stroke-opacity="0.05"
+              stroke-width="4"
+            />
+            <path
+              d="M3 123V138.5"
+              stroke="#E3C0D3"
+              stroke-opacity="0.05"
+              stroke-width="4"
+            />
+            <path
+              d="M3 91V106.5"
+              stroke="#E3C0D3"
+              stroke-opacity="0.05"
+              stroke-width="4"
+            />
+            <path
+              d="M13.5272 2.96921C5.14327 2.84221 3.41603 5.99431 3.50003 14.7889"
+              stroke="#E3C0D3"
+              stroke-opacity="0.05"
+              stroke-width="4"
+            />
+            <path
+              d="M3 57.5V73M3 27V42.5"
+              stroke="#E3C0D3"
+              stroke-opacity="0.05"
+              stroke-width="4"
+            />
+            <path
+              d="M56.5 3L72 3M26 3L41.5 3"
+              stroke="#E3C0D3"
+              stroke-opacity="0.05"
+              stroke-width="4"
+            />
+            <path
+              d="M114.5 3L130 3M84 3L99.5 3"
+              stroke="#E3C0D3"
+              stroke-opacity="0.05"
+              stroke-width="4"
+            />
+            <path
+              d="M171.5 3L187 3M141 3L156.5 3"
+              stroke="#E3C0D3"
+              stroke-opacity="0.05"
+              stroke-width="4"
+            />
+          </svg>
+          <div class="container-hero">
+            <div class="container-heading">
+              <h1 class="heading-primary">Modernes Webdesign</h1>
+              <p class="subheading-primary">
+                handgemacht und <br />
+                massge
+                <span class="subheading-primary--emphasized">schneidert</span>
+              </p>
+            </div>
+
+            <button class="btn btn-hero">Jetzt kontaktieren</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-main section-angebot" id="section-angebot">
+        <div class="container-section">
+          <svg
+            width="556"
+            height="457"
+            viewBox="0 0 556 457"
+            fill="none"
+            class="svg svg-pants"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g opacity="0.2">
               <path
-                d="M21 3H21.5V2.5H21V3ZM10.6464 12.6464C10.4512 12.8417 10.4512 13.1583 10.6464 13.3536C10.8417 13.5488 11.1583 13.5488 11.3536 13.3536L10.6464 12.6464ZM13 3.5L21 3.5V2.5L13 2.5V3.5ZM20.5 3V11H21.5V3H20.5ZM20.6464 2.64645L10.6464 12.6464L11.3536 13.3536L21.3536 3.35355L20.6464 2.64645Z"
-                fill="white"
+                d="M260.719 180.601V171.967M260.719 155.561V146.926M260.719 211.686V203.051M263.811 241.044V232.409M263.811 272.129V263.494M263.811 302.35L262.265 293.715M265.357 336.025L263.811 326.527M268.449 352.431L266.903 342.933M263.811 357.612H256.854M246.805 357.612H239.849M219.751 357.612H212.795M195.016 357.612H188.059M183.422 357.612H176.465M260.719 123.612V114.978M260.719 98.5718V89.9371M261.492 69.2139V60.5793M260.719 44.1734L259.946 33.8118M257.627 15.6789L256.081 6.1808M8.72973 175.42V166.786M8.72973 150.38V141.745M8.72973 206.505V197.871M5.63784 235.863V227.228M5.63784 266.948V258.313M5.63784 297.169L7.18378 288.535M4.09189 330.845L5.63784 321.346M1 347.25L2.54595 337.752M5.63784 352.431H12.5946M22.6432 352.431H29.6M49.6973 352.431H56.6541M74.4324 352.431H81.3892M86.027 352.431H92.9838M8.72973 118.432V109.797M8.72973 93.391V84.7563M7.95676 64.0331V55.3984M8.72973 38.9926L9.5027 28.631M11.8216 10.4981L13.3676 1"
+                stroke="#C4C4C4"
               />
               <path
-                d="M9 4V4C7.13077 4 6.19615 4 5.5 4.40192C5.04394 4.66523 4.66523 5.04394 4.40192 5.5C4 6.19615 4 7.13077 4 9V14C4 16.8284 4 18.2426 4.87868 19.1213C5.75736 20 7.17157 20 10 20H15C16.8692 20 17.8038 20 18.5 19.5981C18.9561 19.3348 19.3348 18.9561 19.5981 18.5C20 17.8038 20 16.8692 20 15V15"
-                stroke="white"
+                d="M411.449 170.24L398.308 216.003L385.168 306.667L370.481 417.191C370.481 417.191 370.481 437.051 370.481 448.276C370.481 459.501 357.341 455.184 357.341 455.184C357.341 455.184 268.449 456.911 268.449 448.276C268.449 439.641 273.859 421.509 273.859 392.151C273.859 362.793 273.859 320.483 273.859 320.483C273.859 320.483 276.178 285.944 276.178 261.767C276.178 237.59 273.859 222.911 273.859 193.553C273.859 164.195 277.724 117.568 282.362 91.6641C287 65.7601 297.822 34.6752 297.822 34.6752H299.368M411.449 170.24V56.2619V34.6752M411.449 170.24L424.589 216.003L437.73 306.667L452.416 417.191C452.416 417.191 452.416 437.051 452.416 448.276C452.416 459.501 465.557 455.184 465.557 455.184C465.557 455.184 554.449 456.911 554.449 448.276C554.449 439.641 549.038 421.509 549.038 392.151C549.038 362.793 549.038 320.483 549.038 320.483C549.038 320.483 546.719 285.944 546.719 261.767C546.719 237.59 549.038 222.911 549.038 193.553C549.038 164.195 545.173 117.568 540.535 91.6641C535.897 65.7601 525.076 34.6752 525.076 34.6752H411.449M411.449 34.6752H299.368M299.368 34.6752V1H522.757V32.0848M307.097 78.7121H355.022V91.6641M307.097 76.9851L306.324 77.8486L307.097 81.3025V91.6641M307.097 91.6641V117.568L309.416 126.203L313.281 131.384H321.011H343.427L350.384 122.749L355.022 114.114V104.616V91.6641M307.097 91.6641H355.022M497.249 78.7121H449.324V91.6641M497.249 76.9851L498.022 77.8486L497.249 81.3025V91.6641M497.249 91.6641V117.568L494.93 126.203L491.065 131.384H483.335H460.919L453.962 122.749L449.324 114.114V104.616V91.6641M497.249 91.6641H449.324"
+                stroke="#C4C4C4"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+          <svg
+            width="173"
+            height="620"
+            viewBox="0 0 173 620"
+            fill="none"
+            class="svg svg-btn"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g opacity="0.05">
+              <path
+                d="M55.0177 3C55.0177 3 175.693 89.7918 169.408 132.54C163.123 175.288 60.0459 233.581 39.9333 282.806C19.8207 332.031 163.123 365.712 169.408 401.983C175.693 438.254 131.682 501.918 48.7325 538"
+                stroke="#E3C0D3"
+                stroke-width="6"
                 stroke-linecap="round"
               />
-            </svg>
-          </a>
+              <ellipse cx="79" cy="538.5" rx="79" ry="81.5" fill="#C4C4C4" />
+              <ellipse cx="79" cy="537.5" rx="71" ry="71.5" fill="#122932" />
+              <circle cx="79.5" cy="538.5" r="62.5" fill="#C4C4C4" />
+              <ellipse cx="99" cy="558.5" rx="15" ry="14.5" fill="black" />
+              <ellipse cx="100" cy="519.5" rx="15" ry="14.5" fill="black" />
+              <ellipse cx="60" cy="558.5" rx="15" ry="14.5" fill="black" />
+              <ellipse cx="61.5" cy="519.5" rx="15.5" ry="14.5" fill="black" />
+            </g>
+          </svg>
+          <p class="subheading-secondary">Angebot</p>
+          <h2 class="heading-secondary">
+            <span class="heading-secondary--first">Sie</span> haben die
+            <span class="heading-secondary--emphasized">Vision</span>, ich setze
+            sie um
+          </h2>
+
+          <h3 class="heading-tertiary">Modernes Design</h3>
+          <p class="textbox textbox-angebot">
+            Ich lege grossen Wert auf moderne Layouts und Designs kombiniert mit
+            der bestmöglichen Benutzerfreundlichkeit. Sei es mit gängigen
+            Werkzeugen wie Wordpress, Squarespace etc. oder komplett von Hand
+            zusammengeschneidert; Ihr Webauftritt soll der Ort sein, wo Ihre
+            Zielgruppe bestmöglichst aufgehoben ist.
+          </p>
+          <h3 class="heading-tertiary">Unterhalt & Support</h3>
+          <p class="textbox textbox-angebot">
+            Ein Webauftritt ist selten statisch, immer wieder wollen/sollen
+            Änderungen und Verbesserungen vorgenommen werden. Deshalb bin ich
+            auch nach der Fertigstellung jederzeit für Sie da - versprochen!
+          </p>
+          <h3 class="heading-tertiary">Selbständige Inhaltsbewirtschaftung</h3>
+          <p class="textbox textbox-angebot">
+            Dank einfach verfügbarer Werkzeuge wie Wordpress, Squarespace etc.
+            sind Sie in der Lage, die Inhalte Ihres Webauftritts nach
+            Fertigstellung selbständig zu bewirtschaften. Und das, ohne
+            Programmierkentnisse mitzubringen. Gerne gebe ich Ihnen eine
+            Einführung, sei es in Form eines aufgezeichneten Video-Tutorials
+            oder Live und in Farbe.
+          </p>
+
+          <h4 class="heading-quaternary">Damit können Sie rechnen</h4>
+          <div class="container-cards">
+            <div class="cards card-one">
+              <p class="heading-cards">Effizient & <br />Unkompliziert</p>
+              <div class="container-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-clock"
+                >
+                  <path
+                    d="M12 4V6"
+                    stroke="#e3c0d3"
+                    stroke-opacity="0.25"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M12 11.9996L6.05859 6.06641"
+                    stroke="#e3c0d3"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M20 12L18 12"
+                    stroke="#e3c0d3"
+                    stroke-opacity="0.25"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M12 18V20"
+                    stroke="#e3c0d3"
+                    stroke-opacity="0.25"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M6 12L4 12"
+                    stroke="#e3c0d3"
+                    stroke-opacity="0.25"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M12 3.6C13.9434 3.6 15.8266 4.27384 17.3289 5.50671C18.8312 6.73958 19.8595 8.4552 20.2386 10.3612C20.6177 12.2673 20.3242 14.2458 19.4081 15.9597C18.492 17.6736 17.01 19.0169 15.2145 19.7606C13.4191 20.5043 11.4213 20.6024 9.56161 20.0383C7.7019 19.4742 6.09534 18.2827 5.01565 16.6668C3.93597 15.0509 3.44996 13.1107 3.64045 11.1767C3.83093 9.24263 4.68612 7.43448 6.06031 6.0603"
+                    stroke="#e3c0d3"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+
+              <p class="text-cards">
+                Ich trödle nicht gerne und komme meist schnell und direkt zur
+                Sache.
+              </p>
+            </div>
+            <div class="cards card-two">
+              <p class="heading-cards">Kunden-<br />orientiert</p>
+              <div class="container-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-smiley"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9.5"
+                    stroke="#e3c0d3"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    cx="9"
+                    cy="10"
+                    r="1"
+                    fill="#e3c0d3"
+                    stroke="#e3c0d3"
+                    stroke-linecap="round"
+                  />
+                  <circle
+                    cx="15"
+                    cy="10"
+                    r="1"
+                    fill="#e3c0d3"
+                    stroke="#e3c0d3"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8.62889 15C8.34911 15 8.20922 15 8.13459 15.1068C8.05996 15.2136 8.10323 15.3318 8.18977 15.5683C8.70589 16.9788 10.2167 18 12 18C13.7834 18 15.2941 16.9788 15.8102 15.5683C15.8968 15.3318 15.9401 15.2136 15.8654 15.1068C15.7908 15 15.6509 15 15.3711 15H8.62889Z"
+                    fill="#e3c0d3"
+                  />
+                </svg>
+              </div>
+              <p class="text-cards">
+                Ihr Produkt und Ihre Vision stehen zu jedem Zeitpunkt im
+                Vordergrund.
+              </p>
+            </div>
+            <div class="cards card-three">
+              <p class="heading-cards">Remote <br />Unterstützung</p>
+              <div class="container-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-desktop"
+                >
+                  <path
+                    d="M7 5H17C17.9711 5 18.5988 5.00212 19.0613 5.06431C19.495 5.12262 19.631 5.21677 19.7071 5.29289C19.7832 5.36902 19.8774 5.50496 19.9357 5.9387C19.9979 6.40121 20 7.02892 20 8V16H4V8C4 7.02892 4.00212 6.40121 4.06431 5.9387C4.12262 5.50496 4.21677 5.36902 4.29289 5.29289C4.36902 5.21677 4.50496 5.12262 4.9387 5.06431C5.40121 5.00212 6.02892 5 7 5Z"
+                    stroke="#e3c0d3"
+                    stroke-width="1.2"
+                  />
+                  <path
+                    d="M20.3333 16H3.66667C2.74619 16 2 16.7462 2 17.6667C2 18.9553 3.04467 20 4.33333 20H19.6667C20.9553 20 22 18.9553 22 17.6667C22 16.7462 21.2538 16 20.3333 16Z"
+                    stroke="#e3c0d3"
+                    stroke-width=""
+                  />
+                </svg>
+              </div>
+              <p class="text-cards">
+                Ich arbeite von überall aus und kann somit jederzeit auf Ihre
+                Wünsche eingehen.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section-main section-schneider" id="section-schneider">
-      <div class="container-section"></div>
-    </section>
+      <section class="section-main section-portfolio" id="section-portfolio">
+        <div class="container-section">
+          <p class="subheading-secondary">Portfolio</p>
+          <h2 class="heading-secondary">
+            <span class="heading-secondary--first">Meine</span> Arbeit auf einen
+            Blick
+          </h2>
+          <div class="container-portfolio">
+            <div class="img-macbook">
+              <button class="btn btn-arrow btn-arrow--left hide">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-btn-arrow--left"
+                >
+                  <path
+                    d="M9 12L8.29289 11.2929L7.58579 12L8.29289 12.7071L9 12ZM14.2929 5.29289L8.29289 11.2929L9.70711 12.7071L15.7071 6.70711L14.2929 5.29289ZM8.29289 12.7071L14.2929 18.7071L15.7071 17.2929L9.70711 11.2929L8.29289 12.7071Z"
+                    fill="#717f84"
+                  />
+                </svg>
+              </button>
+              <button class="btn btn-arrow btn-arrow--right">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-btn-arrow--right"
+                >
+                  <path
+                    d="M15 12L15.7071 11.2929L16.4142 12L15.7071 12.7071L15 12ZM9.70711 5.29289L15.7071 11.2929L14.2929 12.7071L8.29289 6.70711L9.70711 5.29289ZM15.7071 12.7071L9.70711 18.7071L8.29289 17.2929L14.2929 11.2929L15.7071 12.7071Z"
+                    fill="#717f84"
+                  />
+                </svg>
+              </button>
+              <img
+                src="content/img/portfolio/mockup-macbook.png"
+                class="mockup-macbook"
+                width="736"
+                height="468"
+              />
 
-    <section class="section-kontakt" id="section-kontakt"></section>
+              <div class="img-container img-container--y7music">
+                <a
+                  href="http://www.y7music.ch"
+                  target="_blank"
+                  class="portfolio-link portfolio-link--y7music"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 3H21.5V2.5H21V3ZM10.6464 12.6464C10.4512 12.8417 10.4512 13.1583 10.6464 13.3536C10.8417 13.5488 11.1583 13.5488 11.3536 13.3536L10.6464 12.6464ZM13 3.5L21 3.5V2.5L13 2.5V3.5ZM20.5 3V11H21.5V3H20.5ZM20.6464 2.64645L10.6464 12.6464L11.3536 13.3536L21.3536 3.35355L20.6464 2.64645Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M9 4V4C7.13077 4 6.19615 4 5.5 4.40192C5.04394 4.66523 4.66523 5.04394 4.40192 5.5C4 6.19615 4 7.13077 4 9V14C4 16.8284 4 18.2426 4.87868 19.1213C5.75736 20 7.17157 20 10 20H15C16.8692 20 17.8038 20 18.5 19.5981C18.9561 19.3348 19.3348 18.9561 19.5981 18.5C20 17.8038 20 16.8692 20 15V15"
+                      stroke="white"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="description-portfolio">
+              <h3 class="heading-tertiary heading-portfolio">
+                Y7-Music aus Zofingen
+              </h3>
+              <p class="textbox textbox--portfolio">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Aperiam molestiae id facere excepturi voluptatem, voluptates
+                mollitia, iure ipsam vero dignissimos laudantium dolorum, autem
+                veritatis alias dolorem numquam nesciunt repellat doloremque.
+              </p>
+              <a
+                href="http://www.y7music.ch"
+                target="_blank"
+                class="link link-y7music"
+                >Hier geht's zur Website</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-main section-schneider" id="section-schneider">
+        <div class="container-section">
+          <p class="subheading-secondary">Der Schneider</p>
+          <h2 class="heading-secondary">
+            <span class="heading-secondary--first">Mit</span> wem Sie es zu tun
+            haben werden
+          </h2>
+
+          <div class="content-schneider">
+            <div class="container-img">
+              <figure class="img-box-schneider">
+                <img
+                  src="content/img/schneider/der-schneider.jpeg"
+                  class="img img-schneider"
+                />
+              </figure>
+            </div>
+            <p class="textbox textbox-schneider">
+              Mein Name ist Brian Boy. <br /><br />
+
+              Geboren und aufgewachsen in Thun. Nach abgeschlossener Berufslehre
+              folgt ein Bachelorstudium an der Zürcher Hochschule der Künste mit
+              Schwerpunkt Jazz-Gitarre. Im Jahr 2019 schliesslich der
+              Masterabschluss mit Lehrdiplom.
+              <br />
+              <br />
+              Aktuell bin ich als Berufsmusiker in der ganzen Schweiz und im
+              Ausland unterwegs. Zudem unterrichte ich an der Musikschule Region
+              Thun akustische und elektrische Gitarre sowie Ukulele.
+              <br />
+              <br />
+              Im Jahr 2019 habe ich mich dazu entschieden, mir nebst meiner
+              musikalischen Tätigkeit noch ein zweites Standbein als Webdesigner
+              und -entwickler aufzubauen.
+              <br />
+              <br />
+              Und so ist der Seitenschneider entstanden.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section-kontakt" id="section-kontakt"></section>
+    </main>
 
     <footer class="footer"></footer>
   </body>

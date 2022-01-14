@@ -5,7 +5,7 @@
 :root {
   /*Background-Colors*/
   --main-background-bright: rgb(238, 238, 238);
-  --main-background-dark: rgb(18, 41, 50);
+  --main-background-dark: #122932;
 
   --secondary-background-bright: rgb(255, 255, 255);
 
@@ -86,6 +86,10 @@ a:visited {
   color: inherit;
 }
 
+p {
+  width: clamp(45ch, 100%, 75ch);
+}
+
 /********************************************/
 /* GENERAL LAYOUT SETTINGS */
 /********************************************/
@@ -101,6 +105,7 @@ section {
 
 .container-section {
   margin-bottom: 9.6rem;
+  position: relative;
 }
 
 .textbox {
@@ -149,11 +154,12 @@ section {
 .subheading-primary--emphasized {
   font-weight: 400;
   font-style: italic;
+  margin-left: -0.6rem;
 }
 
 .heading-secondary {
   font-size: 5.2rem;
-  width: 60vw;
+  width: clamp(5ch, 100%, 16ch);
   line-height: 1;
 
   margin-bottom: 3.2rem;

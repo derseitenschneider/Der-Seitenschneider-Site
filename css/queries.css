@@ -1,0 +1,10 @@
+/********************************************/
+/* BIGGER THAN 2000px */
+/********************************************/
+
+@media (min-width: 125em) {
+  .container-section {
+    max-width: calc(200rem / 100 * 60);
+    margin-left: calc((100vw - 200rem) / 2);
+  }
+}
