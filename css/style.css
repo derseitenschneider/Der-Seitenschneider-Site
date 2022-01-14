@@ -305,6 +305,7 @@
 .img-macbook {
   position: relative;
   top: 0;
+  overflow: hidden;
 }
 
 .img-container {
@@ -314,11 +315,17 @@
   top: 6.34rem;
   left: 9.54rem;
 
-  background-size: 100%;
+  overflow: hidden;
 }
-.img-container:hover {
-  background-position: bottom;
-  transition: background-position 15s;
+
+.img-page {
+  transform: translateY(0);
+
+  transition: transform 5s;
+}
+.img-container:hover .img-page {
+  transform: translateY(calc(-100% + 34.1rem));
+  transition: transform 15s;
 }
 
 .img-container--y7music {
@@ -334,9 +341,13 @@
   z-index: 2;
 }
 
-.description-portfolio {
+.container-description {
   overflow: hidden;
 }
+
+/* .description-portfolio {
+  overflow: hidden;
+} */
 
 .description-portfolio .link {
   position: relative;
@@ -362,6 +373,10 @@
 .description-portfolio .link:hover::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+.move-left {
+  transform: translateX(-100%);
 }
 
 /******************************************/

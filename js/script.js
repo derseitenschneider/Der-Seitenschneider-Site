@@ -22,6 +22,12 @@ const navLinkPortfolio = document.querySelector(".nav-link--portfolio");
 const navLinkSchneider = document.querySelector(".nav-link--schneider");
 const navLinkKontakt = document.querySelector(".nav-link--kontakt");
 
+//Portfolio Gallery
+const btnToLeft = document.querySelector(".btn-arrow--left");
+const btnToRight = document.querySelector(".btn-arrow--right");
+
+const currentPortfolio = document.querySelectorAll(".current");
+
 //ARRAYS
 
 //Array Nav Links
@@ -69,3 +75,7 @@ scrollIntoView(sectionKontaktEL, navLinkKontakt, "nav-current");
 /////////////////////////////////////////////////////////////////////
 // HANDLER //
 /////////////////////////////////////////////////////////////////////
+
+btnToRight.addEventListener("click", function () {
+  currentPortfolio.forEach((el) => el.classList.add("move-left"));
+});
