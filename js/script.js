@@ -26,7 +26,10 @@ const navLinkKontakt = document.querySelector(".nav-link--kontakt");
 const btnToLeft = document.querySelector(".btn-arrow--left");
 const btnToRight = document.querySelector(".btn-arrow--right");
 
-const currentPortfolio = document.querySelectorAll(".current");
+const allPortfolios = document.querySelectorAll(".img-portfolio");
+const allDescriptions = document.querySelectorAll(".description-portfolio");
+
+console.log(allDescriptions);
 
 //ARRAYS
 
@@ -72,10 +75,36 @@ scrollIntoView(sectionPortfolioEL, navLinkPortfolio, "nav-current");
 scrollIntoView(sectionSchneiderEL, navLinkSchneider, "nav-current");
 scrollIntoView(sectionKontaktEL, navLinkKontakt, "nav-current");
 
+//Portfolio Slide
+
+let slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs((slideIndex += n));
+}
+
+function showDivs(n) {
+  if (n > allPortfolios.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = allPortfolios.length;
+  }
+  for (let i = 0; i < allPortfolios.length; i++) {
+    allPortfolios[i].classList.remove("show");
+    allDescriptions[i].classList.remove("show");
+  }
+  allPortfolios[slideIndex - 1].classList.add("show");
+  allDescriptions[slideIndex - 1].classList.add("show");
+}
+
+console.log(slideIndex);
+
 /////////////////////////////////////////////////////////////////////
 // HANDLER //
 /////////////////////////////////////////////////////////////////////
 
-btnToRight.addEventListener("click", function () {
-  currentPortfolio.forEach((el) => el.classList.add("move-left"));
-});
+// btnToRight.addEventListener("click", function () {
+//   currentPortfolio.forEach((el) => el.classList.add("move-left"));
+// });

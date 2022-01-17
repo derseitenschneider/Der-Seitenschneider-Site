@@ -88,6 +88,19 @@
   display: flex;
   align-items: flex-end;
 }
+.content-section-right {
+  opacity: 0.2;
+  transform: scale(0.5);
+
+  transition: all 1s;
+}
+
+.section-right:hover .content-section-right {
+  opacity: 1;
+  transform: scale(1);
+
+  cursor: url(../content/img/schneider/der-schneider.jpeg) 15 15, move;
+}
 
 /* Navigation */
 
@@ -277,6 +290,8 @@
   flex-direction: column;
   align-items: left;
   gap: 3.2rem;
+
+  /* overflow: hidden; */
 }
 
 .btn-arrow {
@@ -291,7 +306,6 @@
 
 .btn-arrow--right {
   right: 0;
-  top: ;
 }
 
 .btn-arrow--left:hover {
@@ -302,13 +316,15 @@
   transform: translateX(1rem);
 }
 
-.img-macbook {
+.frame-macbook {
   position: relative;
-  top: 0;
+
   overflow: hidden;
+
+  /* z-index: 1; */
 }
 
-.img-container {
+.container-img-portfolio {
   position: absolute;
   width: 54.55rem;
   height: 34.1rem;
@@ -318,20 +334,36 @@
   overflow: hidden;
 }
 
+.img-portfolio {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateX(100%);
+
+  transition: transform 0.5s;
+}
+
+.img-portfolio.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translateX(0);
+}
+
 .img-page {
   transform: translateY(0);
 
   transition: transform 5s;
-}
-.img-container:hover .img-page {
-  transform: translateY(calc(-100% + 34.1rem));
-  transition: transform 15s;
+
+  filter: blur(2);
 }
 
-.img-container--y7music {
-  background-position: top;
-  background-image: url(../content/img/portfolio/y7music-full.png);
-  transition: background-position 5s;
+.img-page:hover {
+  cursor: pointer;
+  transform: translateY(calc(-100% + 34.1rem));
+  transition: transform 15s;
 }
 
 .portfolio-link {
@@ -342,12 +374,31 @@
 }
 
 .container-description {
-  overflow: hidden;
+  position: relative;
+  height: 20rem;
 }
 
 /* .description-portfolio {
   overflow: hidden;
 } */
+
+.description-portfolio {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.3s;
+}
+
+.description-portfolio.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
 .description-portfolio .link {
   position: relative;
@@ -373,10 +424,6 @@
 .description-portfolio .link:hover::after {
   transform: scaleX(1);
   transform-origin: left;
-}
-
-.move-left {
-  transform: translateX(-100%);
 }
 
 /******************************************/
