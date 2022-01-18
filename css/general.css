@@ -99,8 +99,8 @@ section {
 }
 
 .section-main {
-  padding: 8rem 6.4rem;
-  width: 60vw;
+  padding: 8rem 9.6rem;
+  width: 100vw;
 }
 
 .container-section {
@@ -136,6 +136,25 @@ section {
   line-height: 1;
 
   margin-bottom: 2.4rem;
+}
+
+.heading-primary--emphasized {
+  position: relative;
+}
+
+.heading-primary--emphasized::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: 0 auto;
+  z-index: -1;
+
+  width: 80%;
+  height: 0.5rem;
+  background-color: var(--main-accent-color);
 }
 
 .subheading-primary {

@@ -175,15 +175,17 @@
 /******************************************/
 
 .section-hero {
-  width: 60vw;
-  padding: 18rem 12.6rem;
+  width: 100vw;
 
   position: relative;
 
   background-color: var(--main-background-dark);
   z-index: 2;
-  display: flex;
-  align-items: center;
+
+  background-image: linear-gradient(to right, #122932, rgba(18, 41, 50, 0.39)),
+    url("../content/img/hero/webdesign.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .svg {
@@ -211,18 +213,30 @@
   flex-direction: column;
 }
 
+.container-hero {
+  padding: 8rem 12.8rem;
+}
+
 .btn-hero {
   width: auto;
   padding: 1.6rem 3.2rem;
   background: var(--main-accent-color);
+
+  margin: 0 auto;
+
+  border-radius: 1.2rem;
 
   font-size: 2.4rem;
   font-weight: 600;
 }
 
 .container-heading {
+  margin-top: 12rem;
+
   display: flex;
   flex-direction: column;
+
+  align-self: flex-start;
 }
 
 /******************************************/
@@ -236,6 +250,11 @@
 
 .textbox-angebot:last-of-type {
   margin-bottom: 8rem;
+}
+
+.wrapper-cards {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .container-cards {
@@ -287,8 +306,8 @@
 .container-portfolio {
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: left;
+
+  align-items: center;
   gap: 3.2rem;
 
   /* overflow: hidden; */
