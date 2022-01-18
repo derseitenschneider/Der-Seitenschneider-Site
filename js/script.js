@@ -26,10 +26,9 @@ const navLinkKontakt = document.querySelector(".nav-link--kontakt");
 const btnToLeft = document.querySelector(".btn-arrow--left");
 const btnToRight = document.querySelector(".btn-arrow--right");
 
-const allPortfolios = document.querySelectorAll(".img-portfolio");
-const allDescriptions = document.querySelectorAll(".description-portfolio");
-
-console.log(allDescriptions);
+const slideImages = document.querySelectorAll(".slide-img");
+const btnPortfolioLeft = document.querySelector(".btn-arrow--left");
+const btnPortfolioRight = document.querySelector(".btn-arrow--right");
 
 //ARRAYS
 
@@ -78,29 +77,44 @@ scrollIntoView(sectionKontaktEL, navLinkKontakt, "nav-current");
 //Portfolio Slide
 
 let slideIndex = 1;
-showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs((slideIndex += n));
-}
+const slideToRight = function () {
+  slideImages[slideIndex - 1].classList.add("active");
+  slideImages[slideIndex - 1].classList.remove("to-right");
+  slideImages[slideIndex - 2].classList.add("to-left");
+};
 
-function showDivs(n) {
-  if (n > allPortfolios.length) {
-    slideIndex = 1;
+const slideToLeft = function () {
+  slideImages[slideIndex - 1].classList.add("active");
+  slideImages[slideIndex - 1].classList.remove("to-left");
+  slideImages[slideIndex].classList.add("to-right");
+};
+
+const updateSlideIndex = function (number) {
+  //When sliding left
+  if (number < 0) {
+    if (slideIndex > 1) {
+      slideIndex += number;
+      slideToLeft();
+      if (slideIndex <= 1) {
+        btnPortfolioLeft.classList.add("btn-inactive");
+      }
+    }
   }
-  if (n < 1) {
-    slideIndex = allPortfolios.length;
+  //When sliding right
+  if (number > 0) {
+    if (slideIndex < slideImages.length) {
+      {
+        slideIndex += number;
+        slideToRight();
+        btnPortfolioLeft.classList.remove("btn-inactive");
+      }
+    }
+    if (slideIndex >= slideImages.length) {
+      btnPortfolioRight.classList.add("btn-inactive");
+    }
   }
-  for (let i = 0; i < allPortfolios.length; i++) {
-    allPortfolios[i].classList.remove("show");
-    allDescriptions[i].classList.remove("show");
-  }
-  allPortfolios[slideIndex - 1].classList.add("show");
-  allDescriptions[slideIndex - 1].classList.add("show");
-}
-
-console.log(slideIndex);
-
+};
 /////////////////////////////////////////////////////////////////////
 // HANDLER //
 /////////////////////////////////////////////////////////////////////
