@@ -294,110 +294,45 @@
   /* overflow: hidden; */
 }
 
-.btn-arrow {
-  position: absolute;
-  top: 40%;
-  transition: transform 450ms;
-}
-
-.btn-arrow--left {
-  left: 0;
-}
-
-.btn-arrow--right {
-  right: 0;
-}
-
-.btn-arrow--left:hover {
-  transform: translateX(-1rem);
-}
-
-.btn-arrow--right:hover {
-  transform: translateX(1rem);
-}
-
-.frame-macbook {
+.container-screen {
   position: relative;
-
-  overflow: hidden;
-
-  /* z-index: 1; */
+  display: flex;
+  align-items: center;
 }
 
-.container-img-portfolio {
-  position: absolute;
-  width: 54.55rem;
-  height: 34.1rem;
-  top: 6.34rem;
-  left: 9.54rem;
+.btn-inactive {
+  opacity: 0.3;
 
-  overflow: hidden;
-}
-
-.img-portfolio {
-  opacity: 0;
-  visibility: hidden;
   pointer-events: none;
-
-  transform: translateX(100%);
-
-  transition: transform 0.5s;
 }
 
-.img-portfolio.show {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-
-  transform: translateX(0);
+.img-screen {
+  position: relative;
+  width: 60rem;
 }
 
-.img-page {
+.container-slide {
+  position: absolute;
+  top: 52px;
+  left: 78px;
+
+  width: 44.4rem;
+  height: 27.8rem;
+
+  overflow: hidden;
+
+  background-color: red;
+}
+
+.img-slide {
   transform: translateY(0);
 
   transition: transform 5s;
-
-  filter: blur(2);
 }
 
-.img-page:hover {
-  cursor: pointer;
-  transform: translateY(calc(-100% + 34.1rem));
+.container-slide:hover .img-slide {
+  transform: translateY(calc(-100% + 27.8rem));
   transition: transform 15s;
-}
-
-.portfolio-link {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  z-index: 2;
-}
-
-.container-description {
-  position: relative;
-  height: 20rem;
-}
-
-/* .description-portfolio {
-  overflow: hidden;
-} */
-
-.description-portfolio {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  transition: opacity 0.3s;
-}
-
-.description-portfolio.show {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
 }
 
 .description-portfolio .link {
