@@ -301,7 +301,11 @@
 }
 
 .btn-arrow {
-  transition: opacity 1s;
+  transition: opacity 1s, transform 0.45s;
+}
+
+.btn-arrow:hover {
+  transform: scale(1.1);
 }
 
 .btn-inactive {
@@ -341,7 +345,7 @@
   pointer-events: auto;
   transform: translateX(0);
 
-  transition: background-position 15s, transform 1s ease;
+  transition: background-position 12s, transform 1s ease;
 }
 
 .slide-img.to-left {
@@ -353,29 +357,49 @@
   transform: translateX(100%);
 }
 
-.slide-img--y7music {
-  background-image: url(../content/img/portfolio/y7music-full.png);
+.img-page {
+  transform: translateY(0);
+  transition: transform 5s;
+  z-index: -1;
 }
 
-.slide-img--marabu {
-  background-image: url(../content/img/portfolio/marabu-beach.png);
-}
-
-.slide-img:hover {
-  background-position: bottom;
-  transition: background-position 15s;
+.wrapper-img-page:hover .img-page {
+  transform: translateY(calc(-100% + 27.8rem));
+  transition: transform 15s;
 }
 
 .slide-link {
   display: block;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 0.5rem;
+  top: 0.5rem;
+
+  z-index: 1;
 }
 
 .icon-slide-link {
   height: 2.4rem;
   width: 2.4rem;
+}
+
+.container-slide-description {
+  min-height: 30rem;
+}
+
+.slide-description {
+  position: absolute;
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  transition: opacity 1s;
+}
+
+.slide-description.active {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 .description-link {

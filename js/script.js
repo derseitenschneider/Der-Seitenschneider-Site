@@ -27,6 +27,7 @@ const btnToLeft = document.querySelector(".btn-arrow--left");
 const btnToRight = document.querySelector(".btn-arrow--right");
 
 const slideImages = document.querySelectorAll(".slide-img");
+const slideDescriptions = document.querySelectorAll(".slide-description");
 const btnPortfolioLeft = document.querySelector(".btn-arrow--left");
 const btnPortfolioRight = document.querySelector(".btn-arrow--right");
 
@@ -78,27 +79,52 @@ scrollIntoView(sectionKontaktEL, navLinkKontakt, "nav-current");
 
 let slideIndex = 1;
 
+const slideDescriptionUpdate = function () {
+  slideDescriptions.forEach((element) => element.classList.remove("active"));
+  slideDescriptions[slideIndex - 1].classList.add("active");
+};
+
 const slideToRight = function () {
-  slideImages[slideIndex - 1].classList.add("active");
-  slideImages[slideIndex - 1].classList.remove("to-right");
+  //Slide Images
+  let currentSlide = slideImages[slideIndex - 1];
+  currentSlide.classList.add("active");
+  currentSlide.classList.remove("to-right");
   slideImages[slideIndex - 2].classList.add("to-left");
+
+  //Make Btn-Left active
+  btnPortfolioLeft.classList.remove("btn-inactive");
+
+  //Make Btn-Right inactive when last Slide
+  if (slideIndex >= slideImages.length) {
+    btnPortfolioRight.classList.add("btn-inactive");
+  }
+
+  slideDescriptionUpdate();
 };
 
 const slideToLeft = function () {
-  slideImages[slideIndex - 1].classList.add("active");
-  slideImages[slideIndex - 1].classList.remove("to-left");
+  let currentSlide = slideImages[slideIndex - 1];
+
+  currentSlide.classList.add("active");
+  currentSlide.classList.remove("to-left");
   slideImages[slideIndex].classList.add("to-right");
+
+  //Make Btn-Right active
+  btnPortfolioRight.classList.remove("btn-inactive");
+
+  //Make Btn-Left inactive when first slide
+  if (slideIndex == 1) {
+    btnPortfolioLeft.classList.add("btn-inactive");
+  }
+  slideDescriptionUpdate();
 };
 
 const updateSlideIndex = function (number) {
   //When sliding left
   if (number < 0) {
     if (slideIndex > 1) {
-      slideIndex += number;
+      slideIndex = number + slideIndex;
       slideToLeft();
-      if (slideIndex <= 1) {
-        btnPortfolioLeft.classList.add("btn-inactive");
-      }
     }
   }
   //When sliding right
@@ -107,11 +133,7 @@ const updateSlideIndex = function (number) {
       {
         slideIndex += number;
         slideToRight();
-        btnPortfolioLeft.classList.remove("btn-inactive");
       }
-    }
-    if (slideIndex >= slideImages.length) {
-      btnPortfolioRight.classList.add("btn-inactive");
     }
   }
 };
