@@ -4,18 +4,26 @@
 
 :root {
   /*Background-Colors*/
-  --main-background-bright: rgb(238, 238, 238);
+  /* --main-background-bright: rgb(238, 238, 238); */
+
+  /* --secondary-background-bright: rgb(255, 255, 255); */
+
+  /*Text-Colors*/
+  /* --main-text-color-dark: rgb(18, 41, 50);
+  --main-text-color-bright: rgb(238, 238, 238);
+  --secondary-
+
+  /*Background-Colors*/
+  --main-background-bright: #faf6f0;
   --main-background-dark: #122932;
 
-  --secondary-background-bright: rgb(255, 255, 255);
+  /*Text-Colors*/
+  --main-text-color-dark: hsl(197, 47%, 13%);
+  --main-text-color-medium: hsl(197, 47%, 25%);
+  --main-text-color-bright: rgb(238, 238, 238);
 
   /*Accent Color*/
   --main-accent-color: #e3c0d3;
-
-  /*Text-Colors*/
-  --main-text-color-dark: rgb(18, 41, 50);
-  --main-text-color-bright: rgb(238, 238, 238);
-  --secondary-text-color-bright: rgb(196, 196, 196);
 }
 
 /********************************************/
@@ -48,6 +56,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Montserrat", sans-serif;
   color: var(--main-text-color-dark);
+  background-color: var(--main-background-bright);
 }
 
 img,
@@ -129,10 +138,11 @@ section {
 /********************************************/
 
 .heading-primary {
-  font-family: "Abril Fatface", cursive;
-  font-size: 8.6rem;
+  /* font-family: "Abril Fatface", cursive; */
+  font-family: "Min-sans";
+  font-size: 8.8rem;
   font-weight: 400;
-  color: #eee;
+
   line-height: 1;
 
   margin-bottom: 2.4rem;
@@ -140,40 +150,42 @@ section {
 
 .heading-primary--emphasized {
   position: relative;
+  color: var(--main-text-color-medium);
+
+  /* background-image: linear-gradient(
+    to right,
+    #eeeeee,
+    #e3c0d3,
+    #122932,
+    #e3c0d3,
+    #eeeeee
+  );
+  background-size: 400%;
+  background-position: right;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+
+  /* animation-name: gradientMove;
+  animation-duration: 3s;
+  animation-delay: 2s; */
+  /* animation-iteration-count: infinite;
+  animation-direction: alternate-reverse; */
 }
 
 .heading-primary--emphasized::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+
   right: 0;
 
   margin: 0 auto;
   z-index: -1;
 
-  width: 80%;
+  width: 70%;
   height: 0.5rem;
   background-color: var(--main-accent-color);
-}
-
-.subheading-primary {
-  width: 75%;
-  align-self: flex-end;
-
-  /* font-family: "Montserrat", sans-serif; */
-  font-size: 3rem;
-  font-weight: 200;
-
-  color: var(--secondary-text-color-bright);
-
-  margin-bottom: 12.8rem;
-}
-
-.subheading-primary--emphasized {
-  font-weight: 400;
-  font-style: italic;
-  margin-left: -0.6rem;
 }
 
 .heading-secondary {

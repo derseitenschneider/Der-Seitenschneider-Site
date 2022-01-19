@@ -8,34 +8,31 @@
 }
 
 .container-header {
-  max-width: 200rem;
-
   margin: 0 auto;
   padding: 2rem 2rem;
 
-  position: absolute;
+  /* position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
+  width: 100%; */
 
   display: flex;
   justify-content: space-between;
 }
 
 .logo-header {
-  transform: rotate(-90deg);
   position: relative;
 }
 
 .logo {
-  position: absolute;
-  right: 0;
-  top: 0.8rem;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
 }
 
-.logo::after {
+/* .logo::after {
   content: "";
   position: absolute;
   left: 0;
@@ -43,7 +40,7 @@
   height: 0.4rem;
   width: 6.3rem;
   background-color: var(--main-accent-color);
-}
+} */
 
 .logo:link,
 .logo:visited {
@@ -52,140 +49,24 @@
   color: var(--main-accent-color);
 }
 
-.container-social {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  text-align: right;
-  z-index: 9;
-}
-
-.social-link:link,
-.social-link:visited {
-  /* display: block; */
-  font-family: inherit;
-
-  text-decoration: underline;
-  text-transform: uppercase;
-}
-
-/******************************************/
-/* SECTION RIGHT */
-/******************************************/
-
-.section-right {
-  height: 100vh;
-  width: 40vw;
-
-  padding: 6.4rem 9.6rem;
-
-  background-color: var(--main-background-bright);
-
-  z-index: 2;
-
-  /* float: right; */
-
-  display: flex;
-  align-items: flex-end;
-}
-.content-section-right {
-  opacity: 0.2;
-  transform: scale(0.5);
-
-  transition: all 1s;
-}
-
-.section-right:hover .content-section-right {
-  opacity: 1;
-  transform: scale(1);
-
-  cursor: url(../content/img/schneider/der-schneider.jpeg) 15 15, move;
-}
-
-/* Navigation */
-
-.main-nav {
-  background-color: var(--main-background-bright);
-  position: relative;
-  padding: 1.8rem 3.6rem;
-}
-
-.nav-frame {
-  position: absolute;
-  height: 120%;
-  width: 100%;
-
-  top: -50%;
-  left: 25%;
-  z-index: -1;
-
-  background-image: linear-gradient(
-    to right,
-    var(--main-accent-color),
-    #ccadbe,
-    #b69aa9,
-    #9f8694,
-    var(--main-background-dark)
-  );
-  background-size: 400%;
-  background-position: left;
-
-  animation: backgroundGradient 20s infinite alternate;
-}
-
-.nav-frame::after {
-  content: "";
-  position: absolute;
-  left: 3%;
-  top: 3%;
-  height: 94%;
-  width: 94%;
-  background-color: var(--main-background-bright);
-}
-
-.nav-list {
-  display: flex;
-  flex-direction: column;
-
-  gap: 1.6rem;
-}
-
-.nav-el {
-  font-family: "Montserrat", sans-serif;
-  font-size: 3.6rem;
-}
-
-.nav-el a:link,
-.nav-el a:visited {
-  display: inline-block;
-  /* transform: translateX(0); */
-
-  transition: all 450ms;
-}
-
-.nav-el a:hover,
-.nav-el a:active,
-.nav-el a:focus,
-.nav-el .nav-current {
-  transform: translateX(2rem);
-}
-
 /******************************************/
 /* SECTION HERO */
 /******************************************/
 
 .section-hero {
   width: 100vw;
+  height: 100vh;
 
   position: relative;
 
-  background-color: var(--main-background-dark);
   z-index: 2;
 
-  background-image: linear-gradient(to right, #122932, rgba(18, 41, 50, 0.39)),
+  /* background-image: linear-gradient(to top, #122932, rgba(18, 41, 50, 0.39)),
     url("../content/img/hero/webdesign.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+
+  /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80vh); */
 }
 
 .svg {
@@ -214,85 +95,34 @@
 }
 
 .container-hero {
-  padding: 8rem 12.8rem;
+  max-width: 200rem;
+  margin: 0 auto;
+
+  padding: 13rem;
 }
 
 .btn-hero {
+  /* display: inline-block; */
   width: auto;
   padding: 1.6rem 3.2rem;
-  background: var(--main-accent-color);
 
-  margin: 0 auto;
+  color: var(--main-text-color-bright);
+  background: var(--main-background-dark);
 
-  border-radius: 1.2rem;
-
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .container-heading {
   margin-top: 12rem;
+  margin-bottom: 8rem;
+  width: 60vw;
 
-  display: flex;
+  /* display: flex;
   flex-direction: column;
 
-  align-self: flex-start;
-}
-
-/******************************************/
-/* SECTION ANGEBOT */
-/******************************************/
-
-.section-angebot {
-  background-color: var(--main-background-bright);
-  z-index: 999;
-}
-
-.textbox-angebot:last-of-type {
-  margin-bottom: 8rem;
-}
-
-.wrapper-cards {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.container-cards {
-  display: flex;
-  gap: 2.4rem;
-  z-index: 2;
-}
-
-.cards {
-  position: relative;
-
-  width: calc(100% / 3);
-}
-
-.heading-cards {
-  font-size: 2.4rem;
-  /* text-align: center; */
-  text-transform: uppercase;
-}
-
-.container-icon {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  margin-top: 1.6rem;
-  margin-bottom: 0.8rem;
-}
-
-.icon {
-  height: 6.4rem;
-  width: 6.4rem;
-}
-
-.text-cards {
-  font-size: 1.6rem;
-  width: 100%;
-  /* text-align: center; */
+  align-self: flex-start; */
 }
 
 /******************************************/
@@ -300,7 +130,14 @@
 /******************************************/
 
 .section-portfolio {
-  background-color: var(--main-background-bright);
+  background-color: var(--main-background-dark);
+  color: var(--main-text-color-bright);
+}
+
+.section-portfolio .subheading-secondary,
+.section-portfolio .heading-secondary,
+section- {
+  color: var(--main-text-color-bright);
 }
 
 .container-portfolio {
@@ -320,6 +157,7 @@
 }
 
 .btn-arrow {
+  background: none;
   transition: opacity 1s, transform 0.45s;
 }
 
@@ -396,7 +234,7 @@
   z-index: 1;
 }
 
-.icon-slide-link {
+.slide-link .icon {
   height: 2.4rem;
   width: 2.4rem;
 }
@@ -445,6 +283,62 @@
 .description-link:hover::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+/******************************************/
+/* SECTION ANGEBOT */
+/******************************************/
+
+.section-angebot {
+  background-color: var(--main-background-bright);
+  z-index: 999;
+}
+
+.textbox-angebot:last-of-type {
+  margin-bottom: 8rem;
+}
+
+.wrapper-cards {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container-cards {
+  display: flex;
+  gap: 2.4rem;
+  z-index: 2;
+}
+
+.cards {
+  position: relative;
+
+  width: calc(100% / 3);
+}
+
+.heading-cards {
+  font-size: 2.4rem;
+  /* text-align: center; */
+  text-transform: uppercase;
+}
+
+.container-icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.icon {
+  height: 6.4rem;
+  width: 6.4rem;
+}
+
+.text-cards {
+  font-size: 1.6rem;
+  width: 100%;
+  /* text-align: center; */
 }
 
 /******************************************/

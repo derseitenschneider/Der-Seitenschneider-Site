@@ -11,3 +11,12 @@
     background-position: right;
   }
 }
+
+@keyframes gradientMove {
+  from {
+    background-position: left;
+  }
+  tp {
+    background-position: right;
+  }
+}
