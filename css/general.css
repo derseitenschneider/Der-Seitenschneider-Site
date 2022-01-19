@@ -24,6 +24,10 @@
 
   /*Accent Color*/
   --main-accent-color: #e3c0d3;
+
+  /*Shades*/
+  --background-shade-one: #f0ebdf;
+  --background-shade-two: #f0ebdf;
 }
 
 /********************************************/
@@ -57,6 +61,8 @@ body {
   font-family: "Montserrat", sans-serif;
   color: var(--main-text-color-dark);
   background-color: var(--main-background-bright);
+
+  overflow-x: hidden;
 }
 
 img,
@@ -189,7 +195,9 @@ section {
 }
 
 .heading-secondary {
+  font-family: "Min-sans";
   font-size: 5.2rem;
+  font-weight: 400;
   width: clamp(5ch, 100%, 16ch);
   line-height: 1;
 

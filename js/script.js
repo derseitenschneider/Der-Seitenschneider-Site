@@ -22,6 +22,9 @@ const navLinkPortfolio = document.querySelector(".nav-link--portfolio");
 const navLinkSchneider = document.querySelector(".nav-link--schneider");
 const navLinkKontakt = document.querySelector(".nav-link--kontakt");
 
+//Carousel Heading
+const headingCarousel = document.querySelectorAll(".el-carousel");
+
 //Portfolio Gallery
 const btnToLeft = document.querySelector(".btn-arrow--left");
 const btnToRight = document.querySelector(".btn-arrow--right");
@@ -46,34 +49,29 @@ const navLinksArr = [
 // FUNCTIONS //
 /////////////////////////////////////////////////////////////////////
 
-//Intersection Observer
+//CAROUSEL HEADING
 
-const scrollIntoView = function (element, target, addClass) {
-  // const target = targetLink;
-  const options = {
-    root: null,
-    threshold: [0.75],
-  };
-
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        navLinksArr.forEach((entry) => entry.classList.remove(addClass));
-        if (!element.classList.contains("section-hero"))
-          target.classList.add(addClass);
-      }
-    });
-  }, options);
-  observer.observe(element);
+const hideRotationElement = function (element) {
+  element.classList.remove("active");
+  element.classList.add("previous");
 };
 
-// scrollIntoView(sectionHeroEL);
+const showRotationElement = function (element) {
+  element.classList.add("active");
+};
 
-scrollIntoView(sectionHeroEL, null, "nav-current");
-scrollIntoView(sectionAngebotEL, navLinkAngebot, "nav-current");
-scrollIntoView(sectionPortfolioEL, navLinkPortfolio, "nav-current");
-scrollIntoView(sectionSchneiderEL, navLinkSchneider, "nav-current");
-scrollIntoView(sectionKontaktEL, navLinkKontakt, "nav-current");
+let i = 0;
+
+const rotationLoop = function () {
+  setTimeout(function () {
+    hideRotationElement(headingCarousel[i]);
+    i++;
+    showRotationElement(headingCarousel[i]);
+    if (i < headingCarousel.length - 1) rotationLoop();
+  }, 2000);
+};
+
+rotationLoop();
 
 //Portfolio Slide
 
