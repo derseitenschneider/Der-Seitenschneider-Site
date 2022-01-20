@@ -70,7 +70,6 @@
 
 .section-hero {
   width: 100vw;
-  height: 100vh;
 
   position: relative;
 
@@ -85,12 +84,13 @@
 }
 
 .container-heading {
-  margin-top: 12rem;
-  margin-bottom: 12rem;
-  width: 60vw;
+  /* margin-top: 12rem; */
+  margin-bottom: 14rem;
+  width: 100%;
 }
 
 .heading-carousel {
+  margin-top: 1.6rem;
   height: 6rem;
   color: var(--main-text-color-medium);
 }
@@ -178,6 +178,7 @@ section- {
 } */
 
 .container-portfolio {
+  width: 100%;
   position: relative;
   display: flex;
 
@@ -189,23 +190,41 @@ section- {
 
 .container-screen {
   position: relative;
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 }
 
 .btn-arrow {
   background: none;
+  position: absolute;
+  top: 44%;
+
+  width: 6.4rem;
   transition: opacity 1s, transform 0.45s;
+}
+
+.btn-arrow--left {
+  left: 0;
+}
+
+.btn-arrow--right {
+  right: 0;
 }
 
 .btn-arrow:hover {
   transform: scale(1.1);
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2));
 }
 
 .btn-inactive {
   opacity: 0.3;
 
   pointer-events: none;
+}
+
+.btn-arrow .icon {
+  width: 6.4rem;
+  height: 6.4rem;
 }
 
 .img-screen {
@@ -324,10 +343,10 @@ section- {
 }
 
 .overhang-square--left {
-  height: 50rem;
-  width: 20vw;
+  height: 50%;
+  width: 35%;
 
-  top: 25%;
+  top: 15%;
   left: 0;
 
   background-color: var(--background-shade-two);
@@ -342,8 +361,82 @@ section- {
   z-index: 999;
 }
 
-.textbox-angebot:last-of-type {
-  margin-bottom: 8rem;
+.icon-angebot {
+  display: block;
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  fill: var(--main-text-color-medium);
+  /* height: 16rem; */
+}
+
+.svg-angebot {
+  position: relative;
+  z-index: 1;
+}
+
+.svg-angebot--design::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150%;
+  height: 150%;
+
+  border-radius: 100%;
+
+  opacity: 0.5;
+
+  background-color: var(--background-shade-three);
+  z-index: -1;
+}
+
+.svg-angebot--support::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: 150%;
+  height: 150%;
+
+  transform-origin: center left;
+
+  transform: rotate(-20deg);
+
+  border-radius: 1.2rem;
+
+  opacity: 0.5;
+
+  background-color: var(--background-shade-three);
+  z-index: -1;
+}
+
+.svg-angebot--inhalt::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150%;
+  height: 150%;
+
+  border-top: 0 solid transparent;
+  border-left: 112.5px solid transparent;
+  border-right: 112.5px solid transparent;
+  border-bottom: 22.5rem solid var(--background-shade-three);
+
+  transform: rotate(10deg);
+  transform-origin: bottom right;
+
+  opacity: 0.5;
+
+  z-index: -1;
+}
+
+.section-angebot .grid--2-cols {
+  margin-bottom: 9.6rem;
 }
 
 .wrapper-cards {
@@ -376,11 +469,6 @@ section- {
 
   margin-top: 1.6rem;
   margin-bottom: 0.8rem;
-}
-
-.icon {
-  height: 6.4rem;
-  width: 6.4rem;
 }
 
 .text-cards {
@@ -448,10 +536,3 @@ section- {
 /******************************************/
 /* SECTION KONTAKT */
 /******************************************/
-
-.section-kontakt {
-  background-color: #122932;
-  width: 100vw;
-  position: absolute;
-  z-index: 9;
-}

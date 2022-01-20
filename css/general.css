@@ -18,7 +18,7 @@
   --main-background-dark: #122932;
 
   /*Text-Colors*/
-  --main-text-color-dark: hsl(197, 47%, 13%);
+  --main-text-color-dark: #122831;
   --main-text-color-medium: hsl(197, 47%, 25%);
   --main-text-color-bright: rgb(238, 238, 238);
 
@@ -28,6 +28,7 @@
   /*Shades*/
   --background-shade-one: #f0ebdf;
   --background-shade-two: #f0ebdf;
+  --background-shade-three: #918132;
 }
 
 /********************************************/
@@ -103,6 +104,7 @@ a:visited {
 
 p {
   width: clamp(45ch, 100%, 75ch);
+  line-height: 2;
 }
 
 /********************************************/
@@ -110,16 +112,20 @@ p {
 /********************************************/
 
 section {
-  min-height: 100vh;
+  height: clamp(100%, 100vh, 200rem);
 }
 
 .section-main {
   padding: 8rem 9.6rem;
   width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 .container-section {
-  margin-bottom: 9.6rem;
+  width: 100%;
+  max-width: 200rem;
+  margin-bottom: 12rem;
   position: relative;
 }
 
@@ -139,6 +145,12 @@ section {
   cursor: pointer;
 }
 
+/*Icons*/
+
+.icon {
+  display: block;
+}
+
 /********************************************/
 /* HEADINGS */
 /********************************************/
@@ -146,12 +158,10 @@ section {
 .heading-primary {
   /* font-family: "Abril Fatface", cursive; */
   font-family: "Min-sans";
-  font-size: 8.8rem;
+  font-size: 10rem;
   font-weight: 400;
 
-  line-height: 1;
-
-  margin-bottom: 2.4rem;
+  line-height: 0.9;
 }
 
 .heading-primary--emphasized {
@@ -197,11 +207,13 @@ section {
 .heading-secondary {
   font-family: "Min-sans";
   font-size: 5.2rem;
-  font-weight: 400;
-  width: clamp(5ch, 100%, 16ch);
+  font-weight: 600;
+  width: clamp(5ch, 100%, 18ch);
   line-height: 1;
 
-  margin-bottom: 3.2rem;
+  color: var(--main-text-color-medium);
+
+  margin-bottom: 4.8rem;
 }
 
 .subheading-secondary {
@@ -209,7 +221,7 @@ section {
   font-weight: 200;
   text-transform: uppercase;
 
-  margin-bottom: 0.8rem;
+  /* margin-bottom: 0.8rem; */
 }
 
 .heading-secondary--first {
@@ -232,9 +244,9 @@ section {
 
 .heading-tertiary {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 500;
 
-  margin-bottom: 0.4rem;
+  margin-bottom: 1.2rem;
 }
 
 .heading-quaternary {
@@ -251,4 +263,14 @@ section {
   position: fixed;
   right: 0;
   top: 0;
+}
+
+.grid--2-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: flex-end;
+
+  row-gap: 12.8rem;
+  column-gap: 2.4rem;
 }
