@@ -14,21 +14,26 @@
   --secondary-
 
   /*Background-Colors*/
-  --main-background-bright: #faf6f0;
+  /* --main-background-bright: rgb(250, 246, 240); */
+  --main-background-bright: #dddddd;
   --main-background-dark: #122932;
 
   /*Text-Colors*/
   --main-text-color-dark: #122831;
-  --main-text-color-medium: hsl(197, 47%, 25%);
-  --main-text-color-bright: rgb(238, 238, 238);
+  --main-text-color-medium: #224d5e;
+  /* --main-text-color-bright: rgb(238, 238, 238); */
+  --main-text-color-bright: rgb(221, 221, 221);
 
   /*Accent Color*/
   --main-accent-color: #e3c0d3;
 
   /*Shades*/
-  --background-shade-one: #f0ebdf;
-  --background-shade-two: #f0ebdf;
-  --background-shade-three: #918132;
+  /* --background-shade-one: #f0ebdf; */
+  --background-shade-one: #d29651;
+  /* --background-shade-two: #f0ebdf; */
+  --background-shade-two: hsl(32, 59%, 75%);
+  /* --background-shade-three: #918132; */
+  --background-shade-three: hsl(32, 59%, 40%);
 }
 
 /********************************************/
@@ -54,6 +59,7 @@ body {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  --web
 }
 
 body {
@@ -111,28 +117,29 @@ p {
 /* GENERAL LAYOUT SETTINGS */
 /********************************************/
 
-section {
+/* section {
   height: clamp(100%, 100vh, 200rem);
-}
+} */
 
 .section-main {
-  padding: 8rem 9.6rem;
+  padding: 8rem 2rem;
   width: 100vw;
   display: flex;
   justify-content: center;
 }
 
 .container-section {
-  width: 100%;
+  padding: 0 3.2rem;
+  margin: 0 12rem 4.8rem 12rem;
   max-width: 200rem;
-  margin-bottom: 12rem;
+  /* margin-bottom: 12rem; */
   position: relative;
 }
 
 .textbox {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 
-  margin-bottom: 3.2rem;
+
 }
 
 /*Buttons*/
@@ -233,8 +240,12 @@ section {
   position: absolute;
   top: 0;
   left: -1rem;
+
   height: 100%;
-  width: 0.4rem;
+  width: .4rem;
+
+  transform: skew(0, -30deg);
+
   background-color: var(--main-accent-color);
 }
 
@@ -246,12 +257,12 @@ section {
   font-size: 3rem;
   font-weight: 500;
 
-  margin-bottom: 1.2rem;
+  margin-bottom: .8rem;
 }
 
 .heading-quaternary {
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 2.4rem;
 }
 
