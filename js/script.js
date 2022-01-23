@@ -68,7 +68,7 @@ const rotationLoop = function () {
     i++;
     showRotationElement(headingCarousel[i]);
     if (i < headingCarousel.length - 1) rotationLoop();
-  }, 2000);
+  }, 3000);
 };
 
 rotationLoop();
