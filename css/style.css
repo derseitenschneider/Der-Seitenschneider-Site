@@ -9,7 +9,9 @@
 
 .container-header {
   margin: 0 auto;
-  padding: 2rem 2rem;
+  padding: 2rem 3vw;
+
+  background-color: transparent;
 
   /* position: absolute;
   top: 0;
@@ -70,7 +72,7 @@
 
 .section-hero {
   width: 100vw;
-  height: min(100vh, 100rem);
+  height: min(100vh, 80rem);
 
   position: relative;
 
@@ -157,6 +159,7 @@
 .section-portfolio {
   color: var(--main-text-color-dark);
   position: relative;
+  z-index: 1;
 }
 
 /* .section-portfolio .subheading-secondary,
@@ -456,8 +459,8 @@ section- {
 
   border-radius: 100%;
 
-  top: -10rem;
-  right: -25rem;
+  top: -12.5%;
+  right: -12.5%;
   z-index: 2;
 }
 
@@ -538,7 +541,7 @@ section- {
   position: relative;
   text-align: center;
 
-  height: 36rem;
+  height: 38rem;
   background-color: var(--main-background-bright);
 
   border-radius: 12px;
@@ -609,7 +612,7 @@ section- {
 }
 
 .heading-cards {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   text-align: center;
   width: 100%;
   text-transform: uppercase;
@@ -626,7 +629,7 @@ section- {
 }
 
 .text-cards {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   width: 100%;
   /* text-align: center; */
 }
@@ -636,7 +639,7 @@ section- {
 /******************************************/
 
 .section-contact {
-  border-right: 12rem solid var(--background-shade-one);
+  /* border-right: 12rem solid var(--background-shade-one); */
 }
 .section-contact .heading-secondary {
   width: clamp(5ch, 100%, 20ch);
@@ -653,6 +656,7 @@ section- {
   align-items: center;
   position: relative;
 }
+
 .container-contact {
   position: absolute;
   top: 0;
@@ -666,6 +670,10 @@ section- {
   box-shadow: 0 1.2rem 1.2rem rgba(0, 0, 0, 0.208);
 
   z-index: 1;
+}
+
+.container-adress {
+  line-height: 1.5;
 }
 
 .container-contact::after {
@@ -693,7 +701,17 @@ section- {
 .list-contact {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 3.2rem;
+}
+
+.contact-el {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.icon-contact {
+  fill: #ddddddc7;
 }
 
 .form-list {
@@ -703,6 +721,7 @@ section- {
 }
 
 .form-el {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -713,20 +732,151 @@ section- {
 }
 
 .form-el input {
-  height: 2.4rem;
+  height: 3.2rem;
+  padding: 1.8rem 0.8rem;
+
+  /* box-shadow: 0 1.2rem 1.2rem rgba(0, 0, 0, 0.137); */
 }
 
 .form-el textarea {
-  height: 100%;
+  resize: none;
+  height: auto;
+  padding: 0.8rem;
 }
 
 .form-el input,
 .form-el textarea {
+  position: relative;
   font-family: sans-serif;
   font-size: 1.8rem;
-  padding: 1.6rem 0.8rem;
+
+  background: hsl(0, 0%, 91%);
+  border: none;
+}
+
+.form-el input:focus,
+.form-el textarea:focus {
+  outline: none;
+}
+
+.form-el:not(:last-of-type)::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  height: 0.3rem;
+  width: 100%;
+
+  background-color: var(--main-text-color-medium);
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.form-el:focus-within::after {
+  transform: scaleX(1);
 }
 
 .btn-form {
   width: fit-content;
+}
+
+/******************************************/
+/* FOOTER */
+/******************************************/
+
+.footer {
+  position: relative;
+
+  width: 100vw;
+  padding: 6.4rem 3.2rem;
+
+  display: flex;
+  gap: 12.8rem;
+  align-items: flex-start;
+
+  z-index: -1;
+
+  background-color: var(--background-shade-one);
+}
+.footer .heading-secondary {
+  display: inline-block;
+  font-size: 3.6rem;
+  color: var(--main-text-color-medium);
+  margin-bottom: 0;
+}
+
+.footer-row {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3.6rem;
+}
+
+.container-social-footer {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.container-copyright p {
+  line-height: 1;
+}
+
+.icon-social {
+  fill: var(--main-text-color-medium);
+}
+
+.nav-list--footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.nav-link--footer {
+  font-size: 1.6rem;
+}
+
+.el-footer {
+  position: fixed;
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--main-text-color-medium);
+
+  z-index: -2;
+}
+
+.el-footer--circle {
+  bottom: 30%;
+  right: 2vw;
+
+  border-radius: 100%;
+
+  /* opacity: 0.5; */
+}
+
+.el-footer--square {
+  bottom: 25%;
+  right: 25%;
+
+  transform: rotate(30deg);
+}
+
+.el-footer--triangle {
+  bottom: 10%;
+  right: 25%;
+
+  background-color: transparent;
+
+  width: 10rem;
+  height: 10rem;
+
+  border-top: 0 solid transparent;
+  border-left: 5rem solid transparent;
+  border-right: 5rem solid transparent;
+  border-bottom: 10rem solid var(--main-text-color-medium);
+
+  transform: rotate(-28deg);
 }
