@@ -164,10 +164,17 @@ html::-webkit-scrollbar {
   font-size: 1.6rem;
   font-weight: 600;
   text-transform: uppercase;
+
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
   cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--main-text-color-medium);
 }
 
 /*Icons*/
@@ -175,12 +182,13 @@ html::-webkit-scrollbar {
 .icon {
   display: block;
 }
-body::after,
+.header::after,
+.section-hero::after,
 .section-main::after {
   content: "";
   position: absolute;
   right: 0;
-  top: 0;
+  bottom: 0;
   background-color: var(--background-shade-one);
   height: 100%;
   width: 2vw;
