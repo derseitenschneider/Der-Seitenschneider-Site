@@ -506,6 +506,7 @@ section- {
   position: relative;
 
   transform: translate(15%, 20%) scale(1.1);
+  /* z-index: 1; */
 }
 
 .img-box-schneider::before {
@@ -527,9 +528,11 @@ section- {
 
 .section-schneider .textbox {
   color: var(--main-text-color-bright);
-  background-color: var(--main-background-dark);
+  /* background-color: var(--main-background-dark); */
+  background-color: transparent;
   padding: 0 2.4rem;
   z-index: 1;
+  backdrop-filter: blur(1);
 }
 
 .section-schneider .heading-tertiary {
