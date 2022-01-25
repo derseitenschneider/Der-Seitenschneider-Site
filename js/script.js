@@ -6,6 +6,8 @@
 
 //Main Components
 
+const body = document.querySelector("body");
+
 const headerEL = document.querySelector(".header");
 
 const sectionRightEl = document.querySelector(".section-right");
@@ -91,10 +93,12 @@ const slideToRight = function () {
 
   //Make Btn-Left active
   btnPortfolioLeft.classList.remove("btn-inactive");
+  btnPortfolioLeft.removeAttribute("tabindex");
 
   //Make Btn-Right inactive when last Slide
   if (slideIndex >= slideImages.length) {
     btnPortfolioRight.classList.add("btn-inactive");
+    btnPortfolioRight.setAttribute("tabindex", -1);
   }
 
   slideDescriptionUpdate();
@@ -109,10 +113,12 @@ const slideToLeft = function () {
 
   //Make Btn-Right active
   btnPortfolioRight.classList.remove("btn-inactive");
+  btnPortfolioRight.removeAttribute("tabindex");
 
   //Make Btn-Left inactive when first slide
   if (slideIndex == 1) {
     btnPortfolioLeft.classList.add("btn-inactive");
+    btnPortfolioLeft.setAttribute("tabindex", -1);
   }
   slideDescriptionUpdate();
 };
@@ -135,6 +141,37 @@ const updateSlideIndex = function (number) {
     }
   }
 };
+
+//Sticky Nav
+
+const addStickyHeader = function () {
+  body.classList.add("sticky");
+};
+
+const removeStickyHeader = function () {
+  body.classList.remove("sticky");
+};
+
+let optionsHero = {
+  root: null,
+  rootMargin: "-80px",
+  threshold: 0,
+};
+
+let observerHero = new IntersectionObserver(function (entries) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      addStickyHeader();
+    }
+
+    if (entry.isIntersecting) {
+      removeStickyHeader();
+    }
+  });
+}, optionsHero);
+
+observerHero.observe(sectionHeroEL);
+
 /////////////////////////////////////////////////////////////////////
 // HANDLER //
 /////////////////////////////////////////////////////////////////////

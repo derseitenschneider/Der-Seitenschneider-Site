@@ -22,7 +22,7 @@
   --main-text-color-dark: #122831;
   --main-text-color-medium: #224d5e;
   /* --main-text-color-bright: rgb(238, 238, 238); */
-  --main-text-color-bright: rgb(221, 221, 221);
+  --main-text-color-bright: #dddddd;
 
   /*Accent Color*/
   --main-accent-color: #e3c0d3;
@@ -67,6 +67,8 @@ html {
 }
 
 body {
+  position: relative;
+
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: "Montserrat", sans-serif;
@@ -314,6 +316,15 @@ html::-webkit-scrollbar {
   z-index: 10;
 }
 
+.sticky .header {
+  background-color: #eee;
+  width: 100%;
+  position: fixed;
+  top: 0;
+
+  opacity: 0.9;
+}
+
 .container-header {
   margin: 0 auto;
   padding: 2rem 3vw;
@@ -331,8 +342,16 @@ html::-webkit-scrollbar {
   justify-content: space-between;
 }
 
+.sticky .container-header {
+  padding: 0 3vw;
+}
+
 .logo-header {
   position: relative;
+}
+
+.sticky .icon-logo {
+  width: 4rem;
 }
 
 .logo:link,
@@ -346,6 +365,7 @@ html::-webkit-scrollbar {
 
 .main-nav {
   display: flex;
+  align-items: center;
 }
 
 .nav-el {
@@ -435,7 +455,7 @@ html::-webkit-scrollbar {
 .nav-list--footer {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 0.8rem;
 }
 
 .nav-link--footer:focus {

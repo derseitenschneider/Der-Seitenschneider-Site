@@ -11,6 +11,10 @@
   z-index: 2;
 }
 
+.sticky .section-hero {
+  margin-top: 10rem;
+}
+
 .container-hero {
   max-width: 200rem;
   margin: 0 auto;
@@ -94,12 +98,6 @@
   z-index: 1;
 }
 
-/* .section-portfolio .subheading-secondary,
-.section-portfolio .heading-secondary,
-section- {
-  color: var(--main-text-color-bright);
-} */
-
 .container-portfolio.grid--2-cols {
   align-items: center;
 
@@ -108,19 +106,18 @@ section- {
   column-gap: 6.4rem;
   row-gap: 0;
 }
+
 .container-header--portfolio {
   grid-column: 2/3;
 }
 
-.container-screen {
+/*Container left (slide-images)*/
+
+.container-portfolio--left {
   position: relative;
   justify-self: end;
   /* display: flex;
   align-items: center; */
-}
-
-.container-right {
-  height: fit-content;
 }
 
 .btn-arrow {
@@ -140,9 +137,20 @@ section- {
   right: 0;
 }
 
-.btn-arrow:hover {
-  transform: scale(1.1);
+.btn-arrow path {
+  fill: var(--main-text-color-dark);
+}
+
+.btn-arrow:hover,
+.btn-arrow:focus {
+  transform: scale(1.2);
   filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2));
+  fill: red;
+}
+
+.btn-arrow:hover path,
+.btn-arrow:focus path {
+  fill: var(--main-text-color-medium);
 }
 
 .btn-inactive {
@@ -225,6 +233,12 @@ section- {
   width: 2.4rem;
 }
 
+/*Container right (slide-description)*/
+
+.container-portfolio--right {
+  height: fit-content;
+}
+
 .container-slide-description {
   position: relative;
 }
@@ -249,10 +263,18 @@ section- {
   display: block;
 }
 
-.description-link {
+.description-link:link,
+.description-link:visited {
   position: relative;
   font-size: 1.8rem;
   font-weight: 600;
+}
+
+.description-link:hover,
+.description-link:active,
+.description-link:focus {
+  color: var(--main-text-color-medium);
+  border: none;
 }
 
 .description-link::after {
@@ -270,7 +292,8 @@ section- {
   transition: transform 450ms;
 }
 
-.description-link:hover::after {
+.description-link:hover::after,
+.description-link:focus::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -405,7 +428,8 @@ section- {
 .content-schneider {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 8rem;
+  gap: 1.6rem;
+  margin-bottom: 15.8rem;
 }
 
 .container-img {
@@ -430,8 +454,8 @@ section- {
   height: 100%;
   width: 100%;
 
-  background-color: var(--background-shade-one);
-  opacity: 0.18;
+  background-color: var(--main-text-color-dark);
+  opacity: 0.4;
 }
 
 .img-schneider {
