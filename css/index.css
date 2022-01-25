@@ -1,88 +1,4 @@
 /******************************************/
-/* HEADER */
-/******************************************/
-
-.header {
-  width: 100vw;
-  z-index: 10;
-}
-
-.container-header {
-  margin: 0 auto;
-  padding: 2rem 3vw;
-
-  background-color: transparent;
-
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%; */
-
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo-header {
-  position: relative;
-}
-
-.logo:link,
-.logo:visited {
-  font-family: "Montserrat", cursive;
-  font-size: 2rem;
-  letter-spacing: 1px;
-  line-height: 0.5;
-  color: var(--background-shade-one);
-}
-
-.main-nav {
-  display: flex;
-}
-
-.nav-el {
-  padding: 1rem 1.2rem;
-}
-
-.nav-link:link,
-.nav-link:visited {
-  position: relative;
-  font-size: 1.6rem;
-}
-
-.nav-link::after {
-  content: "";
-
-  position: absolute;
-  bottom: -0.2rem;
-  left: 0;
-
-  width: 100%;
-  height: 0.2rem;
-
-  background-color: var(--main-accent-color);
-
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.45s;
-}
-
-.nav-link:hover,
-.nav-link:active,
-.nav-link:focus {
-  color: var(--main-text-color-medium);
-  border: none;
-}
-
-.nav-link:hover::after,
-.nav-link:active::after,
-.nav-link:focus::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-/******************************************/
 /* SECTION HERO */
 /******************************************/
 
@@ -185,9 +101,10 @@ section- {
 } */
 
 .container-portfolio.grid--2-cols {
-  /* grid-template-columns: 1vw; */
-  justify-items: stretch;
   align-items: center;
+
+  justify-content: center;
+
   column-gap: 6.4rem;
   row-gap: 0;
 }
@@ -203,7 +120,7 @@ section- {
 }
 
 .container-right {
-  height: 100%;
+  height: fit-content;
 }
 
 .btn-arrow {
@@ -310,7 +227,6 @@ section- {
 
 .container-slide-description {
   position: relative;
-  min-height: 35rem;
 }
 
 .slide-description {
@@ -331,10 +247,6 @@ section- {
   visibility: visible;
 
   display: block;
-}
-
-.textbox--portfolio {
-  margin-bottom: 2.4rem;
 }
 
 .description-link {
@@ -530,7 +442,7 @@ section- {
   color: var(--main-text-color-bright);
   /* background-color: var(--main-background-dark); */
   background-color: transparent;
-  padding: 0 2.4rem;
+  /* padding: 0 2.4rem; */
   z-index: 1;
   backdrop-filter: blur(1);
 }
@@ -658,7 +570,7 @@ section- {
 /******************************************/
 
 .section-contact {
-  /* border-right: 12rem solid var(--background-shade-one); */
+  border-right: 12rem solid var(--background-shade-one);
 }
 .section-contact .heading-secondary {
   width: clamp(5ch, 100%, 20ch);
@@ -801,104 +713,4 @@ section- {
 
 .btn-form {
   width: fit-content;
-}
-
-/******************************************/
-/* FOOTER */
-/******************************************/
-
-.footer {
-  position: relative;
-
-  width: 100vw;
-  padding: 6.4rem 3.2rem;
-
-  display: flex;
-  gap: 12.8rem;
-  align-items: flex-start;
-
-  z-index: -1;
-
-  background-color: var(--background-shade-one);
-}
-.footer .heading-secondary {
-  display: inline-block;
-  font-size: 3.6rem;
-  color: var(--main-text-color-medium);
-  margin-bottom: 0;
-}
-
-.footer-row {
-  display: flex;
-  flex-direction: column;
-
-  gap: 3.6rem;
-}
-
-.container-social-footer {
-  display: flex;
-  gap: 1.2rem;
-}
-
-.container-copyright p {
-  line-height: 1;
-}
-
-.icon-social {
-  fill: var(--main-text-color-medium);
-}
-
-.nav-list--footer {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-
-.nav-link--footer {
-  font-size: 1.6rem;
-}
-
-.el-footer {
-  position: absolute;
-  width: 10rem;
-  height: 10rem;
-  background-color: var(--main-text-color-medium);
-}
-/* .footer-row--right {
-  width: 100%;
-  position: relative;
-  display: block;
-} */
-
-.el-footer--circle {
-  top: 2rem;
-  right: 12%;
-
-  border-radius: 100%;
-
-  /* opacity: 0.5; */
-}
-
-.el-footer--square {
-  bottom: 10rem;
-  right: 25%;
-
-  transform: rotate(30deg);
-}
-
-.el-footer--triangle {
-  bottom: 10%;
-  right: 15%;
-
-  background-color: transparent;
-
-  width: 10rem;
-  height: 10rem;
-
-  border-top: 0 solid transparent;
-  border-left: 5rem solid transparent;
-  border-right: 5rem solid transparent;
-  border-bottom: 10rem solid var(--main-text-color-medium);
-
-  transform: rotate(-28deg);
 }

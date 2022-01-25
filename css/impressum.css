@@ -1,0 +1,37 @@
+.section-impressum {
+  border-right: 12rem solid var(--background-shade-one);
+}
+
+.section-impressum ul {
+  font-size: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.section-impressum p {
+  width: clamp(45ch, 100%, 100ch);
+}
+
+.section-impressum li {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+.container-impressum {
+  margin-bottom: 12.8rem;
+}
+
+.container-datenschutz {
+  position: relative;
+}
+
+.overhang-square--right {
+  position: absolute;
+  height: 20rem;
+  width: 25rem;
+
+  background-color: var(--background-shade-one);
+
+  top: -10rem;
+  right: -12rem;
+  z-index: 2;
+}

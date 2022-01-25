@@ -143,13 +143,14 @@ html::-webkit-scrollbar {
 .container-section {
   padding: 0 3.2rem;
   margin: 0 auto;
-  max-width: 200rem;
+  max-width: 150rem;
   margin-bottom: 12rem;
   position: relative;
 }
 
 .textbox {
   font-size: 1.6rem;
+  margin-bottom: 3.2rem;
 }
 
 /*Buttons*/
@@ -172,8 +173,8 @@ html::-webkit-scrollbar {
   cursor: pointer;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover:not(.btn-arrow),
+.btn:focus:not(.btn-arrow) {
   background-color: var(--main-text-color-medium);
 }
 
@@ -182,7 +183,7 @@ html::-webkit-scrollbar {
 .icon {
   display: block;
 }
-.header::after,
+/* .header::after,
 .section-hero::after,
 .section-main::after {
   content: "";
@@ -193,8 +194,8 @@ html::-webkit-scrollbar {
   height: 100%;
   width: 2vw;
 
-  /* border-right: 12rem solid var(--background-shade-one); */
-}
+
+} */
 
 /********************************************/
 /* HEADINGS */
@@ -302,6 +303,224 @@ html::-webkit-scrollbar {
   font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: 2.4rem;
+}
+
+/******************************************/
+/* HEADER */
+/******************************************/
+
+.header {
+  width: 100vw;
+  z-index: 10;
+}
+
+.container-header {
+  margin: 0 auto;
+  padding: 2rem 3vw;
+
+  background-color: transparent;
+
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%; */
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-header {
+  position: relative;
+}
+
+.logo:link,
+.logo:visited {
+  font-family: "Montserrat", cursive;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  line-height: 0.5;
+  color: var(--background-shade-one);
+}
+
+.main-nav {
+  display: flex;
+}
+
+.nav-el {
+  padding: 1rem 1.2rem;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+
+  width: 100%;
+  height: 0.2rem;
+
+  background-color: var(--main-accent-color);
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s;
+}
+
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus {
+  color: var(--main-text-color-medium);
+  border: none;
+}
+
+.nav-link:hover::after,
+.nav-link:active::after,
+.nav-link:focus::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/******************************************/
+/* FOOTER */
+/******************************************/
+
+.footer {
+  position: relative;
+
+  width: 100vw;
+  padding: 6.4rem 3.2rem;
+
+  display: flex;
+  gap: 12.8rem;
+  align-items: flex-start;
+
+  background-color: var(--background-shade-one);
+}
+.footer .heading-secondary {
+  display: inline-block;
+  font-size: 3.6rem;
+  color: var(--main-text-color-medium);
+  margin-bottom: 0;
+}
+
+.footer-row {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3.6rem;
+}
+
+.container-social-footer {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.container-copyright p {
+  line-height: 1;
+}
+
+.icon-social {
+  fill: var(--main-text-color-medium);
+}
+
+.nav-list--footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.nav-link--footer:focus {
+  border: none;
+}
+
+.nav-link--footer:link,
+.nav-link--footer:visited {
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.nav-link--footer:hover,
+.nav-link--footer:active,
+.nav-link--footer:focus {
+  color: var(--main-text-color-medium);
+}
+
+.nav-link--footer::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  height: 0.2rem;
+  width: 100%;
+
+  background-color: var(--main-text-color-medium);
+
+  transform: scale(0);
+  transform-origin: right;
+  transition: transform 0.35s;
+}
+
+.nav-link--footer:hover::after,
+.nav-link--footer:active::after,
+.nav-link--footer:focus::after {
+  transform: scale(1);
+  transform-origin: left;
+}
+
+.el-footer {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--main-text-color-medium);
+}
+/* .footer-row--right {
+  width: 100%;
+  position: relative;
+  display: block;
+} */
+
+.el-footer--circle {
+  top: 2rem;
+  right: 12%;
+
+  border-radius: 100%;
+
+  /* opacity: 0.5; */
+}
+
+.el-footer--square {
+  bottom: 10rem;
+  right: 25%;
+
+  transform: rotate(30deg);
+}
+
+.el-footer--triangle {
+  bottom: 10%;
+  right: 15%;
+
+  background-color: transparent;
+
+  width: 10rem;
+  height: 10rem;
+
+  border-top: 0 solid transparent;
+  border-left: 5rem solid transparent;
+  border-right: 5rem solid transparent;
+  border-bottom: 10rem solid var(--main-text-color-medium);
+
+  transform: rotate(-28deg);
 }
 
 /********************************************/
