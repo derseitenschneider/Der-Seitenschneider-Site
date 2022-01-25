@@ -4,24 +4,13 @@
 
 :root {
   /*Background-Colors*/
-  /* --main-background-bright: rgb(238, 238, 238); */
 
-  /* --secondary-background-bright: rgb(255, 255, 255); */
-
-  /*Text-Colors*/
-  /* --main-text-color-dark: rgb(18, 41, 50);
-  --main-text-color-bright: rgb(238, 238, 238);
-  --secondary-
-
-  /*Background-Colors*/
-  /* --main-background-bright: rgb(250, 246, 240); */
   --main-background-bright: #dddddd;
   --main-background-dark: #122932;
 
   /*Text-Colors*/
   --main-text-color-dark: #122831;
   --main-text-color-medium: #224d5e;
-  /* --main-text-color-bright: rgb(238, 238, 238); */
   --main-text-color-bright: #dddddd;
 
   /*Accent Color*/
@@ -124,10 +113,6 @@ p {
 /* GENERAL LAYOUT SETTINGS */
 /********************************************/
 
-/* section {
-  height: clamp(100%, 100vh, 200rem);
-} */
-
 html::-webkit-scrollbar {
   display: none;
 }
@@ -136,10 +121,6 @@ html::-webkit-scrollbar {
   padding: 12.8rem 2rem;
   width: 100vw;
   position: relative;
-  /* 
-  display: flex;
-  justify-content: center; */
-  /* border-right: 10rem solid var(--background-shade-one); */
 }
 
 .container-section {
@@ -185,19 +166,6 @@ html::-webkit-scrollbar {
 .icon {
   display: block;
 }
-/* .header::after,
-.section-hero::after,
-.section-main::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background-color: var(--background-shade-one);
-  height: 100%;
-  width: 2vw;
-
-
-} */
 
 /********************************************/
 /* HEADINGS */
@@ -215,26 +183,6 @@ html::-webkit-scrollbar {
 .heading-primary--emphasized {
   position: relative;
   color: var(--main-text-color-medium);
-
-  /* background-image: linear-gradient(
-    to right,
-    #eeeeee,
-    #e3c0d3,
-    #122932,
-    #e3c0d3,
-    #eeeeee
-  );
-  background-size: 400%;
-  background-position: right;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-
-  /* animation-name: gradientMove;
-  animation-duration: 3s;
-  animation-delay: 2s; */
-  /* animation-iteration-count: infinite;
-  animation-direction: alternate-reverse; */
 }
 
 .heading-primary--emphasized::after {
@@ -268,8 +216,6 @@ html::-webkit-scrollbar {
   font-size: 2rem;
   font-weight: 200;
   text-transform: uppercase;
-
-  /* margin-bottom: 0.8rem; */
 }
 
 .heading-secondary--first {
@@ -333,28 +279,17 @@ html::-webkit-scrollbar {
 
   background-color: transparent;
 
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%; */
-
   display: flex;
   justify-content: space-between;
 }
 
 .sticky .container-header {
-  padding: 0 3vw;
-}
-
-.logo-header {
-  position: relative;
+  padding: 0.4rem 3vw;
 }
 
 .sticky .icon-logo {
-  width: 1rem;
-  height: 1rem;
+  width: 4.4rem;
+  height: 4.4rem;
 }
 
 .logo:link,
@@ -365,11 +300,6 @@ html::-webkit-scrollbar {
   line-height: 0.5;
   color: var(--background-shade-one);
 }
-
-/* .icon-logo {
-  height: 6rem;
-  width: 6rem;
-} */
 
 .main-nav {
   display: flex;
@@ -454,6 +384,7 @@ html::-webkit-scrollbar {
 
 .container-copyright p {
   line-height: 1;
+  margin-bottom: 1.2rem;
 }
 
 .icon-social {
@@ -512,19 +443,12 @@ html::-webkit-scrollbar {
   height: 10rem;
   background-color: var(--main-text-color-medium);
 }
-/* .footer-row--right {
-  width: 100%;
-  position: relative;
-  display: block;
-} */
 
 .el-footer--circle {
   top: 2rem;
   right: 12%;
 
   border-radius: 100%;
-
-  /* opacity: 0.5; */
 }
 
 .el-footer--square {

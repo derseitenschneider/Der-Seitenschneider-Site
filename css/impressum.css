@@ -1,9 +1,14 @@
 .section-impressum {
   border-right: 12rem solid var(--background-shade-one);
+  padding: 8.6rem 2rem;
 }
 
 .sticky .section-impressum {
   margin-top: 10rem;
+}
+
+.section-impressum .heading-tertiary {
+  font-size: 2.4rem;
 }
 
 .section-impressum ul {
@@ -36,6 +41,6 @@
   background-color: var(--background-shade-one);
 
   top: -10rem;
-  right: -12rem;
+  right: -25%;
   z-index: 2;
 }

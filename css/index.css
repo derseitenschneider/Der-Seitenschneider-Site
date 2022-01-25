@@ -5,7 +5,6 @@
 .section-hero {
   width: 100vw;
   height: min(100vh, 80rem);
-
   position: relative;
 
   z-index: 2;
@@ -116,8 +115,6 @@
 .container-portfolio--left {
   position: relative;
   justify-self: end;
-  /* display: flex;
-  align-items: center; */
 }
 
 .btn-arrow {
@@ -145,7 +142,6 @@
 .btn-arrow:focus {
   transform: scale(1.2);
   filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.2));
-  fill: red;
 }
 
 .btn-arrow:hover path,
@@ -155,7 +151,6 @@
 
 .btn-inactive {
   opacity: 0.3;
-
   pointer-events: none;
 }
 
@@ -244,8 +239,6 @@
 }
 
 .slide-description {
-  /* position: absolute; */
-
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -325,7 +318,6 @@
   fill: var(--main-text-color-medium);
 
   filter: drop-shadow(0 12px 8px rgba(0, 0, 0, 0.2));
-  /* height: 16rem; */
 }
 
 .svg-angebot {
@@ -343,8 +335,6 @@
   height: 150%;
 
   border-radius: 100%;
-
-  /* opacity: 0.5; */
 
   background-color: var(--background-shade-one);
   z-index: -1;
@@ -364,8 +354,6 @@
   transform: rotate(-20deg);
 
   border-radius: 1.2rem;
-
-  /* opacity: 0.5; */
 
   background-color: var(--background-shade-one);
   z-index: -1;
@@ -387,8 +375,6 @@
 
   transform: rotate(10deg);
   transform-origin: bottom right;
-
-  /* opacity: 0.5; */
 
   z-index: -1;
 }
@@ -442,7 +428,6 @@
   position: relative;
 
   transform: translate(15%, 20%) scale(1.1);
-  /* z-index: 1; */
 }
 
 .img-box-schneider::before {
@@ -464,9 +449,7 @@
 
 .section-schneider .textbox {
   color: var(--main-text-color-bright);
-  /* background-color: var(--main-background-dark); */
   background-color: transparent;
-  /* padding: 0 2.4rem; */
   z-index: 1;
   backdrop-filter: blur(1);
 }
@@ -528,8 +511,6 @@
 
   border-radius: 100%;
 
-  /* opacity: 0.5; */
-
   background-color: var(--background-shade-one);
 }
 
@@ -544,7 +525,6 @@
   width: 10rem;
   height: 10rem;
   border-radius: 1.2rem;
-  /* opacity: 0.5; */
 
   background-color: var(--background-shade-one);
 }
@@ -586,7 +566,6 @@
 .text-cards {
   font-size: 1.8rem;
   width: 100%;
-  /* text-align: center; */
 }
 
 /******************************************/
@@ -596,6 +575,7 @@
 .section-contact {
   border-right: 12rem solid var(--background-shade-one);
 }
+
 .section-contact .heading-secondary {
   width: clamp(5ch, 100%, 20ch);
   line-height: 1.1;
@@ -689,8 +669,6 @@
 .form-el input {
   height: 3.2rem;
   padding: 1.8rem 0.8rem;
-
-  /* box-shadow: 0 1.2rem 1.2rem rgba(0, 0, 0, 0.137); */
 }
 
 .form-el textarea {
