@@ -2,6 +2,10 @@
   border-right: 12rem solid var(--background-shade-one);
 }
 
+.sticky .section-impressum {
+  margin-top: 10rem;
+}
+
 .section-impressum ul {
   font-size: 1.6rem;
   margin-bottom: 3.2rem;
