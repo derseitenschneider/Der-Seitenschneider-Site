@@ -10,9 +10,9 @@
   z-index: 2;
 }
 
-.sticky .section-hero {
+/* .sticky .section-hero {
   margin-top: 10rem;
-}
+} */
 
 .container-hero {
   max-width: 200rem;
@@ -71,6 +71,17 @@
   color: var(--main-accent-color);
 }
 
+.btn-hero:link,
+.btn-hero:visited {
+  color: var(--main-text-color-bright);
+}
+
+.btn-hero:hover,
+.btn-hero:active,
+.btn-hero:focus {
+  background-color: var(--background-shade-one);
+}
+
 .overhang {
   position: absolute;
   z-index: -1;
@@ -95,6 +106,12 @@
   color: var(--main-text-color-dark);
   position: relative;
   z-index: 1;
+}
+
+.section-portfolio .heading-secondary::after {
+  content: "Portfolio";
+
+  left: -50%;
 }
 
 .container-portfolio.grid--2-cols {
@@ -310,12 +327,18 @@
   z-index: 1;
 }
 
+.section-angebot .heading-secondary::after {
+  content: "Angebot";
+
+  left: -15%;
+}
+
 .icon-angebot {
   display: block;
   position: relative;
   width: 15rem;
   height: 15rem;
-  fill: var(--main-text-color-medium);
+  fill: var(--background-tint-one);
 
   filter: drop-shadow(0 12px 8px rgba(0, 0, 0, 0.2));
 }
@@ -338,6 +361,13 @@
 
   background-color: var(--background-shade-one);
   z-index: -1;
+
+  transform: translateX(50%);
+  transition: transform 2s ease;
+}
+
+.in-viewport.svg-angebot--design::after {
+  transform: translateX(0);
 }
 
 .svg-angebot--support::after {
@@ -396,9 +426,9 @@
 
   border-radius: 100%;
 
-  top: -12.5%;
+  top: -5%;
   right: -12.5%;
-  z-index: 2;
+  z-index: 1;
 }
 
 .section-schneider {
@@ -409,6 +439,12 @@
 .section-schneider .subheading-secondary,
 .section-schneider .heading-secondary {
   color: var(--main-text-color-bright);
+}
+
+.section-schneider .heading-secondary::after {
+  content: "Schneider";
+
+  left: -15%;
 }
 
 .content-schneider {
@@ -495,7 +531,7 @@
 
 .cards:hover {
   transform: translateY(-1rem);
-  box-shadow: 0 16px 12px rgb(210, 150, 81, 0.3);
+  box-shadow: 0 16px 12px hsl(var(--main-text-color-bright), 100%);
 }
 
 .card-one::after {
@@ -581,6 +617,17 @@
   line-height: 1.1;
 }
 
+.section-contact .heading-secondary::after {
+  content: "Kontakt";
+
+  left: -15%;
+}
+
+.section-contact .heading-tertiary {
+  color: var(--main-text-color-bright);
+  margin-bottom: 4.8rem;
+}
+
 .container-form {
   background-color: var(--main-background-bright);
   width: 50%;
@@ -595,8 +642,8 @@
 .container-contact {
   position: absolute;
   top: 0;
-  right: -55%;
-  width: 100%;
+  right: -75%;
+  width: 120%;
 
   background-color: var(--main-background-dark);
 

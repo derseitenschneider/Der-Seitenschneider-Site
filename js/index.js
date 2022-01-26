@@ -27,14 +27,20 @@ const navLinkKontakt = document.querySelector(".nav-link--kontakt");
 //Carousel Heading
 const headingCarousel = document.querySelectorAll(".el-carousel");
 
-//Portfolio Gallery
-const btnToLeft = document.querySelector(".btn-arrow--left");
-const btnToRight = document.querySelector(".btn-arrow--right");
-
 const slideImages = document.querySelectorAll(".slide-img");
 const slideDescriptions = document.querySelectorAll(".slide-description");
 const btnPortfolioLeft = document.querySelector(".btn-arrow--left");
 const btnPortfolioRight = document.querySelector(".btn-arrow--right");
+
+//BUTTONS
+
+//Btns scroll-nav
+const btnScrollNav = document.querySelector(".btn-scroll-nav");
+const containerScrollNav = document.querySelector(".container-scroll-nav");
+
+//Btns portfolio gallery
+const btnToLeft = document.querySelector(".btn-arrow--left");
+const btnToRight = document.querySelector(".btn-arrow--right");
 
 //ARRAYS
 
@@ -50,6 +56,12 @@ const navLinksArr = [
 /////////////////////////////////////////////////////////////////////
 // FUNCTIONS //
 /////////////////////////////////////////////////////////////////////
+
+//Open and close scroll-nav
+
+const openCloseScrollNav = function () {
+  body.classList.toggle("scrollnav-open");
+};
 
 //CAROUSEL HEADING
 
@@ -152,30 +164,95 @@ const removeStickyHeader = function () {
   body.classList.remove("sticky");
 };
 
-let optionsHero = {
+let optionsStickyHeader = {
   root: null,
   rootMargin: "-80px",
   threshold: 0,
 };
 
-let observerHero = new IntersectionObserver(function (entries) {
+const callbackStickyHeader = function (entries) {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
+      containerScrollNav.removeAttribute("tabindex");
+      btnScrollNav.removeAttribute("tabindex");
       addStickyHeader();
     }
 
     if (entry.isIntersecting) {
-      removeStickyHeader();
+      containerScrollNav.setAttribute("tabindex", -1);
+      btnScrollNav.setAttribute("tabindex", -1);
+      body.classList.remove("scrollnav-open");
+      setTimeout(removeStickyHeader, 650);
     }
   });
-}, optionsHero);
+};
 
-observerHero.observe(sectionHeroEL);
+let observerStickyHeader = new IntersectionObserver(
+  callbackStickyHeader,
+  optionsStickyHeader
+);
+
+observerStickyHeader.observe(sectionHeroEL);
+
+//Load Fade
+const elementsToLoad = new Set([
+  document.querySelector(".container-portfolio--right"),
+  document.querySelector(".container-header--portfolio"),
+]);
+
+elementsToLoad.forEach((entry) => entry.classList.add("loadin"));
+
+let optionsLoading = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+
+const callbackLoading = function (entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("loaded");
+    }
+  });
+};
+
+const observerLoading = new IntersectionObserver(
+  callbackLoading,
+  optionsLoading
+);
+
+elementsToLoad.forEach((el) => observerLoading.observe(el));
+
+//Animation Angebot
+
+let optionsAngebot = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+
+const callbackAngebot = function (entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      document
+        .querySelector(".svg-angebot--design")
+        .classList.add("in-viewport");
+      console.log("isintersecting");
+    }
+  });
+};
+
+const observerAngebot = new IntersectionObserver(
+  callbackAngebot,
+  optionsAngebot
+);
+
+observerAngebot.observe(document.querySelector(".container-text--design"));
 
 /////////////////////////////////////////////////////////////////////
 // HANDLER //
 /////////////////////////////////////////////////////////////////////
 
-// btnToRight.addEventListener("click", function () {
-//   currentPortfolio.forEach((el) => el.classList.add("move-left"));
-// });
+//Btn scroll nav
+
+btnScrollNav.addEventListener("click", openCloseScrollNav);
