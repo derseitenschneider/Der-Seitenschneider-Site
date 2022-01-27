@@ -1,8 +1,8 @@
 /********************************************/
 /* GLOBAL VARIABLES */
 /********************************************/
-/* 
-:root {
+
+/* :root {
   --main-background-bright: #dddddd;
   --main-background-dark: #122932;
 
@@ -158,7 +158,7 @@ html::-webkit-scrollbar {
 
 .section-main {
   padding: 12.8rem 2rem;
-  width: 100vw;
+  max-width: 100vw;
   position: relative;
 }
 
@@ -193,6 +193,17 @@ html::-webkit-scrollbar {
 
 .btn:hover {
   cursor: pointer;
+}
+
+.btn-normal:link,
+.btn-normal:visited {
+  color: var(--main-text-color-bright);
+}
+
+.btn-normal:hover,
+.btn-normal:active,
+.btn-normal:focus {
+  background-color: var(--background-shade-one);
 }
 
 /* .btn:hover:not(.btn-arrow),
@@ -447,7 +458,7 @@ html::-webkit-scrollbar {
   height: 6.2rem;
   padding: 0 3.2rem;
 
-  background-color: var(--main-text-color-dark);
+  background-color: var(--main-background-dark);
   opacity: 0.9;
 
   transform: translateX(101%);
@@ -495,7 +506,7 @@ html::-webkit-scrollbar {
 
 .btn.btn-scroll-nav {
   position: relative;
-  background-color: var(--main-text-color-dark);
+  background-color: var(--main-background-dark);
   /* padding: 0.5rem; */
 
   height: 6.2rem;
@@ -516,7 +527,7 @@ html::-webkit-scrollbar {
   display: block;
 
   stroke: var(--main-background-bright);
-  background-color: var(--main-text-color-dark);
+  background-color: var(--main-background-dark);
 }
 
 .icon-scrollnav--open {
