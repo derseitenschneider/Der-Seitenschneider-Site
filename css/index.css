@@ -348,11 +348,20 @@
   z-index: 1;
 }
 
+.container-text--support {
+  grid-column: 2/3;
+}
+
+.svg-angebot--support {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
 .svg-angebot--design::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: -25%;
+  left: -20%;
 
   width: 150%;
   height: 150%;
@@ -373,44 +382,54 @@
 .svg-angebot--support::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 50%;
+  right: 6.25%;
 
   width: 150%;
   height: 150%;
 
-  transform-origin: center left;
-
-  transform: rotate(-20deg);
-
-  border-radius: 1.2rem;
+  /* border-radius: 1.2rem; */
 
   background-color: var(--background-shade-one);
   z-index: -1;
+
+  transform: rotate(10deg);
+  transform-origin: bottom left;
+  transition: transform 2s ease;
+}
+
+.in-viewport.svg-angebot--support::after {
+  transform: rotate(45deg);
 }
 
 .svg-angebot--inhalt::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: -55%;
 
   width: 150%;
   height: 150%;
 
   border-top: 0 solid transparent;
-  border-left: 112.5px solid transparent;
-  border-right: 112.5px solid transparent;
-  border-bottom: 22.5rem solid var(--background-shade-one);
+  border-left: 12.5rem solid transparent;
+  border-right: 12.5rem solid transparent;
+  border-bottom: 25rem solid var(--background-shade-one);
 
-  transform: rotate(10deg);
+  transform: rotate(25deg);
   transform-origin: bottom right;
+  transition: transform 2s ease;
 
   z-index: -1;
 }
 
+.in-viewport.svg-angebot--inhalt::after {
+  transform: rotate(0);
+}
+
 .section-angebot .grid--2-cols {
   margin-bottom: 15.6rem;
+  place-items: center;
 }
 
 /******************************************/
@@ -463,20 +482,26 @@
 .img-box-schneider {
   position: relative;
 
+  transform: translate(0, 0) scale(1);
+  transition: transform 1.5s linear;
+  transition: ;
+}
+
+.slide-schneider .img-box-schneider {
   transform: translate(15%, 20%) scale(1.1);
 }
 
 .img-box-schneider::before {
   content: "";
   position: absolute;
-  top: 3;
+  top: 0;
   left: 0;
 
   height: 100%;
   width: 100%;
 
   background-color: var(--main-text-color-dark);
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 .img-schneider {
@@ -652,6 +677,13 @@
   box-shadow: 0 1.2rem 1.2rem rgba(0, 0, 0, 0.208);
 
   z-index: 1;
+
+  transform: translateX(100%);
+  transition: transform 2s ease-out;
+}
+
+.slide-contact .container-contact {
+  transform: translateX(0);
 }
 
 .container-adress {
@@ -711,6 +743,12 @@
 
 .form-el label {
   font-size: 1.8rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 0.5;
+  color: var(--main-background-dark);
 }
 
 .form-el input {

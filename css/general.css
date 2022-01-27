@@ -450,7 +450,7 @@ html::-webkit-scrollbar {
   background-color: var(--main-text-color-dark);
   opacity: 0.9;
 
-  transform: translateX(100%);
+  transform: translateX(101%);
   transition: transform 0.65s ease;
 }
 
@@ -484,7 +484,7 @@ html::-webkit-scrollbar {
 
   opacity: 0.9;
 
-  transform: translateX(200%);
+  transform: translateX(300%);
 
   transition: transform 0.45s ease;
 }
@@ -552,19 +552,25 @@ html::-webkit-scrollbar {
 /******************************************/
 
 .footer {
+  background-color: var(--background-shade-one);
+}
+
+.container-footer {
   position: relative;
 
   width: 100vw;
+  max-width: 200rem;
   padding: 6.4rem 3.2rem;
+  margin: 0 auto;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 12.8rem;
-  align-items: flex-start;
+  align-items: stretch;
 
   color: var(--main-text-color-medium);
-
-  background-color: var(--background-shade-one);
 }
+
 .footer .heading-secondary {
   display: inline-block;
   font-size: 3.6rem;
@@ -576,7 +582,9 @@ html::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
 
-  gap: 3.6rem;
+  justify-content: space-between;
+
+  /* gap: 3.6rem; */
 }
 
 .container-social-footer {
@@ -585,12 +593,16 @@ html::-webkit-scrollbar {
 }
 
 .container-copyright p {
-  line-height: 1;
-  margin-bottom: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 0;
 }
 
 .icon-social {
   fill: var(--main-text-color-medium);
+}
+
+.nav-el--footer:last-of-type {
+  margin-top: 2.4rem;
 }
 
 .nav-list--footer {
@@ -647,23 +659,54 @@ html::-webkit-scrollbar {
   background-color: var(--main-text-color-medium);
 }
 
+@keyframes floatUpDown {
+  from {
+    transform: translateY(-0.5rem);
+  }
+
+  to {
+    transform: translateY(0.5rem);
+  }
+}
+
 .el-footer--circle {
   top: 2rem;
   right: 12%;
 
   border-radius: 100%;
+  animation: floatUpDown 3s infinite alternate ease-in-out;
+}
+
+@keyframes floatLeftRight {
+  from {
+    transform: translateX(-0.5rem) rotate(35deg);
+  }
+
+  to {
+    transform: translateX(0.5rem) rotate(25deg);
+  }
 }
 
 .el-footer--square {
   bottom: 10rem;
   right: 25%;
 
-  transform: rotate(30deg);
+  animation: floatLeftRight 3s infinite alternate;
+}
+
+@keyframes floatTurn {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .el-footer--triangle {
   bottom: 10%;
-  right: 15%;
+  right: 10%;
 
   background-color: transparent;
 
@@ -675,7 +718,11 @@ html::-webkit-scrollbar {
   border-right: 5rem solid transparent;
   border-bottom: 10rem solid var(--main-text-color-medium);
 
-  transform: rotate(-28deg);
+  transform-origin: center;
+
+  animation: floatTurn 120s infinite linear;
+
+  /* transform: rotate(-28deg); */
 }
 
 /********************************************/

@@ -82,7 +82,7 @@ const rotationLoop = function () {
     i++;
     showRotationElement(headingCarousel[i]);
     if (i < headingCarousel.length - 1) rotationLoop();
-  }, 3000);
+  }, 2000);
 };
 
 rotationLoop();
@@ -222,32 +222,6 @@ const observerLoading = new IntersectionObserver(
 );
 
 elementsToLoad.forEach((el) => observerLoading.observe(el));
-
-//Animation Angebot
-
-let optionsAngebot = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.3,
-};
-
-const callbackAngebot = function (entries) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      document
-        .querySelector(".svg-angebot--design")
-        .classList.add("in-viewport");
-      console.log("isintersecting");
-    }
-  });
-};
-
-const observerAngebot = new IntersectionObserver(
-  callbackAngebot,
-  optionsAngebot
-);
-
-observerAngebot.observe(document.querySelector(".container-text--design"));
 
 /////////////////////////////////////////////////////////////////////
 // HANDLER //
