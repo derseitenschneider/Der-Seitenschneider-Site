@@ -104,7 +104,7 @@
 }
 
 .container-portfolio.grid--2-cols {
-  align-items: center;
+  align-items: start;
 
   justify-content: center;
 
@@ -237,7 +237,8 @@
 /*Container right (slide-description)*/
 
 .container-portfolio--right {
-  height: fit-content;
+  height: 48rem;
+  padding-top: 2rem;
 }
 
 .container-slide-description {
