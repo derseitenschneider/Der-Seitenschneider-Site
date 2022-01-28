@@ -16,12 +16,49 @@ const containerForm = document.querySelector(".container-form");
 // Functions //
 /////////////////////////////////////////////////////////////////////
 
+//Basic Observer Function
 const initiateObserver = function (callback, options, obsEl) {
   let observer = new IntersectionObserver(callback, options);
 
   observer.observe(obsEl);
 };
 
+///////////////////////////////////////////////////////////////
+//Load Fade
+const elementsToLoad = new Set([
+  document.querySelector(".container-portfolio--right"),
+  document.querySelector(".container-header--portfolio"),
+  document.querySelector(".heading-angebot"),
+  document.querySelector(".container-text--design"),
+  document.querySelector(".container-text--support"),
+  document.querySelector(".container-text--inhalt"),
+  document.querySelector(".heading-schneider"),
+  document.querySelector(".heading-cards"),
+  document.querySelector(".container-cards"),
+  document.querySelector(".heading-contact"),
+]);
+
+elementsToLoad.forEach((entry) => entry.classList.add("loadin"));
+
+const callbackLoading = function (entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("loaded");
+    }
+  });
+};
+
+let optionsLoading = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+
+elementsToLoad.forEach((entry) =>
+  initiateObserver(callbackLoading, optionsLoading, entry)
+);
+
+///////////////////////////////////////////////////////////////
 //Animation Angebot
 
 const callbackAngebot = function (entries) {
@@ -42,6 +79,7 @@ textboxAngebot.forEach((el) =>
   initiateObserver(callbackAngebot, optionsAngebot, el)
 );
 
+///////////////////////////////////////////////////////////////
 //Animation Schneider
 
 const callbackSchneider = function (entries) {
@@ -55,11 +93,12 @@ const callbackSchneider = function (entries) {
 let optionsSchneider = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.35,
+  threshold: 0.5,
 };
 
 initiateObserver(callbackSchneider, optionsSchneider, textboxSchneider);
 
+///////////////////////////////////////////////////////////////
 //Animation Contact
 
 const callbackContact = function (entries) {

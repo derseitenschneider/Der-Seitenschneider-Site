@@ -194,35 +194,6 @@ let observerStickyHeader = new IntersectionObserver(
 
 observerStickyHeader.observe(sectionHeroEL);
 
-//Load Fade
-const elementsToLoad = new Set([
-  document.querySelector(".container-portfolio--right"),
-  document.querySelector(".container-header--portfolio"),
-]);
-
-elementsToLoad.forEach((entry) => entry.classList.add("loadin"));
-
-let optionsLoading = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.3,
-};
-
-const callbackLoading = function (entries) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("loaded");
-    }
-  });
-};
-
-const observerLoading = new IntersectionObserver(
-  callbackLoading,
-  optionsLoading
-);
-
-elementsToLoad.forEach((el) => observerLoading.observe(el));
-
 /////////////////////////////////////////////////////////////////////
 // HANDLER //
 /////////////////////////////////////////////////////////////////////

@@ -167,8 +167,8 @@
 
 .img-screen {
   position: relative;
-  min-width: 60rem;
-  max-width: 60rem;
+  /* min-width: 60rem; */
+  width: 60rem;
 }
 
 .container-slide-img {
@@ -323,6 +323,10 @@
   left: -15%;
 }
 
+.container-angebot.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .icon-angebot {
   display: block;
   position: relative;
@@ -362,11 +366,26 @@
   z-index: -1;
 
   transform: translateX(50%);
-  transition: transform 2s ease;
 }
 
 .in-viewport.svg-angebot--design::after {
-  transform: translateX(0);
+  animation: rollLeft 2s ease-in-out forwards;
+}
+
+@keyframes rollLeft {
+  0% {
+    transform: translateX(50%);
+  }
+  65% {
+    transform: translateX(-0.5rem);
+  }
+  85% {
+    transform: translateX(0.5rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .svg-angebot--support::after {
@@ -385,11 +404,37 @@
 
   transform: rotate(10deg);
   transform-origin: bottom left;
-  transition: transform 2s ease;
+  /* transition: transform 2s ease; */
 }
 
 .in-viewport.svg-angebot--support::after {
-  transform: rotate(45deg);
+  animation: fallRight 3s ease-in-out forwards;
+}
+
+@keyframes fallRight {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(45deg);
+  }
+
+  70% {
+    transform: rotate(43deg);
+  }
+
+  85% {
+    transform: rotate(45deg);
+  }
+
+  90% {
+    transform: rotate(44.95deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
 }
 
 .svg-angebot--inhalt::after {
@@ -408,13 +453,38 @@
 
   transform: rotate(25deg);
   transform-origin: bottom right;
-  transition: transform 2s ease;
+  /* transition: transform 2s ease; */
 
   z-index: -1;
 }
 
 .in-viewport.svg-angebot--inhalt::after {
-  transform: rotate(0);
+  animation: fallLeft 2.5s ease-in forwards;
+}
+
+@keyframes fallLeft {
+  0% {
+    transform: rotate(25deg);
+  }
+
+  45% {
+    transform: rotate(0);
+  }
+  67% {
+    transform: rotate(1deg);
+  }
+
+  85% {
+    transform: rotate(0);
+  }
+
+  90% {
+    transform: rotate(0.2deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
 }
 
 .section-angebot .grid--2-cols {

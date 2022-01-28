@@ -104,6 +104,7 @@ body {
   background-color: var(--main-background-bright);
 
   overflow-x: hidden;
+  max-width: 100wv;
 }
 
 img,
@@ -113,6 +114,10 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
+}
+
+img {
+  height: auto;
 }
 
 input,
@@ -143,7 +148,7 @@ a:visited {
 }
 
 p {
-  width: clamp(45ch, 100%, 75ch);
+  /* width: clamp(45ch, 100%, 75ch); */
   max-height: 100%;
   line-height: 2;
 }
@@ -166,7 +171,7 @@ html::-webkit-scrollbar {
   padding: 0 12.8rem;
   margin: 0 auto;
   max-width: 180rem;
-  margin-bottom: 12rem;
+  /* margin-bottom: 12rem; */
   position: relative;
 }
 
@@ -218,14 +223,14 @@ html::-webkit-scrollbar {
 }
 
 /*Logo*/
-.logo circle {
+/* .logo circle {
   stroke: var(--main-accent-color);
   fill: var(--main-background-bright);
-}
+} */
 
-.logo path {
+/* .logo path {
   fill: var(--background-shade-one);
-}
+} */
 
 /********************************************/
 /* HEADINGS */
@@ -234,7 +239,8 @@ html::-webkit-scrollbar {
 .heading-primary {
   /* font-family: "Abril Fatface", cursive; */
   font-family: "Min-sans";
-  font-size: 10rem;
+  /* font-size: 10rem; */
+  font-size: clamp(2.4rem, 7.5vw, 10rem);
   font-weight: 400;
 
   line-height: 0.9;
@@ -280,7 +286,7 @@ html::-webkit-scrollbar {
   top: -50%;
 
   text-transform: uppercase;
-  font-size: 15rem;
+  font-size: 300%;
   color: inherit;
 
   opacity: 0.05;
@@ -368,13 +374,22 @@ html::-webkit-scrollbar {
   height: 4.4rem;
 } */
 
-.logo:link,
+/* .logo:link,
 .logo:visited {
   font-family: "Montserrat", cursive;
   font-size: 2rem;
   letter-spacing: 1px;
   line-height: 0.5;
   color: var(--background-shade-one);
+} */
+
+.icon-logo circle {
+  fill: var(--main-background-bright);
+  stroke: var(--main-accent-color);
+}
+
+.icon-logo path {
+  stroke: var(--main-background-dark);
 }
 
 .main-nav {
@@ -429,17 +444,17 @@ html::-webkit-scrollbar {
 
 .container-scroll-nav {
   position: fixed;
-  top: 1.8rem;
+  top: 1.2rem;
   right: 0;
   bottom: 0;
   left: 0;
 
-  width: calc(95vw - 6.2rem);
+  width: calc(97.6vw - 5.2rem);
   max-width: 180rem;
-  height: fit-content;
+  /* height: fit-content; */
   margin: 0 auto;
 
-  margin-right: calc(6.2rem + 2.5vw);
+  margin-right: calc(5.2rem + 1.2vw);
 
   z-index: 100;
 
@@ -455,13 +470,13 @@ html::-webkit-scrollbar {
 .wrapper-scroll-nav {
   display: flex;
   align-items: center;
-  height: 6.2rem;
+  height: 5.2rem;
   padding: 0 3.2rem;
 
   background-color: var(--main-background-dark);
   opacity: 0.9;
 
-  transform: translateX(101%);
+  transform: translateX(200%);
   transition: transform 0.65s ease;
 }
 
@@ -471,26 +486,42 @@ html::-webkit-scrollbar {
 
 .icon-logo-scrollnav {
   /* height: 4rem; */
-  width: 4rem;
+  width: 3rem;
+}
+
+.icon-logo-scrollnav circle {
+  fill: var(--main-background-dark);
+  stroke: var(--background-shade-one);
+}
+
+.icon-logo-scrollnav path {
+  stroke: var(--main-accent-color);
 }
 
 .scroll-nav {
   margin-left: auto;
   display: flex;
   gap: 3.2rem;
-  margin-right: 6.2rem;
+  margin-right: 5.2rem;
 }
 
 .link-scroll-nav:link,
 .link-scroll-nav:visited {
   font-size: 1.8rem;
   color: var(--main-text-color-bright);
+  transition: color 0.35s;
+}
+
+.link-scroll-nav:hover,
+.link-scroll-nav:active,
+.link-scroll-nav:focus {
+  color: var(--main-accent-color);
 }
 
 .container-btn-scroll-nav {
   position: fixed;
-  top: 1.8rem;
-  right: 2.5vw;
+  top: 1.2rem;
+  right: 1.2vw;
   z-index: 200;
 
   opacity: 0.9;
@@ -509,8 +540,8 @@ html::-webkit-scrollbar {
   background-color: var(--main-background-dark);
   /* padding: 0.5rem; */
 
-  height: 6.2rem;
-  width: 6.2rem;
+  height: 5.2rem;
+  width: 5.2rem;
 }
 
 .icon-scrollnav {
@@ -521,8 +552,8 @@ html::-webkit-scrollbar {
   border: none;
   background: none;
 
-  height: 6.2rem;
-  width: 6.2rem;
+  height: 5.2rem;
+  width: 5.2rem;
 
   display: block;
 
@@ -564,6 +595,7 @@ html::-webkit-scrollbar {
 
 .footer {
   background-color: var(--background-shade-one);
+  margin-top: -1px;
 }
 
 .container-footer {
@@ -748,7 +780,7 @@ html::-webkit-scrollbar {
 
 .grid--2-cols {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
   justify-items: center;
   align-items: flex-end;
 
@@ -763,7 +795,7 @@ html::-webkit-scrollbar {
 .loadin {
   opacity: 0;
   transform: translateY(45px);
-  transition: transform 0.6s, opacity 1.3s;
+  transition: transform 0.8s, opacity 1.3s;
 }
 
 .loaded {
