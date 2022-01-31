@@ -4,7 +4,7 @@
 // VARIABLES //
 /////////////////////////////////////////////////////////////////////
 
-const textboxAngebot = document.querySelectorAll(".container-text-angebot");
+const svgAngebot = document.querySelectorAll(".svg-angebot");
 
 const sectionSchneider = document.querySelector(".section-schneider");
 const textboxSchneider = document.querySelector(".textbox-schneider");
@@ -64,7 +64,7 @@ elementsToLoad.forEach((entry) =>
 const callbackAngebot = function (entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.nextElementSibling.classList.add("in-viewport");
+      entry.target.classList.add("in-viewport");
     }
   });
 };
@@ -72,10 +72,10 @@ const callbackAngebot = function (entries) {
 let optionsAngebot = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.6,
+  threshold: 0.5,
 };
 
-textboxAngebot.forEach((el) =>
+svgAngebot.forEach((el) =>
   initiateObserver(callbackAngebot, optionsAngebot, el)
 );
 
@@ -113,6 +113,15 @@ let optionsContact = {
   root: null,
   rootMargin: "0px",
   threshold: 0.8,
+
+  checkScreensize() {
+    if (window.innerWidth < 976) {
+      // this.threshold = 2;
+      this.rootMargin = "350px 0px -350px 0px";
+    }
+  },
 };
+
+optionsContact.checkScreensize();
 
 initiateObserver(callbackContact, optionsContact, containerForm);
