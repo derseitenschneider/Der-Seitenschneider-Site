@@ -45,6 +45,7 @@
   --main-accent-color: #e9eb9e;
 
   --background-shade-one: #799496;
+  --background-shade-two: #6d6c7c;
 
   --background-tint-one: hsl(75, 6%, 87%);
 }
@@ -161,10 +162,16 @@ html::-webkit-scrollbar {
   display: none;
 }
 
+/* body {
+  background-color: var(--background-shade-one);
+} */
+
 .section-main {
   padding: 12.8rem 2rem;
   max-width: 100vw;
   position: relative;
+
+  background-color: var(--main-background-bright);
 }
 
 .container-section {
@@ -203,6 +210,7 @@ html::-webkit-scrollbar {
 .btn-normal:link,
 .btn-normal:visited {
   color: var(--main-text-color-bright);
+  width: fit-content;
 }
 
 .btn-normal:hover,
@@ -240,6 +248,7 @@ html::-webkit-scrollbar {
   /* font-family: "Abril Fatface", cursive; */
   font-family: "Min-sans";
   /* font-size: 10rem; */
+  color: var(--main-background-dark);
   font-size: clamp(2.4rem, 7.5vw, 10rem);
   font-weight: 400;
 
@@ -342,6 +351,7 @@ html::-webkit-scrollbar {
 .header {
   width: 100vw;
   z-index: 10;
+  position: absolute;
 }
 
 /* .sticky .header {
@@ -359,7 +369,7 @@ html::-webkit-scrollbar {
   margin: 0 auto;
   padding: 2rem 3vw;
 
-  background-color: transparent;
+  background: none;
 
   display: flex;
   justify-content: space-between;
@@ -383,18 +393,23 @@ html::-webkit-scrollbar {
   color: var(--background-shade-one);
 } */
 
-.icon-logo circle {
-  fill: var(--main-background-bright);
-  stroke: var(--main-accent-color);
+.icon-logo {
+  height: 4.4rem;
+  width: 4.4rem;
 }
 
-.icon-logo path {
-  stroke: var(--main-background-dark);
+.icon-logo circle {
+  fill: var(--main-background-bright);
 }
+
+/* .icon-logo path {
+  stroke: var(--main-background-dark);
+} */
 
 .main-nav {
   display: flex;
   align-items: center;
+  mix-blend-mode: difference;
 }
 
 .nav-el {
@@ -405,6 +420,8 @@ html::-webkit-scrollbar {
 .nav-link:visited {
   position: relative;
   font-size: 1.6rem;
+  color: var(--main-text-color-dark);
+  mix-blend-mode: darken;
 }
 
 .nav-link::after {

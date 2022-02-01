@@ -32,6 +32,10 @@ const slideDescriptions = document.querySelectorAll(".slide-description");
 const btnPortfolioLeft = document.querySelector(".btn-arrow--left");
 const btnPortfolioRight = document.querySelector(".btn-arrow--right");
 
+//Cookies
+
+const containerCookies = document.querySelector(".container-cookies");
+
 //BUTTONS
 
 //Btns scroll-nav
@@ -193,6 +197,14 @@ let observerStickyHeader = new IntersectionObserver(
 );
 
 observerStickyHeader.observe(sectionHeroEL);
+
+//Show Cookiebanner
+
+const showCookieBanner = function () {
+  containerCookies.classList.add("show-cookies");
+};
+
+setTimeout(showCookieBanner, 5000);
 
 /////////////////////////////////////////////////////////////////////
 // HANDLER //
