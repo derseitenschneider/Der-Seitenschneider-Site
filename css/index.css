@@ -1043,42 +1043,46 @@ textarea::placeholder {
 
 .container-cookies {
   position: fixed;
-  bottom: 0;
-  left: 10vw;
+  bottom: 2.4rem;
 
-  display: flex;
-  gap: 2.4rem;
+  /* top: 0; */
+  right: 0;
+
+  display: grid;
+  grid-template-columns: 10rem 1fr;
 
   z-index: 100;
-  /* opacity: 0.95; */
+  opacity: 0.95;
 
-  width: 80vw;
+  width: 50rem;
+
+  height: fit-content;
   padding: 2.4rem;
-  background-color: var(--main-background-dark);
+  background-color: var(--main-text-color-dark);
   color: var(--main-text-color-bright);
 
-  transform: translateY(100%);
+  transform: translateX(100%);
   transition: 1s ease;
 }
 
 .container-cookies.show-cookies {
-  transform: translateY(0);
-}
-
-.cookies-left {
-  width: 10rem;
-}
-
-.img-box--cookies {
-  height: 10rem;
+  transform: translateX(0);
 }
 
 .icon-cookies {
-  /* height: 10rem; */
-  width: 10rem;
+  width: 7.4rem;
+  height: 7.4rem;
   fill: var(--main-text-color-bright);
 }
 
+.link-cookies {
+  text-decoration: solid;
+  text-decoration-color: #fff;
+  font-weight: bold;
+  color: #fff;
+}
+
 .container-cookies .btn--cookies {
-  background-color: var(--background-shade-one);
+  background-color: var(--main-background-bright);
+  color: var(--main-text-color-dark);
 }

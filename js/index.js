@@ -204,7 +204,15 @@ const showCookieBanner = function () {
   containerCookies.classList.add("show-cookies");
 };
 
-setTimeout(showCookieBanner, 5000);
+if (!localStorage.getItem("cookieBannerDisplayed")) {
+  setTimeout(showCookieBanner, 5000);
+}
+
+//Cookies accepted
+const acceptCookies = function () {
+  localStorage.setItem("cookieBannerDisplayed", true);
+  containerCookies.classList.remove("show-cookies");
+};
 
 /////////////////////////////////////////////////////////////////////
 // HANDLER //
