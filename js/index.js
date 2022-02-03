@@ -35,7 +35,8 @@ const btnPortfolioRight = document.querySelector(".btn-arrow--right");
 //Cookies
 
 const containerCookies = document.querySelector(".container-cookies");
-
+const wrapperCookiesOne = document.querySelector(".wrapper-cookies--one");
+const wrapperCookiesTwo = document.querySelector(".wrapper-cookies--two");
 //BUTTONS
 
 //Btns scroll-nav

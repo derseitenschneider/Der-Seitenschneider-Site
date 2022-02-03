@@ -6,6 +6,11 @@
 
 const svgAngebot = document.querySelectorAll(".svg-angebot");
 
+const svgDesign = document.querySelector(".svg-angebot--design");
+const svgSupport = document.querySelector(".svg-angebot--support");
+const svgInhalt = document.querySelector(".svg-angebot--inhalt");
+const iconRocket = document.querySelector(".icon-angebot--rocket");
+
 const sectionSchneider = document.querySelector(".section-schneider");
 const textboxSchneider = document.querySelector(".textbox-schneider");
 
@@ -78,6 +83,55 @@ let optionsAngebot = {
 svgAngebot.forEach((el) =>
   initiateObserver(callbackAngebot, optionsAngebot, el)
 );
+
+//Rocket fly
+
+const rocketFly = function () {
+  iconRocket.classList.add("rocket-fly");
+
+  // setTimeout(function () {
+  //   iconRocket.classList.remove("rocket-fly");
+  // }, 5000);
+};
+
+//Rocket land
+const rocketLand = function () {
+  iconRocket.classList.remove("rocket-fly");
+};
+//On hover
+svgDesign.addEventListener("mouseover", rocketFly);
+
+//On scroll fly
+
+const callbackRocketFly = function (entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      setTimeout(rocketFly, 5000);
+    }
+  });
+};
+
+let optionsRocketFly = {
+  root: null,
+  rootMargin: " 0px",
+  threshold: 1,
+};
+
+initiateObserver(callbackRocketFly, optionsRocketFly, svgDesign);
+
+// On sroll land
+
+const callbackRocketLand = function (entries) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      rocketLand();
+    }
+  });
+};
+
+let optionsRocketLand = { root: null, rootMargin: "0px", threshold: 0 };
+
+initiateObserver(callbackRocketLand, optionsRocketLand, svgDesign);
 
 ///////////////////////////////////////////////////////////////
 //Animation Schneider

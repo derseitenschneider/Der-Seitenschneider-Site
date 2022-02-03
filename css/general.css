@@ -45,7 +45,8 @@
   --main-accent-color: #e9eb9e;
 
   --background-shade-one: #799496;
-  --background-shade-two: #6d6c7c;
+  --background-shade-two: #5b596b;
+  --background-shade-three: #6d6c7c;
 
   --background-tint-one: hsl(75, 6%, 87%);
 }
@@ -207,17 +208,58 @@ html::-webkit-scrollbar {
   cursor: pointer;
 }
 
-.btn-normal:link,
-.btn-normal:visited {
-  color: var(--main-text-color-bright);
+.btn-normal {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 1;
   width: fit-content;
 }
 
-.btn-normal:hover,
+.hover-layer-btn {
+  position: absolute;
+
+  bottom: 50%;
+  right: 50%;
+
+  width: 25rem;
+  height: 25rem;
+  border-radius: 100%;
+
+  background-color: var(--background-shade-one);
+  z-index: -1;
+  opacity: 1;
+  transform: translate(50%, 50%) scale(0);
+
+  transition: transform 1.5s ease;
+  transform-origin: center;
+}
+
+.text-btn {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-normal:link,
+.btn-normal:visited {
+  /* color: var(--main-text-color-bright); */
+  color: #fff;
+  width: fit-content;
+}
+
+.btn-normal:hover .hover-layer-btn,
+.btn-noram:active .hover-layer-btn,
+.btn-normal:focus .hover-layer-btn {
+  transition: transform 0.85s ease;
+  transform: translate(50%, 50%) scale(1);
+}
+
+/* .btn-normal:hover,
 .btn-normal:active,
 .btn-normal:focus {
   background-color: var(--background-shade-one);
-}
+} */
 
 /* .btn:hover:not(.btn-arrow),
 .btn:focus:not(.btn-arrow) {
@@ -246,11 +288,13 @@ html::-webkit-scrollbar {
 
 .heading-primary {
   /* font-family: "Abril Fatface", cursive; */
-  font-family: "Min-sans";
+  /* font-family: "Min-sans"; */
+  /* font-family: "Lora", serif; */
   /* font-size: 10rem; */
+  /* font-family: 'Rowdies', cursive; */
   color: var(--main-background-dark);
   font-size: clamp(2.4rem, 7.5vw, 10rem);
-  font-weight: 400;
+  font-weight: 600;
 
   line-height: 0.9;
 }
@@ -398,9 +442,9 @@ html::-webkit-scrollbar {
   width: 4.4rem;
 }
 
-.icon-logo circle {
+/* .icon-logo circle {
   fill: var(--main-background-bright);
-}
+} */
 
 /* .icon-logo path {
   stroke: var(--main-background-dark);
@@ -468,7 +512,7 @@ html::-webkit-scrollbar {
 
   width: calc(97.6vw - 5.2rem);
   max-width: 180rem;
-  /* height: fit-content; */
+  height: fit-content;
   margin: 0 auto;
 
   margin-right: calc(5.2rem + 1.2vw);
