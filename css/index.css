@@ -53,15 +53,17 @@
 }
 
 .heading-carousel {
-  margin-top: 3.2rem;
-  font-family: "Min-sans";
+  margin-top: 6.4rem;
+  /* font-family: "Min-sans"; */
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 6.5vw, 8rem);
+  letter-spacing: 0px;
   height: 6rem;
   color: var(--main-text-color-medium);
 }
 
 .el-carousel {
-  font-weight: 400;
-  font-size: clamp(2.4rem, 6.5vw, 8rem);
   display: block;
   position: absolute;
   transform: translateY(2rem);
@@ -74,7 +76,7 @@
 .el-carousel:last-of-type::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   right: 0;
 
   width: 60%;
@@ -99,6 +101,7 @@
 
 .punctuation {
   color: var(--main-accent-color);
+  margin-left: 8px;
   /* mix-blend-mode: unset; */
 }
 
@@ -1019,33 +1022,39 @@
 input::placeholder,
 textarea::placeholder {
   opacity: 0.5;
+  font-family: inherit;
   color: var(--main-background-dark);
-}
-
-.form-el input {
-  height: 3.2rem;
-  padding: 1.8rem 0.8rem;
-}
-
-.form-el textarea {
-  resize: none;
-  height: auto;
-  padding: 0.8rem;
 }
 
 .form-el input,
 .form-el textarea {
   position: relative;
-  font-family: sans-serif;
-  font-size: 1.8rem;
 
-  background: hsl(0, 0%, 91%);
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  background: hsl(0, 0%, 95%);
   border: none;
+}
+
+.form-el input {
+  /* height: 3.2rem; */
+  font-family: inherit;
+  color: var(--main-text-color-dark);
+  padding: 1.6rem 0.8rem;
+}
+
+.form-el textarea {
+  font-family: inherit;
+  resize: none;
+  height: auto;
+  padding: 0.8rem;
 }
 
 .form-el input:focus,
 .form-el textarea:focus {
   outline: none;
+  background-color: hsl(184, 12%, 90%);
 }
 
 .form-el:not(:last-of-type)::after {
@@ -1067,10 +1076,6 @@ textarea::placeholder {
 
 .form-el:focus-within::after {
   transform: scaleX(1);
-}
-
-.btn-form {
-  width: fit-content;
 }
 
 /******************************************/
