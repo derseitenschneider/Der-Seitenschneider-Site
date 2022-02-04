@@ -33,10 +33,14 @@ const btnPortfolioLeft = document.querySelector(".btn-arrow--left");
 const btnPortfolioRight = document.querySelector(".btn-arrow--right");
 
 //Cookies
-
 const containerCookies = document.querySelector(".container-cookies");
 const wrapperCookiesOne = document.querySelector(".wrapper-cookies--one");
 const wrapperCookiesTwo = document.querySelector(".wrapper-cookies--two");
+
+//Form
+const formEl = document.querySelector(".form");
+const formAnswerEl = document.querySelector(".form-answer");
+
 //BUTTONS
 
 //Btns scroll-nav
@@ -198,6 +202,15 @@ let observerStickyHeader = new IntersectionObserver(
 );
 
 observerStickyHeader.observe(sectionHeroEL);
+
+//Form submit
+
+formEl.onsubmit = function () {
+  //After submit show answer message and hide form
+  console.log("ok");
+  formEl.classList.add("hide");
+  formAnswerEl.classList.remove("hide");
+};
 
 //Show Cookiebanner
 

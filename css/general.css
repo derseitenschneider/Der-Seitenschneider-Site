@@ -503,7 +503,7 @@ html::-webkit-scrollbar {
 }
 
 .scrollnav-open .wrapper-scroll-nav {
-  transform: translateX(0);
+  transform: translateX(1px);
 }
 
 .logo-scroll-nav {

@@ -707,7 +707,7 @@
 .section-schneider .textbox {
   color: var(--main-text-color-bright);
   background-color: transparent;
-  font-weight: 500;
+
   z-index: 1;
 }
 
@@ -901,7 +901,8 @@
 
 .container-form {
   background-color: var(--main-background-bright);
-  width: 50%;
+  width: 75%;
+  min-height: 60rem;
 }
 
 .wrapper-contact {
@@ -912,9 +913,9 @@
 
 .container-contact {
   position: absolute;
-  top: 0;
+  top: 50%;
   right: -75%;
-  width: 120%;
+  width: 95%;
 
   background-color: var(--main-background-dark);
 
@@ -924,7 +925,7 @@
 
   z-index: 1;
 
-  transform: translateX(100%);
+  transform: translate(100%, -50%);
   /* transition: transform 2s ease-out; */
 }
 
@@ -935,14 +936,14 @@
 
 @keyframes slideContact {
   0% {
-    transform: translateX(100%);
+    transform: translate(100%, -50%);
   }
 
   80% {
-    transform: translateX(-2rem);
+    transform: translate(-2rem, -50%);
   }
   100% {
-    transform: translateX(0);
+    transform: translate(0%, -50%);
   }
 }
 
@@ -986,6 +987,46 @@
 
 .icon-contact {
   fill: #ddddddc7;
+}
+
+.form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.form.hide {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.form-answer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.form-answer.hide {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.heading-tertiary.heading-form-answer {
+  color: var(--main-text-color-dark);
+}
+
+.text-form-answer {
+  font-size: 2rem;
 }
 
 .form-list {
@@ -1064,6 +1105,37 @@ textarea::placeholder {
   transform: scaleX(1);
 }
 
+#comments_or_notesA44 {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
+  margin-top: -3.2rem;
+  padding: 0;
+}
+
+#comments_or_notesA44 + label {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
+  margin-top: -3.2rem;
+  padding: 0;
+}
+
+.form-el .text-btn {
+  color: #fff;
+}
+
+iframe {
+  display: none;
+}
 /******************************************/
 /* SECTION COOKIES */
 /******************************************/
