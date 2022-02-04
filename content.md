@@ -1,18 +1,19 @@
 Colors:
 
-Basic Font:
-#122932
+--main-background-bright: #f8f7f7;
+--main-background-dark: #49475b;
 
-Bright Fonts:
-#EEEEEE
-#C4C4C4
+--main-text-color-dark: #14080e;
+--main-text-color-medium: #49475b;
+--main-text-color-bright: #e0e1dd;
 
-Accent Color:
-#E3C0D3
+--main-accent-color: #e9eb9e;
 
-Shades & Tints:
-#95818D
-#E1E1E1
+--background-shade-one: #799496;
+--background-shade-two: #5b596b;
+--background-shade-three: #6d6c7c;
+
+--background-tint-one: hsl(75, 6%, 87%);
 
 - Font sizes(px)
   10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98

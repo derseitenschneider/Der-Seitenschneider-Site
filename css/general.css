@@ -213,6 +213,7 @@ html::-webkit-scrollbar {
   display: block;
   overflow: hidden;
   z-index: 1;
+  border-radius: 8px;
   width: fit-content;
 }
 
@@ -239,7 +240,7 @@ html::-webkit-scrollbar {
   display: block;
   position: relative;
   z-index: 1;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
   word-spacing: 4px;
 }
 
@@ -373,17 +374,6 @@ html::-webkit-scrollbar {
   position: absolute;
 }
 
-/* .sticky .header {
-  background-color: #eee;
-  width: 100%;
-  position: fixed;
-  top: 0;
-
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.05);
-
-  opacity: 0.95;
-} */
-
 .container-header {
   margin: 0 auto;
   padding: 2rem 3vw;
@@ -394,23 +384,19 @@ html::-webkit-scrollbar {
   justify-content: space-between;
 }
 
-/* .sticky .container-header {
-  padding: 0.4rem 3vw;
-} */
+.logo-header {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
 
-/* .sticky .icon-logo {
-  width: 4.4rem;
-  height: 4.4rem;
-} */
-
-/* .logo:link,
-.logo:visited {
-  font-family: "Montserrat", cursive;
-  font-size: 2rem;
-  letter-spacing: 1px;
-  line-height: 0.5;
+.logo-title {
+  display: block;
+  /* font-family: "Playfair Display", serif; */
+  font-size: 1.8rem;
+  font-weight: 400;
   color: var(--background-shade-one);
-} */
+}
 
 .icon-logo {
   height: 4.4rem;
@@ -486,7 +472,7 @@ html::-webkit-scrollbar {
   left: 0;
 
   width: calc(97.6vw - 5.2rem);
-  max-width: 180rem;
+  /* max-width: 180rem; */
   height: fit-content;
   margin: 0 auto;
 
@@ -494,7 +480,7 @@ html::-webkit-scrollbar {
 
   z-index: 100;
 
-  overflow-x: hidden;
+  overflow: hidden;
 
   pointer-events: none;
 }
@@ -520,18 +506,20 @@ html::-webkit-scrollbar {
   transform: translateX(0);
 }
 
+.logo-scroll-nav {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
 .icon-logo-scrollnav {
   /* height: 4rem; */
   width: 3rem;
 }
 
-.icon-logo-scrollnav circle {
-  fill: var(--main-background-dark);
-  stroke: var(--background-shade-one);
-}
-
-.icon-logo-scrollnav path {
-  stroke: var(--main-accent-color);
+.title-scrollnav {
+  font-size: 1.6rem;
+  color: var(--main-text-color-bright);
 }
 
 .scroll-nav {
@@ -539,6 +527,12 @@ html::-webkit-scrollbar {
   display: flex;
   gap: 3.2rem;
   margin-right: 5.2rem;
+}
+
+.link-logo:hover,
+.link-logo:active,
+.link-logo:focus {
+  border: none;
 }
 
 .link-scroll-nav:link,
@@ -551,6 +545,7 @@ html::-webkit-scrollbar {
 .link-scroll-nav:hover,
 .link-scroll-nav:active,
 .link-scroll-nav:focus {
+  border: none;
   color: var(--main-accent-color);
 }
 
