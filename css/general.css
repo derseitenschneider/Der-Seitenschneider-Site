@@ -155,6 +155,15 @@ p {
   line-height: 2;
 }
 
+.preload * {
+  opacity: 0;
+  transition: none;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 /********************************************/
 /* GENERAL LAYOUT SETTINGS */
 /********************************************/

@@ -235,3 +235,9 @@ const acceptCookies = function () {
 //Btn scroll nav
 
 btnScrollNav.addEventListener("click", openCloseScrollNav);
+
+//Remove preload transition class
+
+window.addEventListener("load", function () {
+  document.querySelector("body").classList.remove("preload");
+});
