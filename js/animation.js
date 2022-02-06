@@ -103,21 +103,21 @@ svgDesign.addEventListener("mouseover", rocketFly);
 
 //On scroll fly
 
-const callbackRocketFly = function (entries) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      setTimeout(rocketFly, 5000);
-    }
-  });
-};
+// const callbackRocketFly = function (entries) {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       setTimeout(rocketFly, 5000);
+//     }
+//   });
+// };
 
-let optionsRocketFly = {
-  root: null,
-  rootMargin: " 0px",
-  threshold: 1,
-};
+// let optionsRocketFly = {
+//   root: null,
+//   rootMargin: " 0px",
+//   threshold: 1,
+// };
 
-initiateObserver(callbackRocketFly, optionsRocketFly, svgDesign);
+// initiateObserver(callbackRocketFly, optionsRocketFly, svgDesign);
 
 // On sroll land
 
