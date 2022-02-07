@@ -17,19 +17,6 @@
   /* clip-path: polygon(0 0, 45% 0, 100% 60%, 100% 100%, 0 100%); */
 }
 
-/* .polygon-hero {
-  position: absolute;
-  width: 200vw;
-  height: 100vh;
-  top: 0;
-  left: 50%;
-  z-index: -1;
-} */
-
-/* .sticky .section-hero {
-  margin-top: 10rem;
-} */
-
 .container-hero {
   max-width: 200rem;
   margin: 0 auto;
@@ -1142,36 +1129,41 @@ iframe {
 
 .container-cookies {
   position: fixed;
-  top: 50%;
 
-  /* top: 0; */
+  bottom: 0;
   right: 0;
 
   display: grid;
-  grid-template-columns: 10rem 1fr;
+  grid-template-columns: 6rem 1fr 15rem;
 
+  justify-items: center;
   z-index: 100;
   opacity: 0.95;
 
-  width: 50rem;
+  width: 100vw;
 
   height: fit-content;
   padding: 2.4rem;
   background-color: var(--main-text-color-dark);
   color: var(--main-text-color-bright);
 
-  transform: translateX(100%);
-  transition: 1s ease;
+  transform: translateY(100%);
+  transition: 0.65s ease;
 }
 
 .container-cookies.show-cookies {
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .icon-cookies {
-  width: 7.4rem;
-  height: 7.4rem;
+  width: 3.6rem;
+  height: 3.6rem;
   fill: var(--main-text-color-bright);
+}
+
+.textbox--cookies {
+  font-size: 1.4rem;
+  margin-bottom: 0;
 }
 
 .link-cookies {
@@ -1183,10 +1175,12 @@ iframe {
 
 .container-btns-cookies {
   display: flex;
-  gap: 2.4rem;
+  gap: 1.6rem;
 }
 
 .btn--cookies {
   background-color: var(--main-background-bright);
   color: var(--main-text-color-dark);
+  font-size: 1.4rem;
+  height: fit-content;
 }

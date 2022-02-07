@@ -13,6 +13,7 @@ const iconRocket = document.querySelector(".icon-angebot--rocket");
 
 const sectionSchneider = document.querySelector(".section-schneider");
 const textboxSchneider = document.querySelector(".textbox-schneider");
+const imgBoxSchneider = document.querySelector(".img-box-schneider");
 
 const sectionContact = document.querySelector(".section-contact");
 const containerForm = document.querySelector(".container-form");
@@ -147,10 +148,10 @@ const callbackSchneider = function (entries) {
 let optionsSchneider = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.5,
+  threshold: 1,
 };
 
-initiateObserver(callbackSchneider, optionsSchneider, textboxSchneider);
+initiateObserver(callbackSchneider, optionsSchneider, imgBoxSchneider);
 
 ///////////////////////////////////////////////////////////////
 //Animation Contact
