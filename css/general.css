@@ -363,7 +363,7 @@ html::-webkit-scrollbar {
 .heading-tertiary {
   font-weight: 400;
 
-  font-size: clamp(1.8rem, 2.5vw, 3rem);
+  font-size: clamp(2rem, 3.5vw, 3rem);
 
   margin-bottom: 0.8rem;
 }

@@ -36,6 +36,7 @@ const elementsToLoad = new Set([
   document.querySelector(".container-portfolio--left"),
   document.querySelector(".container-form"),
   document.querySelector(".container-img"),
+  document.querySelector(".heading-cards"),
 ]);
 
 document
