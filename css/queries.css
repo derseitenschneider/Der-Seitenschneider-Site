@@ -74,6 +74,10 @@
     padding: 8rem 0rem;
   } */
 
+  .heading-primary {
+    letter-spacing: -2px;
+  }
+
   .heading-secondary {
     letter-spacing: 0;
   }
@@ -228,6 +232,10 @@
 /********************************************/
 
 @media (max-width: 47em) {
+  .heading-primary {
+    letter-spacing: -1px;
+  }
+
   .icon-angebot {
     width: 10rem;
     height: 10rem;
@@ -235,7 +243,7 @@
 
   .svg-angebot {
     margin-top: 4.8rem;
-    margin-left: 2.4rem;
+    margin-left: 3rem;
     justify-self: baseline;
   }
 
@@ -246,6 +254,39 @@
     border-left: 8rem solid transparent;
     border-right: 8rem solid transparent;
     border-bottom: 16rem solid var(--background-shade-one);
+  }
+
+  .svg-angebot--support::after {
+    left: 6.25%;
+
+    transform: rotate(-55deg);
+    transform-origin: bottom right;
+  }
+
+  @keyframes fallRight {
+    0% {
+      transform: rotate(-55deg);
+    }
+
+    50% {
+      transform: rotate(-45deg);
+    }
+
+    70% {
+      transform: rotate(43deg);
+    }
+
+    85% {
+      transform: rotate(45deg);
+    }
+
+    90% {
+      transform: rotate(44.95deg);
+    }
+
+    100% {
+      transform: rotate(45deg);
+    }
   }
 
   .container-angebot.grid--2-cols {
