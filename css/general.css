@@ -317,7 +317,7 @@ html::-webkit-scrollbar {
   /* font-family: "Min-sans"; */
   /* font-family: "Montserrat", sans-serif; */
   /* font-size: 5.2rem; */
-  font-size: clamp(2.4rem, 3.8vw, 5.2rem);
+  font-size: clamp(2.4rem, 5vw, 5.2rem);
   font-weight: 400;
   letter-spacing: -2px;
   width: clamp(5ch, 100%, 18ch);
@@ -561,8 +561,8 @@ html::-webkit-scrollbar {
 
 .container-btn-scroll-nav {
   position: fixed;
-  top: 1.2rem;
-  right: 1.2vw;
+  top: 3vw;
+  right: 3vw;
   z-index: 200;
 
   opacity: 0.9;
@@ -593,8 +593,8 @@ html::-webkit-scrollbar {
   border: none;
   background: none;
 
-  height: 5.2rem;
-  width: 5.2rem;
+  height: 100%;
+  /* width: 5.2rem; */
 
   display: block;
 
@@ -637,6 +637,11 @@ html::-webkit-scrollbar {
 .footer {
   background-color: var(--background-shade-one);
   margin-top: -1px;
+}
+
+.heading-footer {
+  font-size: 3.2rem;
+  font-weight: 400;
 }
 
 .container-footer {
@@ -836,11 +841,11 @@ html::-webkit-scrollbar {
 .loadin {
   opacity: 0;
   transform: translateY(45px);
-  transition: transform 0.8s, opacity 1.3s;
+  transition: transform 1.3s ease-out, opacity 1.3s;
 }
 
 .loaded {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0s;
+  transition-delay: 0.15s;
 }

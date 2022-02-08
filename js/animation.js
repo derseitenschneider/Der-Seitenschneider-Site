@@ -33,16 +33,29 @@ const initiateObserver = function (callback, options, obsEl) {
 //Load Fade
 const elementsToLoad = new Set([
   document.querySelector(".container-portfolio--right"),
-  document.querySelector(".container-header--portfolio"),
-  document.querySelector(".heading-angebot"),
-  document.querySelector(".container-text--design"),
-  document.querySelector(".container-text--support"),
-  document.querySelector(".container-text--inhalt"),
-  document.querySelector(".heading-schneider"),
-  document.querySelector(".heading-cards"),
-  document.querySelector(".container-cards"),
-  document.querySelector(".heading-contact"),
+  document.querySelector(".container-portfolio--left"),
+  document.querySelector(".container-form"),
+  document.querySelector(".container-img"),
 ]);
+
+document
+  .querySelectorAll(".heading-secondary")
+  .forEach((entry) => elementsToLoad.add(entry));
+
+document
+  .querySelectorAll(".container-text-angebot")
+  .forEach((entry) => elementsToLoad.add(entry));
+
+document
+  .querySelectorAll(".svg-angebot")
+  .forEach((entry) => elementsToLoad.add(entry));
+document
+  .querySelectorAll(".cards")
+  .forEach((entry) => elementsToLoad.add(entry));
+
+document
+  .querySelectorAll(".text-schneider")
+  .forEach((entry) => elementsToLoad.add(entry));
 
 elementsToLoad.forEach((entry) => entry.classList.add("loadin"));
 
@@ -148,7 +161,7 @@ const callbackSchneider = function (entries) {
 let optionsSchneider = {
   root: null,
   rootMargin: "0px",
-  threshold: 1,
+  threshold: 0.6,
 };
 
 initiateObserver(callbackSchneider, optionsSchneider, imgBoxSchneider);
@@ -172,7 +185,7 @@ let optionsContact = {
   checkScreensize() {
     if (window.innerWidth < 976) {
       // this.threshold = 2;
-      this.rootMargin = "350px 0px -350px 0px";
+      this.rootMargin = "250px 0px -250px 0px";
     }
   },
 };
