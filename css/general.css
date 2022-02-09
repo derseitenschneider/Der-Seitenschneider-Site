@@ -94,6 +94,8 @@ body {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
@@ -317,7 +319,7 @@ html::-webkit-scrollbar {
   /* font-family: "Min-sans"; */
   /* font-family: "Montserrat", sans-serif; */
   /* font-size: 5.2rem; */
-  font-size: clamp(2.4rem, 5vw, 5.2rem);
+  font-size: clamp(3rem, 5vw, 5.2rem);
   font-weight: 400;
   letter-spacing: -2px;
   width: clamp(5ch, 100%, 18ch);
@@ -363,9 +365,9 @@ html::-webkit-scrollbar {
 .heading-tertiary {
   font-weight: 400;
 
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(2.4rem, 3.5vw, 3rem);
 
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.2rem;
 }
 
 .heading-quaternary {
@@ -476,17 +478,17 @@ html::-webkit-scrollbar {
 
 .container-scroll-nav {
   position: fixed;
-  top: 1.2rem;
+  top: 3vw;
   right: 0;
   bottom: 0;
   left: 0;
 
-  width: calc(97.6vw - 5.2rem);
+  width: calc(94vw - 5.2rem);
   /* max-width: 180rem; */
   height: fit-content;
   margin: 0 auto;
 
-  margin-right: calc(5.2rem + 1.2vw);
+  margin-right: calc(5.2rem + 3vw);
 
   z-index: 100;
 
@@ -831,6 +833,7 @@ html::-webkit-scrollbar {
   align-items: flex-end;
 
   row-gap: 12.8rem;
+
   column-gap: 2.4rem;
 }
 

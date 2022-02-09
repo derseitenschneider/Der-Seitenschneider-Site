@@ -22,6 +22,10 @@
     height: 23.2rem;
   }
 
+  .wrapper-img-page:hover .img-page {
+    transform: translateY(calc(-100% + 23.2rem));
+  }
+
   .wrapper-cards {
     width: 95%;
   }
@@ -94,10 +98,6 @@
     padding: 0 3.2rem;
   }
 
-  /* .section-hero {
-    height: fit-content;
-  } */
-
   .container-hero {
     padding: 8rem 4.8rem;
   }
@@ -132,6 +132,10 @@
     left: 8.5rem;
     width: 48.1rem;
     height: 30.2rem;
+  }
+
+  .wrapper-img-page:hover .img-page {
+    transform: translateY(calc(-100% + 30.2rem));
   }
 
   .overhang-square--left {
@@ -251,6 +255,7 @@
 
   .footer-row--left {
     gap: 2.4rem;
+    grid-row: 2/3;
   }
 
   .heading-footer {
@@ -272,13 +277,14 @@
 /********************************************/
 
 @media (max-width: 47em) {
-  .section-hero {
+  /* .section-hero {
     margin-bottom: 12.8rem;
     display: block;
-  }
+  } */
 
   .container-hero {
     padding: 2.4rem;
+    column-gap: 0;
   }
 
   .container-hero--left {
@@ -466,6 +472,10 @@
     height: 23.2rem;
   }
 
+  .wrapper-img-page:hover .img-page {
+    transform: translateY(calc(-100% + 23.2rem));
+  }
+
   .content-schneider {
     margin-bottom: 8rem;
   }
@@ -488,9 +498,15 @@
     transition: transform 1.3s ease-out, opacity 1.3s;
   }
 
+  .card-two.loadin {
+    opacity: 0;
+    transform: translateX(45px);
+    transition: transform 1.3s ease-out, opacity 1.3s;
+  }
+
   .cards.loaded {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
     transition-delay: 0.15s;
   }
 
@@ -500,6 +516,7 @@
 
   .container-contact {
     right: -30vw;
+    margin-bottom: -10rem;
   }
 }
 
@@ -519,6 +536,7 @@
 
   .btn.btn-hero {
     align-self: last baseline;
+    justify-self: last baseline;
   }
 
   .container-btn-scroll-nav {
@@ -528,18 +546,31 @@
     transform: translateX(200%);
   }
 
-  .btn.btn-scroll-nav {
+  /* .btn.btn-scroll-nav {
     height: 4.8rem;
     width: 4.8rem;
-  }
-
-  /* .container-scroll-nav {
-    width: 100vw;
-    left: 0;
   } */
+
+  .container-scroll-nav {
+    width: 60vw;
+    left: 40vw;
+  }
 
   .img-screen {
     width: 40rem;
+  }
+
+  .btn-arrow {
+    top: 38%;
+    width: 7.4rem;
+  }
+
+  .btn-arrow--left {
+    left: -1.6rem;
+  }
+
+  .btn-arrow--right {
+    right: -1.6rem;
   }
 
   .container-slide-img {
@@ -549,7 +580,143 @@
     height: 18.5rem;
   }
 
+  .wrapper-img-page:hover .img-page {
+    transform: translateY(calc(-100% + 18.5rem));
+  }
+
   .cards {
-    width: 90%;
+    width: 85%;
+  }
+
+  .section-contact {
+    border-right: 3rem solid var(--background-shade-one);
+  }
+
+  .el-footer--circle {
+    top: 10vw;
+    right: 10vw;
+  }
+
+  .el-footer--square {
+    right: 25vw;
+    bottom: 25rem;
+  }
+
+  .el-footer--triangle {
+    bottom: 12rem;
+  }
+}
+
+/********************************************/
+/* Big Mobile 480px */
+/********************************************/
+
+@media (max-width: 30em) {
+  .container-hero--left {
+    margin-bottom: -5rem;
+  }
+  .text-btn-hero {
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .icon-btn-hero {
+    display: inline-block;
+    pointer-events: auto;
+    visibility: visible;
+
+    width: 3.4rem;
+
+    fill: #fff;
+  }
+
+  .btn-normal.btn-hero {
+    padding: 1.2rem 2rem;
+
+    grid-row: 3/4;
+    grid-column: 2/3;
+
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1.2rem;
+  }
+
+  .img-box--hero {
+    width: clamp(10rem, 55vw, 100rem);
+  }
+
+  .section-portfolio {
+    margin-top: 12.8rem;
+    padding-bottom: 12.8rem;
+  }
+
+  .cards {
+    width: 95%;
+  }
+
+  .container-form {
+    width: 100%;
+  }
+
+  .container-contact {
+    margin-top: 19rem;
+
+    right: 0;
+  }
+}
+
+/********************************************/
+/*  Mobile 416px */
+/********************************************/
+
+@media (max-width: 26em) {
+  .container-scroll-nav {
+    width: 80vw;
+    left: 20vw;
+  }
+  .overhang-square--left {
+    height: 20%;
+  }
+  .img-screen {
+    width: 35rem;
+  }
+
+  .btn-arrow {
+    top: 34%;
+  }
+
+  .container-slide-img {
+    top: 3rem;
+    left: 4.6rem;
+    width: 25.8rem;
+    height: 16.2rem;
+  }
+
+  .wrapper-img-page:hover .img-page {
+    transform: translateY(calc(-100% + 16.2rem));
+  }
+
+  .wrapper-cards .heading-tertiary {
+    text-align: left;
+  }
+
+  .cards {
+    width: 100%;
+  }
+
+  .section-contact {
+    border-right: 2rem solid var(--background-shade-one);
+  }
+
+  .el-footer {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .el-footer--triangle {
+    border-left: 3rem solid transparent;
+    border-right: 3rem solid transparent;
+    border-bottom: 6rem solid var(--main-text-color-medium);
   }
 }

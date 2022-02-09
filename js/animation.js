@@ -33,9 +33,9 @@ const initiateObserver = function (callback, options, obsEl) {
 //Load Fade
 const elementsToLoad = new Set([
   document.querySelector(".container-portfolio--right"),
-  document.querySelector(".container-portfolio--left"),
+
   document.querySelector(".container-form"),
-  document.querySelector(".container-img"),
+
   document.querySelector(".heading-cards"),
 ]);
 
@@ -186,7 +186,7 @@ let optionsContact = {
   checkScreensize() {
     if (window.innerWidth < 976) {
       // this.threshold = 2;
-      this.rootMargin = "250px 0px -250px 0px";
+      this.rootMargin = "150px 0px -150px 0px";
     }
   },
 };
