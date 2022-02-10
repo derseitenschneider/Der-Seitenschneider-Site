@@ -96,10 +96,15 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   max-width: 100vw;
+  height: -webkit-fill-available;
 }
 
 body {
   position: relative;
+
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
 
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;

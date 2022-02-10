@@ -615,6 +615,7 @@
   .container-hero--left {
     margin-bottom: -5rem;
   }
+
   .text-btn-hero {
     display: none;
     pointer-events: none;
@@ -622,18 +623,21 @@
   }
 
   .icon-btn-hero {
-    display: inline-block;
+    display: block;
     pointer-events: auto;
     visibility: visible;
 
+    height: 3.4rem;
     width: 3.4rem;
+  }
 
+  .icon-hero {
     fill: #fff;
+    height: 5rem;
+    width: 5rem;
   }
 
   .btn-normal.btn-hero {
-    padding: 1.2rem 2rem;
-
     grid-row: 3/4;
     grid-column: 2/3;
 
