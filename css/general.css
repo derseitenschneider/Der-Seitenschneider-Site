@@ -2,38 +2,6 @@
 /* GLOBAL VARIABLES */
 /********************************************/
 
-/* :root {
-  --main-background-bright: #dddddd;
-  --main-background-dark: #122932;
-
-  --main-text-color-dark: #122831;
-  --main-text-color-medium: #224d5e;
-  --main-text-color-bright: #dddddd;
-
-  --main-accent-color: #e3c0d3;
-
-  --background-shade-one: #d29651;
-
-  --background-tint-one: #2a1e10;
-  --background-shade-two: hsl(32, 59%, 75%);
-  --background-shade-three: hsl(32, 59%, 40%);
-} */
-
-/* :root {
-  --main-background-bright: #f8f7f7;
-  --main-background-dark: #0d1b2a;
-
-  --main-text-color-dark: #0d1b2a;
-  --main-text-color-medium: #1b263b;
-  --main-text-color-bright: #e0e1dd;
-
-  --main-accent-color: #6a4177;
-
-  --background-shade-one: #415a77;
-
-  --background-tint-one: hsl(75, 6%, 87%);
-} */
-
 :root {
   --main-background-bright: #f8f7f7;
   --main-background-dark: #49475b;
@@ -50,21 +18,6 @@
 
   --background-tint-one: hsl(75, 6%, 87%);
 }
-
-/* :root {
-  --main-background-bright: #f4f7f5;
-  --main-background-dark: #12215e;
-
-  --main-text-color-dark: #010305;
-  --main-text-color-medium: #12215e;
-  --main-text-color-bright: #f4f7f5;
-
-  --main-accent-color: #cd8987;
-
-  --background-shade-one: #cdd6dd;
-
-  --background-tint-one: #cdaca1;
-} */
 
 /********************************************/
 /* GLOBAL RESET */
@@ -94,7 +47,7 @@ body {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   max-width: 100vw;
   height: -webkit-fill-available;
 }
@@ -184,7 +137,7 @@ html::-webkit-scrollbar {
 } */
 
 .section-main {
-  padding: 12.8rem 2rem;
+  padding: 20rem 0;
   max-width: 100vw;
   position: relative;
 
@@ -192,10 +145,10 @@ html::-webkit-scrollbar {
 }
 
 .container-section {
-  padding: 0 12.8rem;
+  padding: 0 14.8rem;
   margin: 0 auto;
   max-width: 180rem;
-  /* margin-bottom: 12rem; */
+
   position: relative;
 }
 
@@ -324,7 +277,7 @@ html::-webkit-scrollbar {
   /* font-family: "Min-sans"; */
   /* font-family: "Montserrat", sans-serif; */
   /* font-size: 5.2rem; */
-  font-size: clamp(3rem, 5vw, 5.2rem);
+  font-size: clamp(2.4rem, 5vw, 5.2rem);
   font-weight: 400;
   letter-spacing: -2px;
   width: clamp(5ch, 100%, 18ch);
@@ -346,7 +299,7 @@ html::-webkit-scrollbar {
 
   opacity: 0.05;
 
-  z-index: -1;
+  mix-blend-mode: darken;
 }
 
 .heading-secondary--first {
@@ -370,7 +323,7 @@ html::-webkit-scrollbar {
 .heading-tertiary {
   font-weight: 400;
 
-  font-size: clamp(2.4rem, 3.5vw, 3rem);
+  font-size: clamp(2rem, 3.5vw, 3rem);
 
   margin-bottom: 1.2rem;
 }
@@ -431,7 +384,6 @@ html::-webkit-scrollbar {
 .main-nav {
   display: flex;
   align-items: center;
-  mix-blend-mode: difference;
 }
 
 .nav-el {
@@ -531,7 +483,7 @@ html::-webkit-scrollbar {
 
 .icon-logo-scrollnav {
   /* height: 4rem; */
-  width: 3rem;
+  width: 4rem;
 }
 
 .title-scrollnav {
