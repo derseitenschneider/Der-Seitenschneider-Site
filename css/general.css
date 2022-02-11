@@ -363,7 +363,7 @@ html::-webkit-scrollbar {
 .logo-title {
   display: block;
   /* font-family: "Playfair Display", serif; */
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 400;
   color: var(--background-shade-one);
 }
@@ -372,14 +372,6 @@ html::-webkit-scrollbar {
   height: 4.4rem;
   width: 4.4rem;
 }
-
-/* .icon-logo circle {
-  fill: var(--main-background-bright);
-} */
-
-/* .icon-logo path {
-  stroke: var(--main-background-dark);
-} */
 
 .main-nav {
   display: flex;
@@ -393,7 +385,8 @@ html::-webkit-scrollbar {
 .nav-link:link,
 .nav-link:visited {
   position: relative;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 300;
   color: var(--main-text-color-dark);
   mix-blend-mode: darken;
 }
@@ -419,6 +412,7 @@ html::-webkit-scrollbar {
 .nav-link:active,
 .nav-link:focus {
   color: var(--main-text-color-medium);
+  font-weight: 400;
   border: none;
 }
 
@@ -598,11 +592,6 @@ html::-webkit-scrollbar {
   margin-top: -1px;
 }
 
-.heading-footer {
-  font-size: 3.2rem;
-  font-weight: 400;
-}
-
 .container-footer {
   position: relative;
 
@@ -619,13 +608,6 @@ html::-webkit-scrollbar {
   color: var(--main-text-color-medium);
 }
 
-.footer .heading-secondary {
-  display: inline-block;
-  font-size: 3.6rem;
-  color: var(--main-text-color-medium);
-  margin-bottom: 0;
-}
-
 .footer-row {
   display: flex;
   flex-direction: column;
@@ -633,6 +615,33 @@ html::-webkit-scrollbar {
   justify-content: space-between;
 
   /* gap: 3.6rem; */
+}
+
+.logo-footer {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.logo-footer .logo-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+
+  color: var(--main-background-dark);
+}
+
+.logo-footer .icon-logo {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+.logo-footer .icon-logo rect,
+.logo-footer .icon-logo path {
+  fill: var(--background-shade-one);
+}
+
+.logo-footer .icon-logo circle {
+  fill: var(--main-background-dark);
 }
 
 .container-social-footer {

@@ -230,11 +230,13 @@
 
   .container-footer {
     grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 0;
   }
 
   .footer-row--left {
     gap: 2.4rem;
     grid-row: 2/3;
+    margin-top: 8rem;
   }
 
   .heading-footer {
@@ -453,9 +455,9 @@
     font-size: 1.6rem;
   }
 
-  .container-footer {
+  /* .container-footer {
     padding-bottom: 1.2rem;
-  }
+  } */
 }
 
 /********************************************/
@@ -680,7 +682,7 @@
     font-size: 1.6rem;
   }
 
-  .container-footer {
+  /* .container-footer {
     padding: 4.8rem 1.2rem 1.2rem 1.2rem;
-  }
+  } */
 }
