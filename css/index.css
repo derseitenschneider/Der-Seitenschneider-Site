@@ -1113,6 +1113,7 @@ iframe {
 
   display: grid;
   grid-template-columns: 6rem 1fr 15rem;
+  column-gap: 2.4rem;
 
   justify-items: center;
   z-index: 300;
@@ -1120,7 +1121,7 @@ iframe {
 
   width: 100vw;
 
-  height: fit-content;
+  height: auto;
   padding: 2.4rem;
   background-color: var(--main-text-color-dark);
   color: var(--main-text-color-bright);

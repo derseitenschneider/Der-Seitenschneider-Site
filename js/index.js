@@ -232,30 +232,38 @@ const acceptCookies = function () {
 // Smooth scrolling animation
 
 const allLinks = document.querySelectorAll("a:link");
+console.log(allLinks[0]);
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
-    e.preventDefault();
     const href = link.getAttribute("href");
+
+    console.log(href);
+
+    if (href !== "#" && href.startsWith("#")) {
+      e.preventDefault();
+      const section = document.querySelector(href);
+      section.scrollIntoView({ behavior: "smooth" });
+    }
 
     // Scroll back to top
     if (href === "#") {
-      window.scroll({
+      window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
-      console.log("home");
     }
 
-    // Scroll to other links
-    if (href !== "#" && href.startsWith("#")) {
-      const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: "smooth" });
-    }
+    // // Scroll to other links
+    // if (href !== "#" && href.startsWith("#")) {
+    //   const sectionEl = document.querySelector(href);
+    //   console.log(sectionEl);
+    //   // sectionEl.scrollIntoView({ behavior: "smooth" });
+    // }
 
-    // // Close mobile naviagtion
-    // if (link.classList.contains("main-nav-link"))
-    //   headerEl.classList.toggle("nav-open");
+    // // // Close mobile naviagtion
+    // // if (link.classList.contains("main-nav-link"))
+    // //   headerEl.classList.toggle("nav-open");
   });
 });
 

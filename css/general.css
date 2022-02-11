@@ -42,17 +42,19 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
+  /* max-width: 100vw; */
 }
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
-  /* overflow-x: hidden; */
+
   max-width: 100vw;
   height: -webkit-fill-available;
 }
 
 body {
+  /* scroll-behavior: smooth; */
   position: relative;
 
   min-height: 100vh;
@@ -65,7 +67,6 @@ body {
   color: var(--main-text-color-dark);
   background-color: var(--main-background-bright);
 
-  overflow-x: hidden;
   max-width: 100vw;
 }
 
@@ -131,10 +132,6 @@ p {
 html::-webkit-scrollbar {
   display: none;
 }
-
-/* body {
-  background-color: var(--background-shade-one);
-} */
 
 .section-main {
   padding: 20rem 0;
