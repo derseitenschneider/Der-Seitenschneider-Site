@@ -163,8 +163,8 @@ html::-webkit-scrollbar {
   border: none;
   padding: 1.6rem 1.2rem;
 
-  color: var(--main-text-color-bright);
-  background: var(--main-background-dark);
+  background-color: #14080ed7;
+  color: #fff;
 
   font-size: 1.6rem;
   font-weight: 600;
@@ -264,6 +264,7 @@ html::-webkit-scrollbar {
   /* font-family: "Lora", serif; */
   /* font-size: 10rem; */
   /* font-family: 'Rowdies', cursive; */
+
   color: var(--main-background-dark);
   font-size: clamp(2.4rem, 7.5vw, 10rem);
   font-weight: 600;
