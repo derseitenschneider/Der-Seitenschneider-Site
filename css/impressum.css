@@ -17,7 +17,7 @@
 }
 
 .section-impressum p {
-  width: clamp(35ch, 100%, 100ch);
+  width: clamp(30ch, 100%, 100ch);
 }
 
 .section-impressum li {

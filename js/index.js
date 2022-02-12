@@ -232,13 +232,10 @@ const acceptCookies = function () {
 // Smooth scrolling animation
 
 const allLinks = document.querySelectorAll("a:link");
-console.log(allLinks[0]);
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
     const href = link.getAttribute("href");
-
-    console.log(href);
 
     if (href !== "#" && href.startsWith("#")) {
       e.preventDefault();
@@ -248,6 +245,8 @@ allLinks.forEach(function (link) {
 
     // Scroll back to top
     if (href === "#") {
+      e.preventDefault();
+
       window.scrollTo({
         top: 0,
         behavior: "smooth",
