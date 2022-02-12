@@ -264,7 +264,7 @@ html::-webkit-scrollbar {
   /* font-family: 'Rowdies', cursive; */
 
   color: var(--main-background-dark);
-  font-size: clamp(2.4rem, 7.5vw, 10rem);
+  font-size: clamp(4rem, 7.5vw, 10rem);
   font-weight: 600;
 
   letter-spacing: -4px;
@@ -276,10 +276,10 @@ html::-webkit-scrollbar {
   /* font-family: "Min-sans"; */
   /* font-family: "Montserrat", sans-serif; */
   /* font-size: 5.2rem; */
-  font-size: clamp(2.4rem, 5vw, 5.2rem);
+  font-size: clamp(3rem, 5vw, 5.2rem);
   font-weight: 400;
   letter-spacing: -2px;
-  width: clamp(5ch, 100%, 18ch);
+  width: clamp(5ch, 100%, 16ch);
   line-height: 1;
 
   color: var(--main-text-color-medium);
