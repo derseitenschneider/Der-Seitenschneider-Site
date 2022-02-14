@@ -792,12 +792,6 @@ html::-webkit-scrollbar {
 /* HELPER CLASSES */
 /********************************************/
 
-.fixed {
-  position: fixed;
-  right: 0;
-  top: 0;
-}
-
 .grid--2-cols {
   display: grid;
   /* grid-template-columns: repeat(2, 1fr); */

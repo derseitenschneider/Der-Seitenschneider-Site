@@ -1,78 +1,20 @@
 "use strict";
 
 /////////////////////////////////////////////////////////////////////
-// VARIABLES //
+// PRELOAD //
 /////////////////////////////////////////////////////////////////////
 
-//Main Components
+//Remove preload transition class
 
-const body = document.querySelector("body");
+window.addEventListener("load", function () {
+  document.querySelector("body").classList.remove("preload");
+});
 
-const headerEL = document.querySelector(".header");
+///////////////////////////////////////////////////////////
+// CAROUSEL HEADING
+///////////////////////////////////////////////////////////
 
-const sectionRightEl = document.querySelector(".section-right");
-
-const sectionHeroEL = document.querySelector(".section-hero");
-const sectionAngebotEL = document.querySelector(".section-angebot");
-const sectionPortfolioEL = document.querySelector(".section-portfolio");
-const sectionSchneiderEL = document.querySelector(".section-schneider");
-const sectionKontaktEL = document.querySelector(".section-kontakt");
-
-//Navigation Links
-const navLinkAngebot = document.querySelector(".nav-link--angebot");
-const navLinkPortfolio = document.querySelector(".nav-link--portfolio");
-const navLinkSchneider = document.querySelector(".nav-link--schneider");
-const navLinkKontakt = document.querySelector(".nav-link--kontakt");
-
-//Carousel Heading
 const headingCarousel = document.querySelectorAll(".el-carousel");
-
-const slideImages = document.querySelectorAll(".slide-img");
-const slideDescriptions = document.querySelectorAll(".slide-description");
-const btnPortfolioLeft = document.querySelector(".btn-arrow--left");
-const btnPortfolioRight = document.querySelector(".btn-arrow--right");
-
-//Cookies
-const containerCookies = document.querySelector(".container-cookies");
-const wrapperCookiesOne = document.querySelector(".wrapper-cookies--one");
-const wrapperCookiesTwo = document.querySelector(".wrapper-cookies--two");
-
-//Form
-const formEl = document.querySelector(".form");
-const formAnswerEl = document.querySelector(".form-answer");
-
-//BUTTONS
-
-//Btns scroll-nav
-const btnScrollNav = document.querySelector(".btn-scroll-nav");
-const containerScrollNav = document.querySelector(".container-scroll-nav");
-
-//Btns portfolio gallery
-const btnToLeft = document.querySelector(".btn-arrow--left");
-const btnToRight = document.querySelector(".btn-arrow--right");
-
-//ARRAYS
-
-//Array Nav Links
-
-const navLinksArr = [
-  navLinkAngebot,
-  navLinkPortfolio,
-  navLinkSchneider,
-  navLinkKontakt,
-];
-
-/////////////////////////////////////////////////////////////////////
-// FUNCTIONS //
-/////////////////////////////////////////////////////////////////////
-
-//Open and close scroll-nav
-
-const openCloseScrollNav = function () {
-  body.classList.toggle("scrollnav-open");
-};
-
-//CAROUSEL HEADING
 
 const hideRotationElement = function (element) {
   element.classList.remove("active");
@@ -85,23 +27,44 @@ const showRotationElement = function (element) {
 
 let i = 0;
 
+//Rotationloop (no for-loop since setTimeout doesn't work with that)
+
 const rotationLoop = function () {
   setTimeout(function () {
+    //Hide current rotation element
     hideRotationElement(headingCarousel[i]);
     i++;
+
+    //Show next rotation element
     showRotationElement(headingCarousel[i]);
+
+    //Continue loop when current rotation element is not the last one
     if (i < headingCarousel.length - 1) rotationLoop();
   }, 2000);
 };
 
 rotationLoop();
 
-//Portfolio Slide
+///////////////////////////////////////////////////////////
+// PORTFOLIO SLIDE //
+///////////////////////////////////////////////////////////
+
+// VARABLES //
+
+const slideImages = document.querySelectorAll(".slide-img");
+const slideDescriptions = document.querySelectorAll(".slide-description");
+const btnPortfolioLeft = document.querySelector(".btn-arrow--left");
+const btnPortfolioRight = document.querySelector(".btn-arrow--right");
 
 let slideIndex = 1;
 
+// FUNCTIONS //
+
 const slideDescriptionUpdate = function () {
+  //Hide all slide description
   slideDescriptions.forEach((element) => element.classList.remove("active"));
+
+  //Show current new slide description
   slideDescriptions[slideIndex - 1].classList.add("active");
 };
 
@@ -163,15 +126,32 @@ const updateSlideIndex = function (number) {
   }
 };
 
-//Sticky Nav
+///////////////////////////////////////////////////////////
+// STICKY SCROLL NAV //
+///////////////////////////////////////////////////////////
 
-const addStickyHeader = function () {
+// VARIABLES //
+
+const body = document.querySelector("body");
+const sectionHeroEL = document.querySelector(".section-hero");
+const btnScrollNav = document.querySelector(".btn-scroll-nav");
+const containerScrollNav = document.querySelector(".container-scroll-nav");
+
+// FUNCTIONS //
+
+const addStickyScrollNavBtn = function () {
   body.classList.add("sticky");
 };
 
-const removeStickyHeader = function () {
+const removeStickyScrollNavBtn = function () {
   body.classList.remove("sticky");
 };
+
+const openCloseScrollNav = function () {
+  body.classList.toggle("scrollnav-open");
+};
+
+// INTERSECTION OBSERVER SCROLL NAV BTN //
 
 let optionsStickyHeader = {
   root: null,
@@ -184,14 +164,14 @@ const callbackStickyHeader = function (entries) {
     if (!entry.isIntersecting) {
       containerScrollNav.removeAttribute("tabindex");
       btnScrollNav.removeAttribute("tabindex");
-      addStickyHeader();
+      addStickyScrollNavBtn();
     }
 
     if (entry.isIntersecting) {
       containerScrollNav.setAttribute("tabindex", -1);
       btnScrollNav.setAttribute("tabindex", -1);
       body.classList.remove("scrollnav-open");
-      setTimeout(removeStickyHeader, 650);
+      setTimeout(removeStickyScrollNavBtn, 650);
     }
   });
 };
@@ -203,47 +183,53 @@ let observerStickyHeader = new IntersectionObserver(
 
 observerStickyHeader.observe(sectionHeroEL);
 
-//Form submit
+// EVENT LISTENER TO OPEN/CLOSE SCROLL NAV //
+
+btnScrollNav.addEventListener("click", openCloseScrollNav);
+
+///////////////////////////////////////////////////////////
+// FORM SUBMIT //
+///////////////////////////////////////////////////////////
+
+const formEl = document.querySelector(".form");
+const formAnswerEl = document.querySelector(".form-answer");
 
 formEl.onsubmit = function () {
   //After submit show answer message and hide form
-  console.log("ok");
   formEl.classList.add("hide");
   formAnswerEl.classList.remove("hide");
 };
 
-//Show Cookiebanner
+///////////////////////////////////////////////////////////
+// COOKIEBANNER //
+///////////////////////////////////////////////////////////
+
+const containerCookies = document.querySelector(".container-cookies");
 
 const showCookieBanner = function () {
   containerCookies.classList.add("show-cookies");
 };
 
+//Show cookie banner, if not already accepted previously
 if (!localStorage.getItem("cookieBannerDisplayed")) {
   setTimeout(showCookieBanner, 5000);
 }
 
-//Cookies accepted
+//When accepted -> Hide cookie banner and store accept in local storage
 const acceptCookies = function () {
   localStorage.setItem("cookieBannerDisplayed", true);
   containerCookies.classList.remove("show-cookies");
 };
 
 ///////////////////////////////////////////////////////////
-// Smooth scrolling animation
+// SMOOTH SCROLLING
+///////////////////////////////////////////////////////////
 
 const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach(function (link) {
   link.addEventListener("click", function (e) {
     const href = link.getAttribute("href");
-    console.log(href);
-
-    if (href !== "#" && href.startsWith("#")) {
-      e.preventDefault();
-
-      const section = document.querySelector(href);
-      section.scrollIntoView({ behavior: "smooth" });
-    }
 
     // Scroll back to top
     if (href === "#") {
@@ -257,23 +243,10 @@ allLinks.forEach(function (link) {
 
     // Scroll to other links
     if (href !== "#" && href.startsWith("#")) {
+      e.preventDefault();
       const sectionEl = document.querySelector(href);
 
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
   });
-});
-
-/////////////////////////////////////////////////////////////////////
-// HANDLER //
-/////////////////////////////////////////////////////////////////////
-
-//Btn scroll nav
-
-btnScrollNav.addEventListener("click", openCloseScrollNav);
-
-//Remove preload transition class
-
-window.addEventListener("load", function () {
-  document.querySelector("body").classList.remove("preload");
 });
