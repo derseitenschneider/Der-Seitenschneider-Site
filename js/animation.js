@@ -1,36 +1,22 @@
 "use strict";
 
 /////////////////////////////////////////////////////////////////////
-// VARIABLES //
+// BASIC OBSERVER FUNCTION //
 /////////////////////////////////////////////////////////////////////
 
-const svgAngebot = document.querySelectorAll(".svg-angebot");
-
-const svgDesign = document.querySelector(".svg-angebot--design");
-const svgSupport = document.querySelector(".svg-angebot--support");
-const svgInhalt = document.querySelector(".svg-angebot--inhalt");
-const iconRocket = document.querySelector(".icon-angebot--rocket");
-
-const sectionSchneider = document.querySelector(".section-schneider");
-const textboxSchneider = document.querySelector(".textbox-schneider");
-const imgBoxSchneider = document.querySelector(".img-box-schneider");
-
-const sectionContact = document.querySelector(".section-contact");
-const containerForm = document.querySelector(".container-form");
-
-/////////////////////////////////////////////////////////////////////
-// Functions //
-/////////////////////////////////////////////////////////////////////
-
-//Basic Observer Function
 const initiateObserver = function (callback, options, obsEl) {
   let observer = new IntersectionObserver(callback, options);
 
   observer.observe(obsEl);
 };
 
-///////////////////////////////////////////////////////////////
-//Load Fade
+/////////////////////////////////////////////////////////////////////
+// BASIC SCROLL FADE IN ANIMATION //
+/////////////////////////////////////////////////////////////////////
+
+//LIST OF ELEMENTS TO FADE IN ON SCROLL
+
+//Single elements
 const elementsToLoad = new Set([
   document.querySelector(".container-portfolio--right"),
 
@@ -39,6 +25,7 @@ const elementsToLoad = new Set([
   document.querySelector(".heading-cards"),
 ]);
 
+// Element groups
 document
   .querySelectorAll(".heading-secondary")
   .forEach((entry) => elementsToLoad.add(entry));
@@ -60,6 +47,7 @@ document
 
 elementsToLoad.forEach((entry) => entry.classList.add("loadin"));
 
+//INTERSECTION OBSERVER FOR BASIC SCROLL FADE IN ANIMATION
 const callbackLoading = function (entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -78,9 +66,15 @@ elementsToLoad.forEach((entry) =>
   initiateObserver(callbackLoading, optionsLoading, entry)
 );
 
-///////////////////////////////////////////////////////////////
-//Animation Angebot
+/////////////////////////////////////////////////////////////////////
+// ANIMATION SECTION ANGEBOT //
+/////////////////////////////////////////////////////////////////////
 
+const svgAngebot = document.querySelectorAll(".svg-angebot");
+const svgDesign = document.querySelector(".svg-angebot--design");
+const iconRocket = document.querySelector(".icon-angebot--rocket");
+
+// Roll in icon background
 const callbackAngebot = function (entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -99,42 +93,18 @@ svgAngebot.forEach((el) =>
   initiateObserver(callbackAngebot, optionsAngebot, el)
 );
 
-//Rocket fly
+//Rocket fly on hover
 
 const rocketFly = function () {
   iconRocket.classList.add("rocket-fly");
-
-  // setTimeout(function () {
-  //   iconRocket.classList.remove("rocket-fly");
-  // }, 5000);
 };
 
-//Rocket land
+svgDesign.addEventListener("mouseover", rocketFly);
+
+//Rocket land when icon left the viewport
 const rocketLand = function () {
   iconRocket.classList.remove("rocket-fly");
 };
-//On hover
-svgDesign.addEventListener("mouseover", rocketFly);
-
-//On scroll fly
-
-// const callbackRocketFly = function (entries) {
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       setTimeout(rocketFly, 5000);
-//     }
-//   });
-// };
-
-// let optionsRocketFly = {
-//   root: null,
-//   rootMargin: " 0px",
-//   threshold: 1,
-// };
-
-// initiateObserver(callbackRocketFly, optionsRocketFly, svgDesign);
-
-// On sroll land
 
 const callbackRocketLand = function (entries) {
   entries.forEach((entry) => {
@@ -148,8 +118,12 @@ let optionsRocketLand = { root: null, rootMargin: "0px", threshold: 0 };
 
 initiateObserver(callbackRocketLand, optionsRocketLand, svgDesign);
 
-///////////////////////////////////////////////////////////////
-//Animation Schneider
+/////////////////////////////////////////////////////////////////////
+// ANIMATION SECTION SCHNEIDER //
+/////////////////////////////////////////////////////////////////////
+
+const sectionSchneider = document.querySelector(".section-schneider");
+const imgBoxSchneider = document.querySelector(".img-box-schneider");
 
 const callbackSchneider = function (entries) {
   entries.forEach((entry) => {
@@ -167,8 +141,12 @@ let optionsSchneider = {
 
 initiateObserver(callbackSchneider, optionsSchneider, imgBoxSchneider);
 
-///////////////////////////////////////////////////////////////
-//Animation Contact
+/////////////////////////////////////////////////////////////////////
+// ANIMATION SECTION CONTACT //
+/////////////////////////////////////////////////////////////////////
+
+const sectionContact = document.querySelector(".section-contact");
+const containerForm = document.querySelector(".container-form");
 
 const callbackContact = function (entries) {
   entries.forEach((entry) => {
