@@ -19,6 +19,21 @@
   --background-tint-one: hsl(75, 6%, 87%);
 }
 
+@font-face {
+  font-family: "VeronaSerialXLight";
+  src: url(../content/fonts/VeronaSerial-Xlight.ttf);
+}
+
+@font-face {
+  font-family: "NashvilleSerialXlight";
+  src: url(../content/fonts/NashvilleSerial-Xlight.ttf);
+}
+
+@font-face {
+  font-family: "VeronaSerial";
+  src: url(../content/fonts/verona-serial-bold.ttf);
+}
+
 /********************************************/
 /* GLOBAL RESET */
 /********************************************/
@@ -41,34 +56,22 @@
 
 html,
 body {
-  height: auto;
   overflow-x: hidden;
-  /* max-width: 100vw; */
 }
 
 html {
   font-size: 62.5%;
-
-  max-width: 100vw;
-  height: -webkit-fill-available;
-  /* overflow: scroll; */
 }
 
 body {
-  /* scroll-behavior: smooth; */
-  position: relative;
-
-  min-height: 100vh;
-  /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
-
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-family: "Montserrat", sans-serif;
+
   color: var(--main-text-color-dark);
   background-color: var(--main-background-bright);
 
-  max-width: 100vw;
+  /* max-width: 100vw; */
 }
 
 img,
@@ -135,15 +138,13 @@ html::-webkit-scrollbar {
 }
 
 .section-main {
-  padding: 20rem 0;
-  max-width: 100vw;
   position: relative;
 
   background-color: var(--main-background-bright);
 }
 
 .container-section {
-  padding: 0 14.8rem;
+  padding: 20rem 14.8rem;
   margin: 0 auto;
   max-width: 180rem;
 
@@ -211,11 +212,15 @@ html::-webkit-scrollbar {
   word-spacing: 4px;
 }
 
+.btn-normal {
+  width: fit-content;
+}
+
 .btn-normal:link,
 .btn-normal:visited {
   /* color: var(--main-text-color-bright); */
   color: #fff;
-  width: fit-content;
+  /* width: fit-content; */
 }
 
 .btn-normal:hover .hover-layer-btn,
@@ -276,6 +281,7 @@ html::-webkit-scrollbar {
   /* font-family: "Min-sans"; */
   /* font-family: "Montserrat", sans-serif; */
   /* font-size: 5.2rem; */
+
   font-size: clamp(3rem, 5vw, 5.2rem);
   font-weight: 400;
   letter-spacing: -2px;
@@ -361,6 +367,7 @@ html::-webkit-scrollbar {
 
 .logo-title {
   display: block;
+  /* font-family: VeronaSerialXlight, serif; */
   /* font-family: "Playfair Display", serif; */
   font-size: 2rem;
   font-weight: 400;

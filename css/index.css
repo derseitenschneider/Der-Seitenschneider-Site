@@ -6,9 +6,7 @@
   position: relative;
   width: 100vw;
 
-  height: clamp(fit-content, 100vh, 80rem);
-
-  padding: 20rem 0;
+  padding: 30rem 4.8rem;
 
   display: grid;
   place-items: center;
@@ -44,8 +42,9 @@
   margin-top: 6.4rem;
 
   font-family: "Playfair Display", serif;
+  /* font-family: "VeronaSerialXLight", serif; */
 
-  font-weight: 400;
+  font-weight: 300;
   font-size: clamp(2.4rem, 6.2vw, 8rem);
   letter-spacing: 0px;
   height: 6rem;
@@ -95,7 +94,7 @@
 .img-box--hero {
   position: relative;
   z-index: 1;
-  width: 40rem;
+  max-width: 40rem;
   align-self: center;
 
   z-index: 1;
@@ -208,8 +207,6 @@
 /******************************************/
 
 .section-portfolio {
-  color: var(--main-text-color-dark);
-  position: relative;
   z-index: 1;
   display: grid;
   place-items: center;
@@ -272,8 +269,7 @@
 .img-screen {
   position: relative;
 
-  width: 60rem;
-  height: 100%;
+  max-width: 60rem;
 
   display: grid;
   place-items: center;
@@ -371,7 +367,7 @@
 /*Container right (slide-description)*/
 
 .container-portfolio--right {
-  height: 48rem;
+  min-height: 40rem;
   padding-top: 2rem;
 }
 
@@ -654,7 +650,6 @@
 
   top: -5%;
   right: -20rem;
-  z-index: 1;
 }
 
 .section-schneider {
@@ -717,7 +712,6 @@
 }
 
 .wrapper-cards {
-  width: 80%;
   max-width: 120rem;
   margin: 0 auto;
 }
