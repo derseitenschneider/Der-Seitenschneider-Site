@@ -558,6 +558,7 @@
   }
 
   .section-hero {
+    height: 100vh;
     padding: 12rem 2.4rem;
   }
 
