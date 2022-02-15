@@ -78,11 +78,13 @@ const slideToRight = function () {
   //Make Btn-Left active
   btnPortfolioLeft.classList.remove("btn-inactive");
   btnPortfolioLeft.removeAttribute("tabindex");
+  btnPortfolioLeft.removeAttribute("aria-hidden");
 
   //Make Btn-Right inactive when last Slide
   if (slideIndex >= slideImages.length) {
     btnPortfolioRight.classList.add("btn-inactive");
     btnPortfolioRight.setAttribute("tabindex", -1);
+    btnPortfolioRight.setAttribute("aria-hidden", true);
   }
 
   slideDescriptionUpdate();
@@ -237,20 +239,34 @@ formEl.onsubmit = function () {
 ///////////////////////////////////////////////////////////
 
 const containerCookies = document.querySelector(".container-cookies");
+const linkCookies = document.querySelector(".link-cookies");
+const btnCookies = document.querySelector(".btn--cookies");
 
 const showCookieBanner = function () {
   containerCookies.classList.add("show-cookies");
 };
 
+const removeElementsfromTabinex = function () {
+  linkCookies.setAttribute("tabindex", -1);
+  linkCookies.setAttribute("aria-hidden", true);
+  btnCookies.setAttribute("tabindex", -1);
+  btnCookies.setAttribute("aria-hidden", true);
+};
+
 //Show cookie banner, if not already accepted previously
 if (!localStorage.getItem("cookieBannerDisplayed")) {
   setTimeout(showCookieBanner, 5000);
+} else {
+  //Remove cookie elements from tabindex
+  removeElementsfromTabinex();
 }
 
 //When accepted -> Hide cookie banner and store accept in local storage
 const acceptCookies = function () {
   localStorage.setItem("cookieBannerDisplayed", true);
   containerCookies.classList.remove("show-cookies");
+  //Remove cookie elements from tabindex
+  removeElementsfromTabinex();
 };
 
 ///////////////////////////////////////////////////////////

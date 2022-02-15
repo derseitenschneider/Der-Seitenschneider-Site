@@ -64,7 +64,7 @@
     <title>Der Seitenschneider</title>
   </head>
 
-  <body class="preload">
+  <body class="body preload">
     <header class="header">
       <div class="container-header">
         <a href="https://derseitenschneider.netlify.app" class="logo-header">
@@ -166,7 +166,13 @@
     <div class="container-scroll-nav">
       <div class="wrapper-scroll-nav">
         <div class="logo-scroll-nav">
-          <a href="#" class="link-logo" onclick="openCloseScrollNav()">
+          <a
+            href="#"
+            class="link-logo"
+            onclick="openCloseScrollNav()"
+            tabindex="-1"
+            aria-hidden="true"
+          >
             <svg
               class="icon icon-logo icon-logo-scrollnav"
               width="180"
@@ -237,7 +243,12 @@
 
         <ul class="scroll-nav">
           <li class="el-scroll-nav">
-            <a href="#" class="link-scroll-nav" onclick="openCloseScrollNav()"
+            <a
+              href="#"
+              class="link-scroll-nav"
+              onclick="openCloseScrollNav()"
+              tabindex="-1"
+              aria-hidden="true"
               >Home</a
             >
           </li>
@@ -247,6 +258,8 @@
               href="#portfolio"
               class="link-scroll-nav"
               onclick="openCloseScrollNav()"
+              tabindex="-1"
+              aria-hidden="true"
               >Portfolio</a
             >
           </li>
@@ -256,6 +269,8 @@
               href="#angebot"
               class="link-scroll-nav"
               onclick="openCloseScrollNav()"
+              tabindex="-1"
+              aria-hidden="true"
               >Angebot</a
             >
           </li>
@@ -265,6 +280,8 @@
               href="#schneider"
               class="link-scroll-nav"
               onclick="openCloseScrollNav()"
+              tabindex="-1"
+              aria-hidden="true"
               >Der Schneider</a
             >
           </li>
@@ -274,6 +291,8 @@
               href="#contact"
               class="link-scroll-nav"
               onclick="openCloseScrollNav()"
+              tabindex="-1"
+              aria-hidden="true"
               >Kontakt</a
             >
           </li>
@@ -348,7 +367,11 @@
 
               <div class="pillar-two"></div>
 
-              <img src="content/img/hero/Brian-crop.png" class="img-hero" />
+              <img
+                src="content/img/hero/Brian-crop.png"
+                class="img-hero"
+                alt="Portrait von Brian Boy"
+              />
             </figure>
           </div>
 
@@ -408,9 +431,9 @@
                     <a
                       href="http://www.y7music.ch"
                       class="slide-link slide-link--y7music"
-                      aria-label="Icon mit Link zur Y7-Music Homepage"
                       target="_blank"
                       tabindex="-1"
+                      aria-hidden="true"
                     >
                       <svg
                         width="24"
@@ -433,16 +456,19 @@
                       </svg>
                     </a>
 
-                    <div class="img-page img-page--y7"></div>
+                    <div
+                      class="img-page img-page--y7"
+                      aria-label="Bildauschnitt der Y7-Music Homepage"
+                    ></div>
                   </div>
 
                   <div class="slide-img slide-img--marabu to-right">
                     <a
                       href="http://www.marabubeach.ch"
                       class="slide-link slide-link--marabu"
-                      aria-label="Icon mit Link zur Marabu Beach Homepage"
                       target="_blank"
                       tabindex="-1"
+                      aria-hidden="true"
                     >
                       <svg
                         width="24"
@@ -465,7 +491,10 @@
                       </svg>
                     </a>
 
-                    <div class="img-page img-page--marabu"></div>
+                    <div
+                      class="img-page img-page--marabu"
+                      aria-label="Bildauschnitt der Marabu Beach Homepage"
+                    ></div>
                   </div>
 
                   <div class="slide-img slide-img--omnifood to-right">
@@ -475,6 +504,7 @@
                       aria-label="Icon mit Link zur Omnifood Homepage"
                       target="_blank"
                       tabindex="-1"
+                      aria-hidden="true"
                     >
                       <svg
                         width="24"
@@ -496,16 +526,19 @@
                         />
                       </svg>
                     </a>
-                    <div class="img-page img-page--omnifood"></div>
+                    <div
+                      class="img-page img-page--omnifood"
+                      aria-label="Bildauschnitt der Omnifood Homepage"
+                    ></div>
                   </div>
 
                   <div class="slide-img slide-img--stepbystep to-right">
                     <a
                       href="http://www.stepbystep-project.ch"
                       class="slide-link slide-link--stepbystep"
-                      aria-label="Icon mit Link zur Step By Step-Project Homepage"
                       target="_blank"
                       tabindex="-1"
+                      aria-hidden="true"
                     >
                       <svg
                         width="24"
@@ -527,7 +560,10 @@
                         />
                       </svg>
                     </a>
-                    <div class="img-page img-page--stepbystep"></div>
+                    <div
+                      class="img-page img-page--stepbystep"
+                      aria-label="Bildauschnitt der Step by Step-Project Homepage"
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -536,6 +572,7 @@
                   class="btn btn-arrow btn-arrow--left btn-inactive"
                   onclick="updateSlideIndex(-1)"
                   tabindex="-1"
+                  aria-hidden="true"
                 >
                   &larr;
                 </button>
@@ -725,6 +762,7 @@
                   src="content/img/schneider/polaroid-1.png"
                   class="img img-schneider"
                   width="385"
+                  alt="Foto von Brian Boy an der Gitarre"
                 />
               </figure>
             </div>
@@ -838,6 +876,7 @@
                       name="comments_or_notesA44"
                       placeholder="Ihre Email"
                       tabindex="-2"
+                      aria-hidden="true"
                       autocomplete="off"
                     />
 

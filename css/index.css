@@ -135,7 +135,7 @@
   z-index: -1;
 
   transform: translateX(-100%);
-  animation: pillarOne 2s forwards ease;
+  animation: pillarOne 2s forwards ease 2s;
   background-color: var(--main-background-bright);
 }
 
@@ -163,7 +163,7 @@
   background-color: var(--main-background-bright);
   transform: translateX(100%);
 
-  animation: pillarTwo 2s forwards ease;
+  animation: pillarTwo 2s forwards ease 2s;
 
   z-index: -1;
 }
@@ -180,8 +180,8 @@
 
 .img-hero {
   transform: translate(-12%, 10%) scale(1.2);
-  opacity: 0.2;
-  animation: showHeroImg 2s ease forwards;
+  opacity: 1;
+  animation: showHeroImg 2s ease forwards 1s;
   filter: grayscale(0.5);
   z-index: 2;
 }
@@ -258,6 +258,10 @@
   width: fit-content;
   /* width: 6.4rem; */
   transition: opacity 1s, transform 0.45s;
+}
+
+.btn-arrow:focus {
+  border: 2px solid var(--main-accent-color);
 }
 
 .btn-inactive {
