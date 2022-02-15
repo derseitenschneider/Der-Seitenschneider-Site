@@ -160,7 +160,7 @@ html::-webkit-scrollbar {
   border: none;
   padding: 1.6rem 1.2rem;
 
-  background-color: #14080ed7;
+  background-color: var(--background-shade-one);
   color: #fff;
 
   font-size: 1.6rem;
@@ -178,9 +178,24 @@ html::-webkit-scrollbar {
   position: relative;
   display: block;
   overflow: hidden;
-  z-index: 1;
-  border-radius: 8px;
   width: fit-content;
+  /* z-index: 1; */
+  isolation: isolate;
+  border-radius: 8px;
+
+  box-shadow: 0 0.8rem 0.8rem rgba(121, 148, 150, 0.3);
+}
+
+.btn-normal:link,
+.btn-normal:visited {
+  color: #fff;
+}
+
+.btn-normal:hover .hover-layer-btn,
+.btn-noram:active .hover-layer-btn,
+.btn-normal:focus .hover-layer-btn {
+  transition: transform 0.85s ease;
+  transform: translate(50%, 50%) scale(1);
 }
 
 .hover-layer-btn {
@@ -193,12 +208,13 @@ html::-webkit-scrollbar {
   height: 28rem;
   border-radius: 100%;
 
-  background-color: var(--background-shade-one);
+  background-color: var(--main-background-dark);
+
   z-index: -1;
-  opacity: 1;
+
   transform: translate(50%, 50%) scale(0);
 
-  transition: transform 1.5s ease;
+  transition: transform 0.85s ease;
   transform-origin: center;
 }
 
@@ -206,54 +222,10 @@ html::-webkit-scrollbar {
   display: block;
   position: relative;
   z-index: 1;
+  width: auto;
   letter-spacing: 0.5px;
   word-spacing: 4px;
 }
-
-.btn-normal {
-  width: fit-content;
-}
-
-.btn-normal:link,
-.btn-normal:visited {
-  /* color: var(--main-text-color-bright); */
-  color: #fff;
-  /* width: fit-content; */
-}
-
-.btn-normal:hover .hover-layer-btn,
-.btn-noram:active .hover-layer-btn,
-.btn-normal:focus .hover-layer-btn {
-  transition: transform 0.85s ease;
-  transform: translate(50%, 50%) scale(1);
-}
-
-/* .btn-normal:hover,
-.btn-normal:active,
-.btn-normal:focus {
-  background-color: var(--background-shade-one);
-} */
-
-/* .btn:hover:not(.btn-arrow),
-.btn:focus:not(.btn-arrow) {
-  background-color: var(--main-text-color-medium);
-} */
-
-/*Icons*/
-
-.icon {
-  display: block;
-}
-
-/*Logo*/
-/* .logo circle {
-  stroke: var(--main-accent-color);
-  fill: var(--main-background-bright);
-} */
-
-/* .logo path {
-  fill: var(--background-shade-one);
-} */
 
 /********************************************/
 /* HEADINGS */
