@@ -42,7 +42,6 @@
   margin-top: 6.4rem;
 
   font-family: "Playfair Display", serif;
-  /* font-family: "VeronaSerialXLight", serif; */
 
   font-weight: 300;
   font-size: clamp(2.4rem, 6.2vw, 8rem);
@@ -181,7 +180,7 @@
 .img-hero {
   transform: translate(-12%, 10%) scale(1.2);
   opacity: 1;
-  animation: showHeroImg 2s ease forwards 1s;
+  animation: showHeroImg 2s ease forwards 2s;
   filter: grayscale(0.5);
   z-index: 2;
 }
@@ -256,7 +255,6 @@
 
   height: fit-content;
   width: fit-content;
-  /* width: 6.4rem; */
   transition: opacity 1s, transform 0.45s;
 }
 
@@ -326,7 +324,6 @@
   transition: background-position-y 5s;
 
   background-position-y: top;
-  /* z-index: -1; */
 }
 
 .img-page--y7 {
@@ -543,8 +540,6 @@
 
   width: 150%;
   height: 150%;
-
-  /* border-radius: 1.2rem; */
 
   background-color: var(--background-shade-one);
   z-index: -1;
