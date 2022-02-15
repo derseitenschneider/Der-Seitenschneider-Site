@@ -1,15 +1,17 @@
 "use strict";
 
+///////////////////////////////////////////////////////////
+// STICKY SCROLL NAV //
+///////////////////////////////////////////////////////////
+
+// VARIABLES //
+
 const body = document.querySelector("body");
 const headingImpressumEL = document.querySelector(".heading-impressum");
-const containerScrollNav = document.querySelector(".container-scroll-nav");
 const btnScrollNav = document.querySelector(".btn-scroll-nav");
+const containerScrollNav = document.querySelector(".container-scroll-nav");
 
-//Sticky Nav
-
-const openCloseScrollNav = function () {
-  body.classList.toggle("scrollnav-open");
-};
+// FUNCTIONS //
 
 const addStickyHeader = function () {
   body.classList.add("sticky");
@@ -18,6 +20,12 @@ const addStickyHeader = function () {
 const removeStickyHeader = function () {
   body.classList.remove("sticky");
 };
+
+const openCloseScrollNav = function () {
+  body.classList.toggle("scrollnav-open");
+};
+
+// INTERSECTION OBSERVER SCROLL NAV BTN //
 
 let optionsStickyHeader = {
   root: null,
@@ -48,5 +56,7 @@ let observerStickyHeader = new IntersectionObserver(
 );
 
 observerStickyHeader.observe(headingImpressumEL);
+
+// EVENT LISTENER TO OPEN/CLOSE SCROLL NAV //
 
 btnScrollNav.addEventListener("click", openCloseScrollNav);
