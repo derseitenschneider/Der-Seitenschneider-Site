@@ -60,3 +60,12 @@ observerStickyHeader.observe(headingImpressumEL);
 // EVENT LISTENER TO OPEN/CLOSE SCROLL NAV //
 
 btnScrollNav.addEventListener("click", openCloseScrollNav);
+
+///////////////////////////////////////////////////////////
+// CURRENTYEAR FOR FOOTER //
+///////////////////////////////////////////////////////////
+
+const currentYear = new Date().getFullYear();
+const currentYearEl = document.querySelector(".current-year");
+
+currentYearEl.textContent = currentYear;

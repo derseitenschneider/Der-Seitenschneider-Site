@@ -134,6 +134,7 @@ const updateSlideIndex = function (number) {
 
 const body = document.querySelector("body");
 const sectionHeroEL = document.querySelector(".section-hero");
+const allSections = document.querySelectorAll(".section-main");
 const btnScrollNav = document.querySelector(".btn-scroll-nav");
 const containerScrollNav = document.querySelector(".container-scroll-nav");
 
@@ -151,22 +152,23 @@ const openCloseScrollNav = function () {
   body.classList.toggle("scrollnav-open");
 };
 
-// INTERSECTION OBSERVER SCROLL NAV BTN //
+// INTERSECTION OBSERVER  HERO SCROLL NAV BTN //
 
-let optionsStickyHeader = {
+let optionsStickyNavHero = {
   root: null,
   rootMargin: "-80px",
   threshold: 0,
 };
 
-const callbackStickyHeader = function (entries) {
+const callbackStickyNavHero = function (entries) {
   entries.forEach((entry) => {
+    //Show btn nav when hero is no more in the viewport
     if (!entry.isIntersecting) {
       containerScrollNav.removeAttribute("tabindex");
       btnScrollNav.removeAttribute("tabindex");
       addStickyScrollNavBtn();
     }
-
+    //Hide btn nav when hero is in the viewport
     if (entry.isIntersecting) {
       containerScrollNav.setAttribute("tabindex", -1);
       btnScrollNav.setAttribute("tabindex", -1);
@@ -176,16 +178,46 @@ const callbackStickyHeader = function (entries) {
   });
 };
 
-let observerStickyHeader = new IntersectionObserver(
-  callbackStickyHeader,
-  optionsStickyHeader
+let observerStickyNavHero = new IntersectionObserver(
+  callbackStickyNavHero,
+  optionsStickyNavHero
 );
 
-observerStickyHeader.observe(sectionHeroEL);
+observerStickyNavHero.observe(sectionHeroEL);
+
+// INTERSECTION OBSERVER SECTIONS SCROLL NAV BTN //
+let optionsStickyNavSections = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0,
+};
+
+const callbackStickyNavSections = function (entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      containerScrollNav.removeAttribute("tabindex");
+      btnScrollNav.removeAttribute("tabindex");
+      addStickyScrollNavBtn();
+    }
+  });
+};
+
+let observerStickyNavSections = new IntersectionObserver(
+  callbackStickyNavSections,
+  optionsStickyNavSections
+);
+
+allSections.forEach((entry) => observerStickyNavSections.observe(entry));
 
 // EVENT LISTENER TO OPEN/CLOSE SCROLL NAV //
 
 btnScrollNav.addEventListener("click", openCloseScrollNav);
+
+let optionsStickyHeaderHero = {
+  root: null,
+  rootMargin: "-80px",
+  threshold: 0,
+};
 
 ///////////////////////////////////////////////////////////
 // FORM SUBMIT //
@@ -250,3 +282,12 @@ allLinks.forEach(function (link) {
     }
   });
 });
+
+///////////////////////////////////////////////////////////
+// CURRENTYEAR FOR FOOTER //
+///////////////////////////////////////////////////////////
+
+const currentYear = new Date().getFullYear();
+const currentYearEl = document.querySelector(".current-year");
+
+currentYearEl.textContent = currentYear;

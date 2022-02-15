@@ -600,15 +600,15 @@ html::-webkit-scrollbar {
 }
 
 .logo-footer .logo-title {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-weight: 400;
 
   color: var(--main-background-dark);
 }
 
 .logo-footer .icon-logo {
-  height: 3.2rem;
-  width: 3.2rem;
+  height: 5.2rem;
+  width: 5.2rem;
 }
 
 .logo-footer .icon-logo rect,
