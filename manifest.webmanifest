@@ -1,0 +1,16 @@
+{
+  "name": "favicons",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "content/Favicons/Favicon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "content/Favicons/Favicon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
