@@ -591,9 +591,13 @@
     width: clamp(10rem, 55vw, 100rem);
   }
 
-  .section-portfolio {
-    margin-top: 0rem;
-    /* padding-bottom: 18rem; */
+  .overhang-square--left {
+    height: 20rem;
+  }
+
+  .description-link:link,
+  .description-link:visited {
+    font-size: 1.6rem;
   }
 
   .btn-arrow {
@@ -619,10 +623,6 @@
   .container-scroll-nav {
     width: 80vw;
     left: 20vw;
-  }
-
-  .overhang-square--left {
-    height: 20rem;
   }
 
   .wrapper-cards .heading-tertiary {
