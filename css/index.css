@@ -258,7 +258,7 @@
   transition: opacity 1s, transform 0.45s;
 }
 
-.btn-arrow:focus {
+.btn-arrow:focus-visible {
   border: 2px solid var(--main-accent-color);
 }
 
