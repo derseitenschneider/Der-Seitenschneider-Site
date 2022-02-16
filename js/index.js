@@ -190,7 +190,7 @@ observerStickyNavHero.observe(sectionHeroEL);
 // INTERSECTION OBSERVER SECTIONS SCROLL NAV BTN //
 let optionsStickyNavSections = {
   root: null,
-  rootMargin: "100px",
+  rootMargin: "0",
   threshold: 0,
 };
 
