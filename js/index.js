@@ -190,7 +190,7 @@ observerStickyNavHero.observe(sectionHeroEL);
 // INTERSECTION OBSERVER SECTIONS SCROLL NAV BTN //
 let optionsStickyNavSections = {
   root: null,
-  rootMargin: "0px",
+  rootMargin: "100px",
   threshold: 0,
 };
 
@@ -209,7 +209,11 @@ let observerStickyNavSections = new IntersectionObserver(
   optionsStickyNavSections
 );
 
-allSections.forEach((entry) => observerStickyNavSections.observe(entry));
+allSections.forEach((entry) => {
+  //Exclude section portfolio
+  if (!entry.classList.contains("section-portfolio"))
+    observerStickyNavSections.observe(entry);
+});
 
 // EVENT LISTENER TO OPEN/CLOSE SCROLL NAV //
 
