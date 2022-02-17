@@ -247,6 +247,22 @@ html::-webkit-scrollbar {
   word-spacing: 4px;
 }
 
+.btn-skip-nav {
+  position: absolute;
+  top: 8rem;
+
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 0.8rem 1.4rem;
+
+  transform: translateX(-100%);
+  transition: 0.35s ease;
+}
+
+.btn-skip-nav:focus {
+  transform: translateX(0);
+}
+
 /********************************************/
 /* HEADINGS */
 /********************************************/
