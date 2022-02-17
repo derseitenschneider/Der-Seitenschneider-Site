@@ -311,15 +311,3 @@ const currentYear = new Date().getFullYear();
 const currentYearEl = document.querySelector(".current-year");
 
 currentYearEl.textContent = currentYear;
-
-///////////////////////////////////////////////////////////
-// SKIP MAIN NAVIGATION //
-///////////////////////////////////////////////////////////
-
-const mainNavElements = document.querySelectorAll(".nav-link");
-const logoHeader = document.querySelector(".logo-header");
-
-const skipMainNav = function () {
-  logoHeader.setAttribute("tabindex", "-1");
-  mainNavElements.forEach((entry) => entry.setAttribute("tabindex", "-1"));
-};

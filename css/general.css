@@ -251,9 +251,8 @@ html::-webkit-scrollbar {
   position: absolute;
   top: 8rem;
 
-  font-size: 1.4rem;
-  font-weight: 400;
-  padding: 0.8rem 1.4rem;
+  border-radius: 0 0.8rem 0.8rem 0;
+  color: #fff !important;
 
   transform: translateX(-100%);
   transition: 0.35s ease;
