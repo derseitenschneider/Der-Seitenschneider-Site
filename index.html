@@ -14,6 +14,8 @@
       content="Webagentur, Webdesign, Webentwicklung, Homepage, Website, Schweiz"
     />
 
+    <meta name="theme-color" content="#49475b" />
+
     <meta property=“og:image:secure_url“
     content=“https://derseitenschneider.ch/content/favicons/og-img.png“/>
     <meta property="og:image:type" content="image/png" />
@@ -68,7 +70,7 @@
         Navigation überspringen
       </a>
       <div class="container-header">
-        <a href="https://derseitenschneider.netlify.app" class="logo-header">
+        <a href="https://derseitenschneider.ch" class="logo-header">
           <svg
             class="icon icon-logo"
             width="180"
@@ -139,7 +141,7 @@
         <ul class="main-nav">
           <li class="nav-el">
             <a
-              href="https://derseitenschneider.netlify.app"
+              href="https://derseitenschneider.ch"
               class="nav-link nav-link--home"
               >Home</a
             >
@@ -302,7 +304,10 @@
     </div>
 
     <div class="container-btn-scroll-nav">
-      <button class="btn btn-scroll-nav btn-scroll-nav--open">
+      <button
+        class="btn btn-scroll-nav btn-scroll-nav--open"
+        aria-label="Navigation öffnen und schliessen"
+      >
         <svg
           class="icon icon-scrollnav icon-scrollnav--open"
           xmlns="http://www.w3.org/2000/svg"
@@ -367,9 +372,11 @@
               <div class="pillar-two"></div>
 
               <img
-                src="content/img/hero/Brian-crop.png"
+                src="content/img/hero/brian-crop.webp"
                 class="img-hero"
                 alt="Portrait von Brian Boy"
+                height="480"
+                width="480"
               />
             </figure>
           </div>
@@ -388,6 +395,7 @@
           href="#contact"
           class="btn btn-normal btn-hero btn-hero--icon"
           role="button"
+          aria-label="Weiter zum Kontaktformular"
         >
           <div class="icon-btn-hero">
             <svg
@@ -423,7 +431,7 @@
                   class="img img-macbook"
                   alt="Bild MacBook Pro"
                   width="600"
-                  height="381"
+                  height="380"
                 />
                 <div class="container-slide-img">
                   <div class="slide-img slide-img--y7music active">
@@ -457,6 +465,7 @@
 
                     <div
                       class="img-page img-page--y7"
+                      role="img"
                       aria-label="Bildauschnitt der Y7-Music Homepage"
                     ></div>
                   </div>
@@ -493,6 +502,7 @@
                     <div
                       class="img-page img-page--marabu"
                       aria-label="Bildauschnitt der Marabu Beach Homepage"
+                      role="img"
                     ></div>
                   </div>
 
@@ -528,6 +538,7 @@
                     <div
                       class="img-page img-page--omnifood"
                       aria-label="Bildauschnitt der Omnifood Homepage"
+                      role="img"
                     ></div>
                   </div>
 
@@ -562,6 +573,7 @@
                     <div
                       class="img-page img-page--stepbystep"
                       aria-label="Bildauschnitt der Step by Step-Project Homepage"
+                      role="img"
                     ></div>
                   </div>
                 </div>
@@ -758,9 +770,10 @@
             <div class="container-img">
               <figure class="img-box-schneider">
                 <img
-                  src="content/img/schneider/polaroid-1.png"
+                  src="content/img/schneider/polaroid-1.webp"
                   class="img img-schneider"
-                  width="385"
+                  width="420"
+                  height="505"
                   alt="Foto von Brian Boy an der Gitarre"
                 />
               </figure>
@@ -1020,7 +1033,7 @@
     <footer class="footer">
       <div class="container-footer">
         <div class="footer-row footer-row--left">
-          <a href="https://derseitenschneider.netlify.app" class="logo-footer">
+          <a href="https://derseitenschneider.ch" class="logo-footer">
             <svg
               class="icon icon-logo"
               width="180"
@@ -1093,6 +1106,7 @@
             <a
               href="https://www.facebook.com/derseitenschneider"
               class="social-link social-link--facebook"
+              aria-label="Link zur Facebook-Seite von der Seitenschneider"
             >
               <svg
                 class="icon icon-social"
@@ -1107,8 +1121,9 @@
               </svg>
             </a>
             <a
-              href="https://www.instagram.com/derseitenschneider/"
+              href="https://www.instagram.com/derseitenschneider"
               class="social-link social-link--instagram"
+              aria-label="Link zur Instagram-Seite von der Seitenschneider"
             >
               <svg
                 class="icon icon-social"
@@ -1126,6 +1141,7 @@
             <a
               href="https://github.com/derseitenschneider"
               class="social-link social-link--github"
+              aria-label="Link zur GitHub-Seite von der Seitenschneider"
             >
               <svg
                 class="icon icon-social"
@@ -1144,9 +1160,7 @@
           <div class="container-copyright">
             <p class="textbox text-copyright">
               Copyright &copy; <span class="current-year">2022</span> by
-              <a href="https://derseitenschneider.netlify.app"
-                >Der Seitenschneider</a
-              >
+              <a href="https://derseitenschneider.ch">Der Seitenschneider</a>
             </p>
             <p class="textbox text-copyright">All rights reserved</p>
           </div>
@@ -1171,7 +1185,7 @@
             </li>
             <li class="nav-el--footer">
               <a
-                href="https://derseitenschneider.netlify.app/impressum.html"
+                href="https://derseitenschneider.ch/impressum.html"
                 class="nav-link--footer"
                 >Impressum &amp; Datenschutz</a
               >
