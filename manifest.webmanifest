@@ -1,7 +1,22 @@
 {
-  "name": "favicons",
-  "display": "standalone",
+  "name": "Der Seitenschneider",
+  "start_url": "https://derseitenschneider.ch",
+  "display": "browser",
+  "dir": "ltr",
+  "lang": "de-CH",
+  "short_name": "Der Seitenschneider",
+  "description": "Modernes Webdesign. Durchdacht, handgemacht & massgeschneidert.",
+  "theme_color": "#799496",
+  "background_color": "#f8f7f7",
+  "orientation": "any",
+
   "icons": [
+    {
+      "src": "content/Favicons/Favicon-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+
     {
       "src": "content/Favicons/Favicon-192.png",
       "type": "image/png",
