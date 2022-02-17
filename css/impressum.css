@@ -21,18 +21,10 @@
   margin-bottom: 3.2rem;
 }
 
-/* .section-impressum p {
-  width: clamp(30ch, 100%, 100ch);
-} */
-
 .section-impressum li {
   list-style: disc;
   margin-left: 2rem;
 }
-
-/* .container-impressum {
-  margin-bottom: 12.8rem;
-} */
 
 .container-datenschutz {
   position: relative;

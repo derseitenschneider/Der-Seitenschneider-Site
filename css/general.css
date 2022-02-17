@@ -19,21 +19,6 @@
   --background-tint-one: hsl(75, 6%, 87%);
 }
 
-@font-face {
-  font-family: "VeronaSerialXLight";
-  src: url(../content/fonts/VeronaSerial-Xlight.ttf);
-}
-
-@font-face {
-  font-family: "NashvilleSerialXlight";
-  src: url(../content/fonts/NashvilleSerial-Xlight.ttf);
-}
-
-@font-face {
-  font-family: "VeronaSerial";
-  src: url(../content/fonts/verona-serial-bold.ttf);
-}
-
 /********************************************/
 /* GLOBAL RESET */
 /********************************************/
@@ -150,11 +135,6 @@ p {
 /********************************************/
 /* GENERAL LAYOUT SETTINGS */
 /********************************************/
-
-html::-webkit-scrollbar {
-  display: none;
-}
-
 .section-main {
   position: relative;
 
@@ -199,7 +179,6 @@ html::-webkit-scrollbar {
   display: block;
   overflow: hidden;
   width: fit-content;
-  /* z-index: 1; */
   isolation: isolate;
   border-radius: 8px;
 
@@ -267,12 +246,6 @@ html::-webkit-scrollbar {
 /********************************************/
 
 .heading-primary {
-  /* font-family: "Abril Fatface", cursive; */
-  /* font-family: "Min-sans"; */
-  /* font-family: "Lora", serif; */
-  /* font-size: 10rem; */
-  /* font-family: 'Rowdies', cursive; */
-
   color: var(--main-background-dark);
   font-size: clamp(4rem, 7.5vw, 10rem);
   font-weight: 600;
@@ -283,10 +256,6 @@ html::-webkit-scrollbar {
 
 .heading-secondary {
   position: relative;
-  /* font-family: "Min-sans"; */
-  /* font-family: "Montserrat", sans-serif; */
-  /* font-size: 5.2rem; */
-
   font-size: clamp(3rem, 5vw, 5.2rem);
   font-weight: 400;
   letter-spacing: -2px;
@@ -370,8 +339,6 @@ html::-webkit-scrollbar {
 
 .logo-title {
   display: block;
-  /* font-family: VeronaSerialXlight, serif; */
-  /* font-family: "Playfair Display", serif; */
   font-size: 2rem;
   font-weight: 400;
   color: var(--background-shade-one);
@@ -444,7 +411,6 @@ html::-webkit-scrollbar {
   left: 0;
 
   width: calc(94vw - 5.2rem);
-  /* max-width: 180rem; */
   height: fit-content;
   margin: 0 auto;
 
@@ -485,7 +451,6 @@ html::-webkit-scrollbar {
 }
 
 .icon-logo-scrollnav {
-  /* height: 4rem; */
   width: 4rem;
 }
 
@@ -541,7 +506,6 @@ html::-webkit-scrollbar {
 .btn.btn-scroll-nav {
   position: relative;
   background-color: var(--main-background-dark);
-  /* padding: 0.5rem; */
 
   height: 5.2rem;
   width: 5.2rem;
@@ -556,7 +520,6 @@ html::-webkit-scrollbar {
   background: none;
 
   height: 100%;
-  /* width: 5.2rem; */
 
   display: block;
 
@@ -622,8 +585,6 @@ html::-webkit-scrollbar {
   flex-direction: column;
 
   justify-content: space-between;
-
-  /* gap: 3.6rem; */
 }
 
 .logo-footer {
@@ -787,8 +748,6 @@ html::-webkit-scrollbar {
   transform-origin: center;
 
   animation: floatTurn 120s infinite linear;
-
-  /* transform: rotate(-28deg); */
 }
 
 /********************************************/
@@ -797,7 +756,6 @@ html::-webkit-scrollbar {
 
 .grid--2-cols {
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
   justify-items: center;
   align-items: flex-end;
 
