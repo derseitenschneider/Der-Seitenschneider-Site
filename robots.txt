@@ -1,0 +1,4 @@
+# robots.txt zu http://derseitenschneider.ch
+
+User-agent: *
+Allow: /
