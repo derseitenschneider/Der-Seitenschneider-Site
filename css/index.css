@@ -43,7 +43,7 @@
 
   font-family: "Playfair Display", serif;
 
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(2.4rem, 6.2vw, 8rem);
   letter-spacing: 0px;
   height: 6rem;
@@ -1141,7 +1141,7 @@ iframe {
 .link-cookies {
   text-decoration: solid;
   text-decoration-color: #fff;
-  font-weight: bold;
+  font-weight: 600;
   color: #fff;
 }
 

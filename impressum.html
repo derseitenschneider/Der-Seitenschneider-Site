@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Impressum und Datenschutz auf einen Blick."
+    />
+    <meta name="theme-color" content="#49475b" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,6 +20,10 @@
     <link href="css/general.css" rel="stylesheet" />
     <link href="css/impressum.css" rel="stylesheet" />
     <link href="css/queries.css" rel="stylesheet" />
+
+    <link rel="icon" href="content/favicons/favicon-64.png" />
+    <link rel="apple-touch-icon" href="content/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
 
     <script src="js/impressum.js" defer></script>
 
@@ -75,7 +84,7 @@
               />
             </g>
             <defs>
-              <clipPath id="clip0_26_27">
+              <clipPath>
                 <rect
                   x="180"
                   y="180"
@@ -94,35 +103,35 @@
         <ul class="main-nav">
           <li class="nav-el">
             <a
-              href="https://derseitenschneider.netlify.app"
+              href="https://derseitenschneider.ch"
               class="nav-link nav-link--home"
               >Home</a
             >
           </li>
           <li class="nav-el">
             <a
-              href="https://derseitenschneider.netlify.app#portfolio"
+              href="https://derseitenschneider.ch#portfolio"
               class="nav-link nav-link--portfolio"
               >Portfolio</a
             >
           </li>
           <li class="nav-el">
             <a
-              href="https://derseitenschneider.netlify.app#angebot"
+              href="https://derseitenschneider.ch#angebot"
               class="nav-link nav-link--angebot"
               >Angebot</a
             >
           </li>
           <li class="nav-el">
             <a
-              href="https://derseitenschneider.netlify.app#schneider"
+              href="https://derseitenschneider.ch#schneider"
               class="nav-link nav-link--schneider"
               >Der Schneider</a
             >
           </li>
           <li class="nav-el">
             <a
-              href="https://derseitenschneider.netlify.app#contact"
+              href="https://derseitenschneider.ch#contact"
               class="nav-link nav-link--contact"
               >Kontakt</a
             >
@@ -134,7 +143,12 @@
     <div class="container-scroll-nav">
       <div class="wrapper-scroll-nav">
         <div class="logo-scroll-nav">
-          <a href="https://derseitenschneider.ch" class="link-logo">
+          <a
+            href="https://derseitenschneider.ch"
+            class="link-logo"
+            tabindex="-1"
+            aria-hidden="true"
+          >
             <svg
               class="icon icon-logo icon-logo-scrollnav"
               width="180"
@@ -242,11 +256,13 @@
     </div>
 
     <div class="container-btn-scroll-nav">
-      <button class="btn btn-scroll-nav btn-scroll-nav--open">
+      <button
+        class="btn btn-scroll-nav btn-scroll-nav--open"
+        aria-label="Navigation öffnen und schliessen"
+      >
         <svg
           class="icon icon-scrollnav icon-scrollnav--open"
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -262,7 +278,6 @@
         <svg
           class="icon icon-scrollnav icon-scrollnav--close"
           xmlns="http://www.w3.org/2000/svg"
-          class="ionicon"
           viewBox="0 0 512 512"
         >
           <title>Close</title>
@@ -279,7 +294,6 @@
         <svg
           class="icon icon-scrollnav icon-scrollnav--close"
           xmlns="http://www.w3.org/2000/svg"
-          class="ionicon"
           viewBox="0 0 512 512"
         >
           <title>Close</title>
@@ -554,6 +568,8 @@
             <a
               href="https://www.facebook.com/derseitenschneider"
               class="social-link social-link--facebook"
+              target="_blank"
+              aria-label="Link zur Facebook-Seite von der Seitenschneider"
             >
               <svg
                 class="icon icon-social"
@@ -570,6 +586,8 @@
             <a
               href="https://www.instagram.com/derseitenschneider"
               class="social-link social-link--instagram"
+              target="_blank"
+              aria-label="Link zur Instagram-Seite von der Seitenschneider"
             >
               <svg
                 class="icon icon-social"
@@ -587,6 +605,8 @@
             <a
               href="https://github.com/derseitenschneider"
               class="social-link social-link--github"
+              target="_blank"
+              aria-label="Link zur GitHub-Seite von der Seitenschneider"
             >
               <svg
                 class="icon icon-social"
@@ -648,7 +668,7 @@
             </li>
             <li class="nav-el--footer">
               <a
-                href="https://derseitenschneider.ch/impressum.html"
+                href="https://derseitenschneider.ch/impressum"
                 class="nav-link--footer"
                 >Impressum &amp; Datenschutz</a
               >

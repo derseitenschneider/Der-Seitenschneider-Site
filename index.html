@@ -36,12 +36,16 @@
 
     <link rel="cannonical" href="https://derseitenschneider.ch" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,700;0,800;1,400;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,500&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+    </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -169,13 +173,7 @@
     <div class="container-scroll-nav">
       <div class="wrapper-scroll-nav">
         <div class="logo-scroll-nav">
-          <a
-            href="#"
-            class="link-logo"
-            onclick="openCloseScrollNav()"
-            tabindex="-1"
-            aria-hidden="true"
-          >
+          <a href="#" class="link-logo" tabindex="-1" aria-hidden="true">
             <svg
               class="icon icon-logo icon-logo-scrollnav"
               width="180"
@@ -510,7 +508,6 @@
                     <a
                       href="https://brians-omnifood.netlify.app/"
                       class="slide-link slide-link--marabu"
-                      aria-label="Icon mit Link zur Omnifood Homepage"
                       target="_blank"
                       tabindex="-1"
                       aria-hidden="true"
@@ -1017,7 +1014,7 @@
           <p class="textbox textbox--cookies">
             Diese Website verwendet Cookies - nähere Informationen dazu und zu
             Ihren Rechten finden Sie in meiner
-            <a href="impressum.html#datenschutz" class="link link-cookies"
+            <a href="impressum.#datenschutz" class="link link-cookies"
               >Datenschutzerklärung</a
             >
             . Klicken Sie auf "Akzeptieren", um Cookies zu akzeptieren und
@@ -1106,6 +1103,7 @@
             <a
               href="https://www.facebook.com/derseitenschneider"
               class="social-link social-link--facebook"
+              target="_blank"
               aria-label="Link zur Facebook-Seite von der Seitenschneider"
             >
               <svg
@@ -1123,6 +1121,7 @@
             <a
               href="https://www.instagram.com/derseitenschneider"
               class="social-link social-link--instagram"
+              target="_blank"
               aria-label="Link zur Instagram-Seite von der Seitenschneider"
             >
               <svg
@@ -1141,6 +1140,7 @@
             <a
               href="https://github.com/derseitenschneider"
               class="social-link social-link--github"
+              target="_blank"
               aria-label="Link zur GitHub-Seite von der Seitenschneider"
             >
               <svg
@@ -1185,7 +1185,7 @@
             </li>
             <li class="nav-el--footer">
               <a
-                href="https://derseitenschneider.ch/impressum.html"
+                href="https://derseitenschneider.ch/impressum"
                 class="nav-link--footer"
                 >Impressum &amp; Datenschutz</a
               >

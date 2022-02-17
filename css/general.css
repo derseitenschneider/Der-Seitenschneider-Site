@@ -308,8 +308,6 @@ html::-webkit-scrollbar {
   color: inherit;
 
   opacity: 0.05;
-
-  mix-blend-mode: darken;
 }
 
 .heading-secondary--first {
