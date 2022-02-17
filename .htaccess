@@ -3,7 +3,7 @@ RewriteEngine On
 RewriteCond %{SERVER_PORT} !=443
 RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 
-RewriteRule ^portfolio /index.html#portfolio [NC, L]
+RewriteRule ^portfolio /#portfolio [NC, L]
 RewriteRule ^angebot /#angebot [NC, L]
 RewriteRule ^der-schneider /#schneider [NC, L]
 RewriteRule ^kontakt /#contact [NC, L]
