@@ -1,2 +1,10 @@
 RewriteEngine On
-Redirect 301 /https://www.derseitenschneider.ch/impressum-datenschutz/ https://derseitenschneider.ch/impressum.html/
+
+RewriteCond %{SERVER_PORT} !=443
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+RewriteRule ^portfolio /#portfolio [NC, L]
+RewriteRule ^angebot /#angebot [NC, L]
+RewriteRule ^der-schneider /#schneider [NC, L]
+RewriteRule ^kontakt /#contact [NC, L]
+RewriteRule ^impressum-datenschutz /impressum.html [NC, L]
