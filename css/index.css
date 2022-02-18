@@ -23,12 +23,6 @@
   column-gap: 6.4rem;
 }
 
-.container-hero--left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .container-hero--right {
   justify-self: center;
 }
@@ -62,7 +56,7 @@
 .el-carousel:last-of-type::after {
   content: "";
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   right: 0;
 
   width: 60%;
@@ -280,6 +274,7 @@
 .img-macbook {
   aspect-ratio: 1288 / 819;
 }
+
 .container-slide-img {
   position: absolute;
   top: 13.5%;
@@ -288,7 +283,7 @@
   height: 73%;
   aspect-ratio: 1288 / 819;
   background-color: #000;
-
+  backface-visibility: hidden;
   overflow: hidden;
 }
 

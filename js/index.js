@@ -19,6 +19,7 @@ const headingCarousel = document.querySelectorAll(".el-carousel");
 const hideRotationElement = function (element) {
   element.classList.remove("active");
   element.classList.add("previous");
+  element.setAttribute("aria-hidden", true);
 };
 
 const showRotationElement = function (element) {
