@@ -40,7 +40,7 @@
 
   font-weight: 400;
   font-size: clamp(2.4rem, 6.2vw, 8rem);
-  letter-spacing: 0px;
+  letter-spacing: -3px;
   height: 6rem;
   color: var(--main-text-color-medium);
 }
