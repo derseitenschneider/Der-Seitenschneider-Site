@@ -239,6 +239,10 @@
   gap: 2.4rem;
 }
 
+.no-flexbox-gap .btn-arrow--left {
+  margin-right: 2.4rem;
+}
+
 .btn-arrow {
   background: none;
 
@@ -685,6 +689,10 @@
   background-color: var(--background-shade-one);
 }
 
+.no-flexbox-gap .container-img {
+  margin-right: 8rem;
+}
+
 .img-box-schneider {
   position: relative;
   width: 42rem;
@@ -719,6 +727,10 @@
   justify-content: center;
   gap: 2.4rem;
   z-index: 2;
+}
+
+.no-flexbox-gap .cards:not(:last-child) {
+  margin-right: 2.4rem;
 }
 
 .cards {
@@ -933,6 +945,10 @@
   gap: 3.2rem;
 }
 
+.no-flexbox-gap .adress-el:not(:last-child) {
+  margin-bottom: 3.2rem;
+}
+
 .adress-el {
   display: flex;
   align-items: center;
@@ -941,6 +957,10 @@
 
 .icon-adress {
   fill: #ddddddc7;
+}
+
+.no-flexbox-gap .icon-adress {
+  margin-right: 1.2rem;
 }
 
 .form {
@@ -988,6 +1008,9 @@
   flex-direction: column;
   gap: 3.2rem;
 }
+.no-flexbox-gap .form-el:not(:last-child) {
+  margin-bottom: 3.2rem;
+}
 
 .form-el {
   position: relative;
@@ -998,6 +1021,10 @@
 
 .form-el label {
   font-size: 1.8rem;
+}
+
+.no-flexbox-gap .form-el label {
+  margin-bottom: 0.4rem;
 }
 
 input::placeholder,
@@ -1139,11 +1166,6 @@ iframe {
   text-decoration-color: #fff;
   font-weight: 600;
   color: #fff;
-}
-
-.container-btns-cookies {
-  display: flex;
-  gap: 1.6rem;
 }
 
 .btn--cookies {

@@ -96,9 +96,15 @@
 
   .scroll-nav {
     flex-direction: column;
-
-    margin-top: 8rem;
+    /* background-color: red; */
+    min-height: 55%;
+    justify-content: center;
+    gap: 3.2rem;
     margin-left: 2.4rem;
+  }
+
+  .no-flexbox-gap .scroll-nav > *:not(:last-child) {
+    margin-bottom: 3.2rem;
   }
 
   .container-portfolio .heading-secondary::after {
@@ -131,6 +137,10 @@
     flex-direction: column;
     gap: 8rem;
     align-items: flex-start;
+  }
+
+  .no-flexbox-gap .container-form {
+    margin-bottom: 8rem;
   }
 
   .form {
@@ -195,6 +205,11 @@
     flex-direction: column;
   }
 
+  .no-flexbox-gap .container-img {
+    margin-right: 0;
+    margin-bottom: 8rem;
+  }
+
   .img-box-schneider {
     width: clamp(8rem, 75vw, 40rem);
   }
@@ -205,6 +220,10 @@
 
   .container-cards {
     gap: 1.8rem;
+  }
+
+  .no-flexbox-gap .cards:not(:last-child) {
+    margin-right: 1.8rem;
   }
 
   .heading-cards {
@@ -236,6 +255,10 @@
     gap: 2.4rem;
     grid-row: 2/3;
     margin-top: 8rem;
+  }
+
+  .no-flexbox-gap .footer-row--left > *:not(:last-child) {
+    margin-bottom: 2.4rem;
   }
 
   .heading-footer {
@@ -271,10 +294,10 @@
     justify-self: first baseline;
   }
 
-  .container-hero--right {
+  /* .container-hero--right {
     display: flex;
     justify-content: end;
-  }
+  } */
 
   .btn-hero {
     grid-row: 2/3;
@@ -325,8 +348,6 @@
   }
 
   .svg-angebot--inhalt::after {
-    /* height: 15rem;
-    width: 15rem; */
     border-top: 0 solid transparent;
     border-left: 8rem solid transparent;
     border-right: 8rem solid transparent;
@@ -392,13 +413,17 @@
 
   .wrapper-cards {
     margin: 0;
-    max-width: none;
   }
 
   .container-cards {
     flex-direction: column;
     align-items: center;
     gap: 4.8rem;
+  }
+
+  .no-flexbox-gap .cards:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
   }
 
   .cards {
@@ -434,6 +459,10 @@
     gap: 5rem;
   }
 
+  .no-flexbox-gap .container-form {
+    margin-bottom: 5rem;
+  }
+
   .form-el label,
   .form-el input,
   .form-el textarea {
@@ -465,6 +494,10 @@
 
   .container-contact {
     gap: 18rem;
+  }
+
+  .no-flexbox-gap .container-form {
+    margin-bottom: 8rem;
   }
 
   .container-adress {
@@ -568,10 +601,12 @@
     visibility: hidden;
   }
 
-  .btn-hero--icon {
+  .btn.btn-hero--icon {
     display: block;
     pointer-events: auto;
     visibility: visible;
+    align-self: unset;
+    justify-self: unset;
 
     position: absolute;
     bottom: 2.4rem;
@@ -583,8 +618,8 @@
 
   .icon-hero {
     fill: #fff;
-    height: 3.2rem;
-    width: 3.2rem;
+    height: 4.4rem;
+    width: 4.4rem;
   }
 
   .img-box--hero {
