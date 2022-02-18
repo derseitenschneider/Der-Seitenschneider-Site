@@ -24,7 +24,8 @@
 }
 
 .container-hero--right {
-  justify-self: center;
+  justify-self: right;
+  align-self: center;
 }
 
 .container-heading {
