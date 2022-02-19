@@ -701,3 +701,175 @@
     font-size: 1.6rem;
   }
 }
+
+/********************************************/
+/* RESPONSIVE BACKGROUND IMAGES */
+/********************************************/
+
+/* 1360+ px */
+@media (min-width: 85em) {
+  .webp .img-page--y7 {
+    background: url(../content/img/portfolio/page-screenshots/y7music/y7music4x.webp);
+    background-size: cover;
+  }
+
+  .no-webp .img-page--y7 {
+    background: url(../content/img/portfolio/page-screenshots/y7music/y7music4x.webp);
+    background-size: cover;
+  }
+
+  .webp .img-page--marabu {
+    background: url(../content/img/portfolio/page-screenshots/marabu/marabu4x.webp);
+    background-size: cover;
+    background-position: top;
+  }
+  .no-webp .img-page--marabu {
+    background: url(../content/img/portfolio/page-screenshots/marabu/marabu4x.png);
+    background-size: cover;
+    background-position: top;
+  }
+
+  .webp .img-page--omnifood {
+    background: url(../content/img/portfolio/page-screenshots/omnifood/omnifood4x.webp);
+    background-size: cover;
+  }
+  .no-webp .webp .img-page--omnifood {
+    background: url(../content/img/portfolio/page-screenshots/omnifood/omnifood4x.png);
+    background-size: cover;
+  }
+
+  .webp .img-page--stepbystep {
+    background: url(../content/img/portfolio/page-screenshots/stepbystep/stepbystep4x.webp);
+    background-size: cover;
+  }
+  .no-webp .img-page--stepbystep {
+    background: url(../content/img/portfolio/page-screenshots/stepbystep/stepbystep4x.png);
+    background-size: cover;
+  }
+}
+
+/* 864+ px */
+@media (min-width: 54em) {
+  .webp .img-page--y7 {
+    background: url(../content/img/portfolio/page-screenshots/y7music/y7music3x.webp);
+    background-size: cover;
+  }
+
+  .no-webp .img-page--y7 {
+    background: url(../content/img/portfolio/page-screenshots/y7music/y7music3x.webp);
+    background-size: cover;
+  }
+
+  .webp .img-page--marabu {
+    background: url(../content/img/portfolio/page-screenshots/marabu/marabu3x.webp);
+    background-size: cover;
+    background-position: top;
+  }
+  .no-webp .img-page--marabu {
+    background: url(../content/img/portfolio/page-screenshots/marabu/marabu3x.png);
+    background-size: cover;
+    background-position: top;
+  }
+
+  .webp .img-page--omnifood {
+    background: url(../content/img/portfolio/page-screenshots/omnifood/omnifood3x.webp);
+    background-size: cover;
+  }
+  .no-webp .webp .img-page--omnifood {
+    background: url(../content/img/portfolio/page-screenshots/omnifood/omnifood3x.png);
+    background-size: cover;
+  }
+
+  .webp .img-page--stepbystep {
+    background: url(../content/img/portfolio/page-screenshots/stepbystep/stepbystep3x.webp);
+    background-size: cover;
+  }
+  .no-webp .img-page--stepbystep {
+    background: url(../content/img/portfolio/page-screenshots/stepbystep/stepbystep3x.png);
+    background-size: cover;
+  }
+}
+
+/* 528+ px */
+@media (min-width: 33em) {
+  .webp .img-page--y7 {
+    background: url(../content/img/portfolio/page-screenshots/y7music/y7music2x.webp);
+    background-size: cover;
+  }
+
+  .no-webp .img-page--y7 {
+    background: url(../content/img/portfolio/page-screenshots/y7music/y7music2x.webp);
+    background-size: cover;
+  }
+
+  .webp .img-page--marabu {
+    background: url(../content/img/portfolio/page-screenshots/marabu/marabu2x.webp);
+    background-size: cover;
+    background-position: top;
+  }
+  .no-webp .img-page--marabu {
+    background: url(../content/img/portfolio/page-screenshots/marabu/marabu2x.png);
+    background-size: cover;
+    background-position: top;
+  }
+
+  .webp .img-page--omnifood {
+    background: url(../content/img/portfolio/page-screenshots/omnifood/omnifood2x.webp);
+    background-size: cover;
+  }
+  .no-webp .webp .img-page--omnifood {
+    background: url(../content/img/portfolio/page-screenshots/omnifood/omnifood2x.png);
+    background-size: cover;
+  }
+
+  .webp .img-page--stepbystep {
+    background: url(../content/img/portfolio/page-screenshots/stepbystep/stepbystep2x.webp);
+    background-size: cover;
+  }
+  .no-webp .img-page--stepbystep {
+    background: url(../content/img/portfolio/page-screenshots/stepbystep/stepbystep2x.png);
+    background-size: cover;
+  }
+}
+
+/* 288+ px */
+@media (min-width: 18em) {
+  .webp .img-page--y7 {
+    background: url(../content/img/portfolio/page-screenshots/y7music/y7music1x.webp);
+    background-size: cover;
+  }
+
+  .no-webp .img-page--y7 {
+    background: url(../content/img/portfolio/page-screenshots/y7music/y7music1x.webp);
+    background-size: cover;
+  }
+
+  .webp .img-page--marabu {
+    background: url(../content/img/portfolio/page-screenshots/marabu/marabu1x.webp);
+    background-size: cover;
+    background-position: top;
+  }
+  .no-webp .img-page--marabu {
+    background: url(../content/img/portfolio/page-screenshots/marabu/marabu1x.png);
+    background-size: cover;
+    background-position: top;
+  }
+
+  .webp .img-page--omnifood {
+    background: url(../content/img/portfolio/page-screenshots/omnifood/omnifood1x.webp);
+    background-size: cover;
+  }
+  .no-webp .webp .img-page--omnifood {
+    background: url(../content/img/portfolio/page-screenshots/omnifood/omnifood1x.png);
+    background-size: cover;
+  }
+
+  .webp .img-page--stepbystep {
+    background: url(../content/img/portfolio/page-screenshots/stepbystep/stepbystep1x.webp);
+    background-size: cover;
+  }
+  .no-webp .img-page--stepbystep {
+    background: url(../content/img/portfolio/page-screenshots/stepbystep/stepbystep1x.png);
+    background-size: cover;
+  }
+}

@@ -284,10 +284,10 @@
 
 .container-slide-img {
   position: absolute;
-  top: 13.5%;
+  top: 13.4%;
   left: 13%;
   width: 74%;
-  height: 73%;
+  height: 73.2%;
   aspect-ratio: 1288 / 819;
   background-color: #000;
   backface-visibility: hidden;
@@ -328,27 +328,7 @@
   background-position-y: top;
 }
 
-.img-page--y7 {
-  background: url(../content/img/portfolio/y7music-full.webp);
-  background-size: cover;
-}
-
-.img-page--marabu {
-  background: url(../content/img/portfolio/marabu-beach.webp);
-  background-size: cover;
-  background-position: bottom;
-}
-
-.img-page--omnifood {
-  background: url(../content/img/portfolio/omnifood-full.webp);
-  background-size: cover;
-}
-.img-page--stepbystep {
-  background: url(../content/img/portfolio/stepbystep-full.webp);
-  background-size: cover;
-}
-
-.img-page:hover {
+.img-page:hover:not(.img-page--marabu) {
   background-position-y: bottom;
   transition: background-position-y 15s;
 }
