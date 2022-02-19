@@ -11,7 +11,7 @@ const removePreloadClass = function () {
 };
 
 window.addEventListener("load", function () {
-  this.setTimeout(removePreloadClass, 100);
+  this.setTimeout(removePreloadClass, 150);
 });
 
 ///////////////////////////////////////////////////////////
