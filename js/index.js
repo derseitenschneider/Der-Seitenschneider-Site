@@ -6,8 +6,12 @@
 
 //Remove preload transition class
 
-window.addEventListener("load", function () {
+const removePreloadClass = function () {
   document.querySelector("body").classList.remove("preload");
+};
+
+window.addEventListener("load", function () {
+  this.setTimeout(removePreloadClass, 100);
 });
 
 ///////////////////////////////////////////////////////////

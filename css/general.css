@@ -104,7 +104,7 @@ p {
 }
 
 .preload * {
-  opacity: 0 !important;
+  opacity: 0;
   visibility: none !important;
   pointer-events: hidden !important;
   transition: none !important;
