@@ -328,6 +328,45 @@
   background-position-y: top;
 }
 
+.webp .img-page--y7 {
+  background: url(../content/img/portfolio/page-screenshots/y7music/y7music4x.webp);
+  background-size: cover;
+}
+
+.no-webp .img-page--y7 {
+  background: url(../content/img/portfolio/page-screenshots/y7music/y7music4x.webp);
+  background-size: cover;
+}
+
+.webp .img-page--marabu {
+  background: url(../content/img/portfolio/page-screenshots/marabu/marabu4x.webp);
+  background-size: cover;
+  background-position: top;
+}
+.no-webp .img-page--marabu {
+  background: url(../content/img/portfolio/page-screenshots/marabu/marabu4x.png);
+  background-size: cover;
+  background-position: top;
+}
+
+.webp .img-page--omnifood {
+  background: url(../content/img/portfolio/page-screenshots/omnifood/omnifood4x.webp);
+  background-size: cover;
+}
+.no-webp .webp .img-page--omnifood {
+  background: url(../content/img/portfolio/page-screenshots/omnifood/omnifood4x.png);
+  background-size: cover;
+}
+
+.webp .img-page--stepbystep {
+  background: url(../content/img/portfolio/page-screenshots/stepbystep/stepbystep4x.webp);
+  background-size: cover;
+}
+.no-webp .img-page--stepbystep {
+  background: url(../content/img/portfolio/page-screenshots/stepbystep/stepbystep4x.png);
+  background-size: cover;
+}
+
 .img-page:hover:not(.img-page--marabu) {
   background-position-y: bottom;
   transition: background-position-y 15s;
