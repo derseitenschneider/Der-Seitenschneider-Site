@@ -197,6 +197,10 @@
     transform: translateX(0);
   }
 
+  .no-js .container-btn-scroll-nav {
+    transform: translateX(200%);
+  }
+
   .container-section {
     padding: 12.8rem 2.4rem;
   }
@@ -294,11 +298,6 @@
     justify-self: first baseline;
   }
 
-  /* .container-hero--right {
-    display: flex;
-    justify-content: end;
-  } */
-
   .btn-hero {
     grid-row: 2/3;
     height: fit-content;
@@ -362,6 +361,10 @@
 
     transform: rotate(-20deg);
     transform-origin: bottom right;
+  }
+
+  .no-js .svg-angebot--support::after {
+    transform: rotate(-45deg);
   }
 
   @keyframes fallRight {
@@ -505,7 +508,7 @@
   }
 
   .no-flexbox-gap .container-form {
-    margin-bottom: 8rem;
+    margin-bottom: 18rem;
   }
 
   .container-adress {

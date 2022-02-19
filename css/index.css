@@ -68,6 +68,14 @@
   z-index: -1;
 }
 
+.no-js .el-carousel:not(:last-of-type) {
+  display: none;
+}
+
+.no-js .el-carousel:last-of-type {
+  opacity: 0.7;
+}
+
 .el-carousel.active {
   transform: translateY(0);
   opacity: 0.7;
@@ -269,6 +277,11 @@
   pointer-events: none;
 }
 
+.no-js .btn-arrow {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .img-screen {
   position: relative;
 
@@ -328,6 +341,11 @@
   background-position-y: top;
 }
 
+.no-js .img-page--y7 {
+  background-size: cover !important;
+  background: url(../content/img/portfolio/page-screenshots/y7music/y7music4x.png);
+}
+
 .webp .img-page--y7 {
   background: url(../content/img/portfolio/page-screenshots/y7music/y7music4x.webp);
   background-size: cover;
@@ -370,6 +388,10 @@
 .img-page:hover:not(.img-page--marabu) {
   background-position-y: bottom;
   transition: background-position-y 15s;
+}
+
+.no-js .img-page:hover {
+  background-position-y: top;
 }
 
 .slide-link {
@@ -537,6 +559,10 @@
   animation: rollLeft 2s ease-in-out forwards;
 }
 
+.no-js .svg-angebot::after {
+  transform: translateX(0);
+}
+
 @keyframes rollLeft {
   0% {
     transform: translateX(50%);
@@ -571,6 +597,10 @@
 
 .in-viewport.svg-angebot--support::after {
   animation: fallRight 3s ease-in-out forwards;
+}
+
+.no-js .svg-angebot--support::after {
+  transform: rotate(45deg);
 }
 
 @keyframes fallRight {
@@ -728,6 +758,10 @@
 }
 
 .slide-schneider .img-box-schneider {
+  transform: translate(10%, 8%) scale(1.1) rotate(1deg);
+}
+
+.no-js .img-box-schneider {
   transform: translate(10%, 8%) scale(1.1) rotate(1deg);
 }
 
@@ -919,6 +953,10 @@
 
 .slide-contact .container-adress {
   animation: slideContact 2s ease-out forwards;
+}
+
+.no-js .container-adress {
+  transform: translate(0, -50%);
 }
 
 @keyframes slideContact {

@@ -32,6 +32,7 @@
 * {
   margin: 0;
   padding: 0;
+  transition: opacity 0.55s;
 }
 
 *:focus {
@@ -114,8 +115,23 @@ p {
   -o-transition: none !important;
 }
 
+.no-js .preload * {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: auto;
+  -webkit-transition: auto;
+  -moz-transition: unset;
+  -ms-transition: auto;
+  -o-transition: auto;
+}
+
 .preload.body {
   opacity: 0;
+}
+
+.no-js .preload.body {
+  opacity: 1;
 }
 
 .body {
@@ -126,6 +142,11 @@ p {
 .preload .header {
   opacity: 0;
   transform: translateY(1rem);
+}
+
+.no-js .preload .header {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .header {
