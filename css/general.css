@@ -104,10 +104,10 @@ p {
 }
 
 .preload * {
-  opacity: 0;
-  visibility: none;
-  pointer-events: hidden;
-  transition: none;
+  opacity: 0 !important;
+  visibility: none !important;
+  pointer-events: hidden !important;
+  transition: none !important;
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -ms-transition: none !important;
