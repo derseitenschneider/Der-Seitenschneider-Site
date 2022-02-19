@@ -176,17 +176,19 @@
   transform: translate(-12%, 10%) scale(1.2);
   opacity: 1;
   animation: showHeroImg 2s ease forwards 2s;
-  filter: grayscale(0.5);
+  filter: grayscale(0.6);
   z-index: 2;
 }
 
 @keyframes showHeroImg {
   from {
     opacity: 1;
+    filter: grayscale(0.6);
   }
 
   to {
-    opacity: 0.2;
+    opacity: 0.15;
+    filter: grayscale(1);
   }
 }
 
