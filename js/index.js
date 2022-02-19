@@ -137,7 +137,12 @@ const updateSlideIndex = function (number) {
 
 const body = document.querySelector("body");
 const sectionHeroEL = document.querySelector(".section-hero");
-const allSections = document.querySelectorAll(".section-main");
+const allSections = new Set([
+  document.querySelector(".section-angebot"),
+  document.querySelector(".section-schneider"),
+  document.querySelector(".section-contact"),
+]);
+
 const btnScrollNav = document.querySelector(".btn-scroll-nav");
 const containerScrollNav = document.querySelector(".container-scroll-nav");
 
@@ -191,7 +196,7 @@ observerStickyNavHero.observe(sectionHeroEL);
 // INTERSECTION OBSERVER SECTIONS SCROLL NAV BTN //
 let optionsStickyNavSections = {
   root: null,
-  rootMargin: "50px",
+  rootMargin: "0px",
   threshold: 0,
 };
 
@@ -212,8 +217,8 @@ let observerStickyNavSections = new IntersectionObserver(
 
 allSections.forEach((entry) => {
   //Exclude section portfolio
-  if (!entry.classList.contains("section-portfolio"))
-    observerStickyNavSections.observe(entry);
+
+  observerStickyNavSections.observe(entry);
 });
 
 // EVENT LISTENER TO OPEN/CLOSE SCROLL NAV //

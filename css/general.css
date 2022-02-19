@@ -105,6 +105,8 @@ p {
 
 .preload * {
   opacity: 0;
+  visibility: none;
+  pointer-events: hidden;
   transition: none;
   -webkit-transition: none !important;
   -moz-transition: none !important;
