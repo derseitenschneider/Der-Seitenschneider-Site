@@ -696,7 +696,7 @@
 .img-box-schneider {
   position: relative;
   width: 42rem;
-  aspect-ratio: 505/608;
+  /* aspect-ratio: 505/608; */
 
   transform: translate(0, 0) scale(1) rotate(0);
   transition: transform 1s linear;

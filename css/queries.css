@@ -475,6 +475,14 @@
 /********************************************/
 
 @media (max-width: 43em) {
+  .pillar-one {
+    border-radius: 0 18px 18px 0;
+  }
+
+  .pillar-two {
+    border-radius: 18px 0 0 18px;
+  }
+
   .btn {
     font-size: 1.4rem;
   }
@@ -593,6 +601,14 @@
 
   .container-hero--left {
     margin-bottom: -5rem;
+  }
+
+  .pillar-one {
+    border-radius: 0 12px 12px 0;
+  }
+
+  .pillar-two {
+    border-radius: 12px 0 0 12px;
   }
 
   .btn-hero--text {
