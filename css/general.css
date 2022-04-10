@@ -4,7 +4,7 @@
 
 :root {
   --main-background-bright: #f8f7f7;
-  --main-background-dark: #49475b;
+  --main-background-dark: rgb(73, 71, 91);
 
   --main-text-color-dark: #14080e;
   --main-text-color-medium: #49475b;
@@ -195,7 +195,7 @@ p {
 
 .btn {
   border: none;
-  padding: 0.8rem;
+  padding: 1.2rem 0.8rem;
 
   background-color: var(--background-shade-one);
   color: #fff;
@@ -361,7 +361,8 @@ p {
 
 .container-header {
   margin: 0 auto;
-  padding: 2rem 2.4rem 1rem 2.4rem;
+
+  padding: 2rem 2.4rem;
 
   background: none;
 

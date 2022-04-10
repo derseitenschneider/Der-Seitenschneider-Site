@@ -22,11 +22,11 @@
 
 @media (max-width: 75em) {
   .heading-primary {
-    font-size: clamp(3rem, 11vw, 50rem);
+    font-size: clamp(3rem, 10vw, 50rem);
   }
 
   .heading-carousel {
-    font-size: clamp(2.4rem, 9vw, 50rem);
+    font-size: clamp(2.4rem, 8vw, 50rem);
     margin-top: 1.2rem;
   }
 
@@ -503,6 +503,10 @@
 /********************************************/
 
 @media (max-width: 43em) {
+  .container-hero {
+    padding-block: 8rem;
+  }
+
   .btn {
     font-size: 1.4rem;
   }
@@ -564,6 +568,14 @@
     justify-self: last baseline;
   } */
 
+  .container-heading {
+    margin-bottom: 6rem;
+  }
+
+  .heading-carousel {
+    margin-top: 0;
+  }
+
   .container-btn-scroll-nav {
     bottom: 2rem;
     top: auto;
@@ -610,13 +622,22 @@
 /********************************************/
 
 @media (max-width: 30em) {
+  .heading-primary {
+    font-size: clamp(3rem, 13vw, 50rem);
+    letter-spacing: 0;
+  }
+
+  .punctuation {
+    margin-left: 0;
+  }
+
   .heading-secondary::after {
     font-size: 210%;
   }
 
   .container-hero {
     padding-top: 5rem;
-    row-gap: 6.4rem;
+    row-gap: 4.4rem;
   }
 
   .container-heading {
@@ -624,10 +645,9 @@
   }
 
   .section-hero {
-    height: calc(100vh - 84px);
+    min-height: calc(100vh - 140px);
     display: grid;
     place-content: center;
-    /* padding: 12rem 2.4rem; */
   }
 
   /* .container-hero--left {
@@ -649,7 +669,9 @@
 
     position: absolute;
     bottom: 2.4rem;
-    right: 2.4rem;
+    right: 0;
+    background-color: var(--background-shade-one);
+    border-radius: 100%;
 
     height: auto;
     padding: 1.2rem;
@@ -657,8 +679,8 @@
 
   .icon-hero {
     fill: #fff;
-    height: 4.4rem;
-    width: 4.4rem;
+    height: 3.6rem;
+    width: 3.6rem;
   }
   /* 
   .img-box--hero {
