@@ -623,12 +623,12 @@
 
 @media (max-width: 30em) {
   .heading-primary {
-    font-size: clamp(3rem, 13vw, 50rem);
+    font-size: clamp(3rem, 13.5vw, 50rem);
     letter-spacing: 0;
   }
 
-  .punctuation {
-    margin-left: 0;
+  .heading-carousel {
+    font-size: clamp(2.4rem, 9.5vw, 8rem);
   }
 
   .heading-secondary::after {
@@ -636,8 +636,8 @@
   }
 
   .container-hero {
-    padding-top: 5rem;
-    row-gap: 4.4rem;
+    padding-top: 2rem;
+    row-gap: 6.5rem;
   }
 
   .container-heading {
@@ -721,10 +721,6 @@
     left: 20vw;
   }
 
-  .heading-carousel {
-    margin-top: 1.2rem;
-  }
-
   .wrapper-cards .heading-tertiary {
     text-align: left;
   }
@@ -744,9 +740,18 @@
 
 @media (max-width: 23em) {
   .container-hero {
-    padding-top: 2rem;
-    padding-bottom: 12rem;
+    padding-top: 0;
+    row-gap: 3rem;
   }
+
+  .heading-primary {
+    font-size: clamp(3rem, 11vw, 50rem);
+  }
+
+  .heading-carousel {
+    font-size: clamp(2.4rem, 8vw, 8rem);
+  }
+
   .container-adress {
     padding: 2.4rem;
   }

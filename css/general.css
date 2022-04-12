@@ -4,7 +4,7 @@
 
 :root {
   --main-background-bright: #f8f7f7;
-  --main-background-dark: rgb(73, 71, 91);
+  --main-background-dark: #49475b;
 
   --main-text-color-dark: #14080e;
   --main-text-color-medium: #49475b;
@@ -195,7 +195,7 @@ p {
 
 .btn {
   border: none;
-  padding: 1.2rem 0.8rem;
+  padding: 1.2rem 1rem;
 
   background-color: var(--background-shade-one);
   color: #fff;
@@ -613,6 +613,8 @@ p {
 .footer {
   background-color: var(--background-shade-one);
   margin-top: -1px;
+  z-index: 2;
+  position: relative;
 }
 
 .container-footer {
