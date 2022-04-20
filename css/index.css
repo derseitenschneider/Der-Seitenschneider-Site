@@ -688,24 +688,6 @@
 /* SECTION SCHNEIDER */
 /******************************************/
 
-.overhang-circle--right {
-  position: absolute;
-  height: 25vw;
-  width: 25vw;
-
-  max-height: 40rem;
-  max-width: 40rem;
-
-  background-color: var(--background-shade-one);
-
-  border-radius: 100%;
-
-  top: -5%;
-  right: -20rem;
-
-  box-shadow: 0 32px 0 var(--main-accent-color);
-}
-
 .section-schneider {
   background-color: var(--main-background-dark);
 }
@@ -750,10 +732,18 @@
   border-bottom: 20px solid transparent;
   border-right: 20px solid transparent;
 
-  clip-path: inset(0 0 100% 0);
-  opacity: 0;
+  clip-path: inset(0 100% 0 0);
 
-  transition: clip-path 1.5s ease-out, opacity 1.5s;
+  transition: clip-path 1s ease-out;
+}
+
+.slide-schneider .img-box-schneider {
+  clip-path: inset(0 0 0 0);
+}
+
+.no-js .img-box-schneider {
+  clip-path: inset(0 0 0 0);
+  opacity: 1;
 }
 
 .img-box-schneider::after {
@@ -771,16 +761,6 @@
   width: 100%;
   filter: grayscale(0.3);
   filter: drop-shadow(20px 20px var(--background-shade-one));
-}
-
-.slide-schneider .img-box-schneider {
-  clip-path: inset(0 0 0 0);
-  opacity: 1;
-}
-
-.no-js .img-box-schneider {
-  clip-path: inset(0 0 0 0);
-  opacity: 1;
 }
 
 .text-schneider {
