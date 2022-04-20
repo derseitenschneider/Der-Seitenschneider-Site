@@ -104,6 +104,8 @@ p {
   line-height: 2;
 }
 
+/*Preload animations*/
+
 .preload * {
   opacity: 0;
   visibility: none !important;
@@ -139,22 +141,34 @@ p {
   transition: opacity 2s ease;
 }
 
-.preload .header {
+.preload .container-hero {
   opacity: 0;
-  transform: translateY(1rem);
+  transform: translateY(-1rem);
 }
 
-.no-js .preload .header {
+.no-js .preload .container-hero {
   opacity: 1;
   transform: translateY(0);
 }
 
-.header {
+.container-hero {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 1s, transform 2s ease;
 }
 
+.preload .img-box--hero {
+  transform: translateY(-3rem);
+}
+
+.no-js .preload .img-box--hero {
+  transform: translateY(0);
+}
+
+.img-box--hero {
+  transform: translateY(0);
+  transition: transform 2s ease;
+}
 /********************************************/
 /* GENERAL LAYOUT SETTINGS */
 /********************************************/
@@ -181,7 +195,7 @@ p {
 
 .btn {
   border: none;
-  padding: 1.6rem 1.2rem;
+  padding: 1.2rem 1rem;
 
   background-color: var(--background-shade-one);
   color: #fff;
@@ -269,8 +283,9 @@ p {
 /********************************************/
 
 .heading-primary {
-  color: var(--main-background-dark);
-  font-size: clamp(4rem, 7.5vw, 10rem);
+  color: #fff;
+  font-size: clamp(4rem, 6vw, 10rem);
+
   font-weight: 600;
 
   letter-spacing: -4px;
@@ -340,12 +355,13 @@ p {
 
 .header {
   width: 100vw;
-  z-index: 10;
-  position: absolute;
+  z-index: 1;
+  position: fixed;
 }
 
 .container-header {
   margin: 0 auto;
+
   padding: 2rem 2.4rem;
 
   background: none;
@@ -597,6 +613,8 @@ p {
 .footer {
   background-color: var(--background-shade-one);
   margin-top: -1px;
+  z-index: 2;
+  position: relative;
 }
 
 .container-footer {

@@ -7,10 +7,6 @@
     padding: 20rem 8rem;
   }
 
-  .container-hero--right {
-    justify-self: last baseline;
-  }
-
   .container-footer {
     gap: 4.8rem;
   }
@@ -21,12 +17,26 @@
 /********************************************/
 
 @media (max-width: 75em) {
+  .heading-primary {
+    font-size: clamp(3rem, 10vw, 50rem);
+  }
+
+  .heading-carousel {
+    font-size: clamp(2.4rem, 8vw, 50rem);
+    margin-top: 1.2rem;
+  }
+
+  .container-heading {
+    margin-bottom: 12rem;
+  }
+
   .container-section {
     padding: 16rem 2.4rem;
   }
 
-  .section-hero {
-    padding: 25rem 4.8rem;
+  .container-hero {
+    grid-template-columns: 1fr;
+    padding-inline: 6.4rem;
   }
 
   .wrapper-scroll-nav {
@@ -72,6 +82,10 @@
     padding: 16rem 3.2rem;
   }
 
+  .container-hero {
+    padding-inline: 3.2rem;
+  }
+
   .container-scroll-nav {
     top: 0;
     left: 50vw;
@@ -96,7 +110,6 @@
 
   .scroll-nav {
     flex-direction: column;
-    /* background-color: red; */
     min-height: 55%;
     justify-content: center;
     gap: 3.2rem;
@@ -205,6 +218,10 @@
     padding: 12.8rem 2.4rem;
   }
 
+  .container-hero {
+    padding-inline: 2.4rem;
+  }
+
   .content-schneider {
     flex-direction: column;
   }
@@ -289,33 +306,17 @@
 /********************************************/
 
 @media (max-width: 47em) {
-  .container-hero--left {
-    grid-column: 1/3;
-  }
-
-  .container-hero--right {
-    grid-column: 2/3;
-    justify-self: first baseline;
-  }
-
-  .btn-hero {
-    grid-row: 2/3;
-    height: fit-content;
-    align-self: center;
-  }
-
   .container-heading {
     margin-bottom: 8rem;
   }
 
   .heading-primary {
-    font-size: clamp(3em, 12.8vw, 10rem);
     letter-spacing: -1px;
   }
 
   .heading-carousel {
     margin-top: 3.2rem;
-    font-size: clamp(2.4rem, 10vw, 8rem);
+
     letter-spacing: 0px;
   }
 
@@ -478,12 +479,8 @@
 /********************************************/
 
 @media (max-width: 43em) {
-  .pillar-one {
-    border-radius: 0 18px 18px 0;
-  }
-
-  .pillar-two {
-    border-radius: 18px 0 0 18px;
+  .container-hero {
+    padding-block: 8rem;
   }
 
   .btn {
@@ -533,18 +530,12 @@
 /********************************************/
 
 @media (max-width: 33em) {
-  .section-hero {
-    padding: 18rem 2.4rem;
+  .container-heading {
+    margin-bottom: 6rem;
   }
 
-  .container-hero--right {
-    grid-row: 2/3;
-    grid-column: 1/2;
-  }
-
-  .btn.btn-hero {
-    align-self: last baseline;
-    justify-self: last baseline;
+  .heading-carousel {
+    margin-top: 1.2rem;
   }
 
   .container-btn-scroll-nav {
@@ -593,25 +584,34 @@
 /********************************************/
 
 @media (max-width: 30em) {
+  .heading-primary {
+    margin-top: 2rem;
+    font-size: clamp(3rem, 13.5vw, 50rem);
+    letter-spacing: 0;
+  }
+
+  .heading-carousel {
+    font-size: clamp(2.4rem, 9.5vw, 8rem);
+  }
+
   .heading-secondary::after {
     font-size: 210%;
   }
 
+  .container-hero {
+    padding-top: 2rem;
+    /* row-gap: 8rem; */
+  }
+
+  .container-heading {
+    margin-bottom: 0;
+  }
+
   .section-hero {
-    height: 100vh;
-    padding: 12rem 2.4rem;
-  }
-
-  .container-hero--left {
-    margin-bottom: -5rem;
-  }
-
-  .pillar-one {
-    border-radius: 0 12px 12px 0;
-  }
-
-  .pillar-two {
-    border-radius: 12px 0 0 12px;
+    min-height: calc(100vh - 140px);
+    padding-bottom: 4rem;
+    display: grid;
+    place-content: center;
   }
 
   .btn-hero--text {
@@ -629,20 +629,33 @@
 
     position: absolute;
     bottom: 2.4rem;
-    right: 2.4rem;
+    right: 0;
+    background-color: var(--background-shade-one);
+    border-radius: 100%;
+    box-shadow: 0 4px rgb(0 0 0 / 10%);
 
     height: auto;
     padding: 1.2rem;
+
+    transform: translateX(200%);
+
+    animation: btnSlideIn 0.6s forwards 4s;
+  }
+
+  @keyframes btnSlideIn {
+    from {
+      transform: translateX(200%);
+    }
+
+    to {
+      transform: translateX(0%);
+    }
   }
 
   .icon-hero {
     fill: #fff;
-    height: 4.4rem;
-    width: 4.4rem;
-  }
-
-  .img-box--hero {
-    width: clamp(10rem, 55vw, 100rem);
+    height: 3.6rem;
+    width: 3.6rem;
   }
 
   .overhang-square--left {
@@ -697,6 +710,19 @@
 /********************************************/
 
 @media (max-width: 23em) {
+  .container-hero {
+    padding-top: 0;
+    row-gap: 3rem;
+  }
+
+  .heading-primary {
+    font-size: clamp(3rem, 11vw, 50rem);
+  }
+
+  .heading-carousel {
+    font-size: clamp(2.4rem, 8vw, 8rem);
+  }
+
   .container-adress {
     padding: 2.4rem;
   }

@@ -123,11 +123,12 @@ initiateObserver(callbackRocketLand, optionsRocketLand, svgDesign);
 /////////////////////////////////////////////////////////////////////
 
 const sectionSchneider = document.querySelector(".section-schneider");
-const imgBoxSchneider = document.querySelector(".img-box-schneider");
+const headingSchneider = document.querySelector(".heading-schneider");
 
 const callbackSchneider = function (entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
+      console.log("intersecting");
       sectionSchneider.classList.add("slide-schneider");
     }
   });
@@ -135,11 +136,11 @@ const callbackSchneider = function (entries) {
 
 let optionsSchneider = {
   root: null,
-  rootMargin: "0px",
-  threshold: 0.6,
+  rootMargin: "0px 0px -200px 0px",
+  threshold: 1,
 };
 
-initiateObserver(callbackSchneider, optionsSchneider, imgBoxSchneider);
+initiateObserver(callbackSchneider, optionsSchneider, headingSchneider);
 
 /////////////////////////////////////////////////////////////////////
 // ANIMATION SECTION CONTACT //
