@@ -669,7 +669,7 @@
 
     position: absolute;
     bottom: 3.4rem;
-    right: 0;
+    right: 1.4rem;
     background-color: var(--background-shade-one);
     border-radius: 100%;
     box-shadow: 0 4px rgb(0 0 0 / 10%);
