@@ -609,6 +609,7 @@
 
 @media (max-width: 30em) {
   .heading-primary {
+    margin-top: 2rem;
     font-size: clamp(3rem, 13.5vw, 50rem);
     letter-spacing: 0;
   }
