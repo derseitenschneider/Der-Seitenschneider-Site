@@ -633,6 +633,7 @@
 
   .section-hero {
     min-height: calc(100vh - 140px);
+    padding-bottom: 4rem;
     display: grid;
     place-content: center;
   }
