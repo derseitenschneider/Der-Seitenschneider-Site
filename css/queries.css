@@ -623,7 +623,7 @@
 
   .container-hero {
     padding-top: 2rem;
-    row-gap: 8rem;
+    /* row-gap: 8rem; */
   }
 
   .container-heading {
