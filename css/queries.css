@@ -668,7 +668,7 @@
     justify-self: unset;
 
     position: absolute;
-    bottom: 2.4rem;
+    bottom: 3.4rem;
     right: 0;
     background-color: var(--background-shade-one);
     border-radius: 100%;
@@ -676,6 +676,20 @@
 
     height: auto;
     padding: 1.2rem;
+
+    transform: translateX(200%);
+
+    animation: btnSlideIn 0.6s forwards 4s;
+  }
+
+  @keyframes btnSlideIn {
+    from {
+      transform: translateX(200%);
+    }
+
+    to {
+      transform: translateX(0%);
+    }
   }
 
   .icon-hero {
