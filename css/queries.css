@@ -672,6 +672,7 @@
     right: 0;
     background-color: var(--background-shade-one);
     border-radius: 100%;
+    box-shadow: 0 4px rgb(0 0 0 / 10%);
 
     height: auto;
     padding: 1.2rem;
