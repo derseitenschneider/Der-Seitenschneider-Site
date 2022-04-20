@@ -157,7 +157,7 @@
   top: -45%;
   right: 0;
   bottom: 0;
-  left: 7.25%;
+  left: 10%;
   opacity: 0.4;
 }
 
@@ -334,7 +334,7 @@
   background: url(../content/img/portfolio/page-screenshots/y7music/y7music4x.png);
 }
 
-.webp .img-page--y7 {
+.webp .img-page--marabu {
   background: url(../content/img/portfolio/page-screenshots/y7music/y7music4x.webp);
   background-size: cover;
 }
