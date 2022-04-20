@@ -554,26 +554,12 @@
 /********************************************/
 
 @media (max-width: 33em) {
-  /* .section-hero {
-    padding: 18rem 2.4rem;
-  } */
-
-  /* .container-hero--right {
-    grid-row: 2/3;
-    grid-column: 1/2;
-  } */
-
-  /* .btn.btn-hero {
-    align-self: last baseline;
-    justify-self: last baseline;
-  } */
-
   .container-heading {
     margin-bottom: 6rem;
   }
 
   .heading-carousel {
-    margin-top: 0;
+    margin-top: 1.2rem;
   }
 
   .container-btn-scroll-nav {

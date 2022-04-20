@@ -729,6 +729,7 @@
 .img-box-schneider {
   position: relative;
   width: 42rem;
+
   border-bottom: 20px solid transparent;
   border-right: 20px solid transparent;
 
@@ -759,7 +760,7 @@
 
 .img-schneider {
   width: 100%;
-  filter: grayscale(0.3);
+
   filter: drop-shadow(20px 20px var(--background-shade-one));
 }
 
