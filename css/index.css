@@ -873,9 +873,9 @@
 /* SECTION KONTAKT */
 /******************************************/
 
-.section-contact {
-  border-right: 12rem solid var(--background-shade-one);
-}
+/* .section-contact {
+  border-right: 12rem solid var(--main-background-dark);
+} */
 
 .section-contact .heading-secondary::after {
   content: "Kontakt";
@@ -915,7 +915,7 @@
   right: -75%;
   width: 95%;
 
-  background-color: var(--main-background-dark);
+  background-color: var(--background-shade-one);
 
   padding: 4.8rem;
 
@@ -964,9 +964,9 @@
   z-index: -1;
 }
 
-.container-adress .heading-secondary,
+.container-adress .heading-tertiary,
 .container-adress li {
-  color: var(--main-text-color-bright);
+  color: var(--main-text-color-dark);
 }
 
 .container-adress li {
@@ -990,7 +990,7 @@
 }
 
 .icon-adress {
-  fill: #ddddddc7;
+  fill: var(--main-background-dark);
 }
 
 .no-flexbox-gap .icon-adress {

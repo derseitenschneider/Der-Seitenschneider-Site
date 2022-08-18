@@ -610,7 +610,7 @@ p {
 /******************************************/
 
 .footer {
-  background-color: var(--background-shade-one);
+  background-color: var(--main-background-dark);
   margin-top: -1px;
   z-index: 2;
   position: relative;
@@ -629,7 +629,7 @@ p {
   gap: 12.8rem;
   align-items: stretch;
 
-  color: var(--main-text-color-medium);
+  color: var(--main-background-bright);
 }
 
 .footer-row {
@@ -637,6 +637,11 @@ p {
   flex-direction: column;
 
   justify-content: space-between;
+}
+
+.footer-row--middle {
+  display: flex;
+  flex-direction: row;
 }
 
 .logo-footer {
@@ -653,7 +658,7 @@ p {
   font-size: 2.4rem;
   font-weight: 400;
 
-  color: var(--main-background-dark);
+  color: var(--main-text-color-bright);
 }
 
 .logo-footer .icon-logo {
@@ -663,11 +668,11 @@ p {
 
 .logo-footer .icon-logo rect,
 .logo-footer .icon-logo path {
-  fill: var(--background-shade-one);
+  fill: var(--main-background-dark);
 }
 
 .logo-footer .icon-logo circle {
-  fill: var(--main-background-dark);
+  fill: var(--background-shade-one);
 }
 
 .container-social-footer {
@@ -685,7 +690,7 @@ p {
 }
 
 .icon-social {
-  fill: var(--main-text-color-medium);
+  fill: var(--background-shade-one);
 }
 
 .nav-el--footer:last-of-type {
@@ -716,7 +721,7 @@ p {
 .nav-link--footer:hover,
 .nav-link--footer:active,
 .nav-link--footer:focus {
-  color: var(--main-text-color-medium);
+  color: #fff;
 }
 
 .nav-link--footer::after {
@@ -729,7 +734,7 @@ p {
   height: 0.2rem;
   width: 100%;
 
-  background-color: var(--main-text-color-medium);
+  background-color: var(--main-accent-color);
 
   transform: scale(0);
   transform-origin: right;

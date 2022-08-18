@@ -18,7 +18,7 @@
                   height="607"
                   rx="303.5"
                   transform="rotate(-180 607 607)"
-                  fill="#799496"
+                  fill="#49475B"
                 />
                 <circle
                   cx="303.5"
@@ -29,11 +29,11 @@
                 />
                 <path
                   d="M280 446.933C280 469.282 261.882 487.4 239.533 487.4L0 487.4V366H239.533C261.882 366 280 384.117 280 406.467V446.933Z"
-                  fill="#799496"
+                  fill="#49475B"
                 />
                 <path
                   d="M607 250.4L367.467 250.4C345.118 250.4 327 232.282 327 209.933V169.467C327 147.117 345.118 129 367.467 129L607 129V250.4Z"
-                  fill="#799496"
+                  fill="#49475B"
                 />
               </g>
               <defs>
@@ -123,9 +123,10 @@
         </div>
 
         <div class="footer-row footer-row--middle">
+          <div class="container--footer-nav__left">
           <ul class="nav-list nav-list--footer">
-            <li class="nav-el--footer">
-              <a href="#" class="nav-link--footer">Home</a>
+          <li class="nav-el--footer">
+              <a href="index.php" class="nav-link--footer">Home</a>
             </li>
             <li class="nav-el--footer">
               <a href="#portfolio" class="nav-link--footer">Portfolio</a>
@@ -133,20 +134,33 @@
             <li class="nav-el--footer">
               <a href="#angebot" class="nav-link--footer">Angebot</a>
             </li>
-            <li class="nav-el--footer">
+          </ul>
+          </div>
+          <div class="container--footer-nav__right">
+
+          <ul class="nav-list nav-list--footer">
+          <li class="nav-el--footer">
               <a href="#schneider" class="nav-link--footer">Der Schneider</a>
+            </li>
+            <li class="nav-el--footer">
+              <a href="blog.php" class="nav-link--footer">Blog</a>
             </li>
             <li class="nav-el--footer">
               <a href="#contact" class="nav-link--footer">Kontakt</a>
             </li>
+          </ul>
+          </div>
+         
+           
+            
             <li class="nav-el--footer">
               <a
-                href="https://derseitenschneider.ch/impressum"
+                href="../impressum.php"
                 class="nav-link--footer"
                 >Impressum &amp; Datenschutz</a
               >
             </li>
-          </ul>
+          
         </div>
 
         <div class="footer-row footer-row--right">

@@ -891,8 +891,8 @@
                     />
                   </svg>
                   <p class="adress">
-                    Brian Boy <br />Talackerweg 29 <br />
-                    CH-3506 Grosshöchstetten
+                    Brian Boy <br />Tanneggweg 12 <br />
+                    CH-3604 Thun
                   </p>
                 </li>
               </ul>
